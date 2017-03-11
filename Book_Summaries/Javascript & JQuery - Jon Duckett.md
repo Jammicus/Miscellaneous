@@ -47,7 +47,9 @@
 ### How To  Use Objects & Methods
 
 * The format is: 
-``` object.method(parameters)```
+``` 
+object.method(parameters)
+```
 ----------------------------------
 
 ## Basic Javascript Instructions
