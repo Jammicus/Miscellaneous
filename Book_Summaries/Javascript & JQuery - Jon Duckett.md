@@ -46,7 +46,8 @@
 ------------
 ### How To  Use Objects & Methods
 
-* The format is ` object.method(parameters)` 
+* The format is: 
+``` object.method(parameters)```
 ----------------------------------
 
 ## Basic Javascript Instructions
@@ -153,7 +154,7 @@
 
 --------------------------
 
-##Functions, Methods & Objects
+## Functions, Methods & Objects
 
 -------
 
@@ -244,11 +245,11 @@ return width * height ;
 * Global variables values are not changed with each function call, unless you modifiy the value in the function
 * Local variables change values for each function call. (They are initalised when the function is called.
 
-``` function getArea (width, height){
+``` 
+function getArea (width, height){
 var area = width * height;
 return area;
 }
-
 var wallSize =  getArea (3,2);
 var othetWallSize = getArea(4,2);
 
@@ -291,7 +292,8 @@ var roomsFree = hotel.checkAvailability();
 * You first declare the variable as a new object `` var hotel = new Object()``
 * You then can define variables and methods using the dot notation mentioned above
 
-``` var hotel = new Object();
+``` 
+var hotel = new Object();
 
 	hotel.name = 'Quay';
 	hotel.rooms = 40;
@@ -410,7 +412,7 @@ function Hotel(name, rooms, booked) {
 	
 ```
 
-###This Keyword
+### This Keyword
 
 * Where a function is declared alters what this means
 * This will always refer to one object
@@ -432,7 +434,8 @@ function windowSize() {
 * All global variables become properties of an object.
 * When a function is in the global context, you can access global variables.
 
-``` var width =600;
+``` 
+var width =600;
 		var shape = { width:300};
 		
 		var showWidth = function() {
@@ -463,7 +466,8 @@ getArea : function() {
 
 * Referes the the passed value.
 
-``` var width = 600;
+``` 
+		var width = 600;
 		var shape = {width: 300};
 		
 		var showWidth = function() {
