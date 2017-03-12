@@ -620,9 +620,98 @@ Example:
 
 ## Decisions and Loops
 
+Three key concepts:
+
+* Evaluations - Where you analyze values to determine whether they match the expected results
+* Decisions -  Using the result of evaluations, you can decide which path your script should go down
+* Loops - Repeatidly doing the same steps.
+
+--------------
+
+### Evaluations
+
+Done by IF-Then-Else
+
+```
+if (ConditionIsTrue){
+do something
+} else {
+do something
+}
+```
+-------------
+
+### Type Coercion & Weak Typing
+
+* Javascript converts data types behind the scenes to complete operations.
+* This is known as type coercion
+* Javascript is known as weak typing, as we cna change the data type for a value.
+* This can end up giving us wrong evaluations
+
+-----
+
+### Truthy & Falsy Values
+
+* Because of type coercion, we can treat every value as either true or false
+
+* Falsy values are treated as if they are false. This could be numbers that are 0, strings that are empty, variables that are not assigned to anything and so on.
+
+* Truthly values are treated as if they are truth, they are the opposite or falsy values, eg, not 0, not empty, assigned to a value, true
+
+--------------
+
+### Checking Equality and Existence
+
+* Objects are considered truthly if they exist, we can then check whether it is present in a page or not.
+
+* There are two types of equality checkers:
+	* == - this checks whether two objects are truthly or falsly
+	* === - this is strict checking, this checks whether they share the same type 
+
+----------------
+
+### Loops
+
+Three main types
+
+* for
+* While 
+* Do while
 
 
+#### For
 
+` for ( var i = 0 ; i <10 ; i++){
+do something
+}
+`
+* You have to initalize a variable ( var i = 0)
+* You then need to say when the loop should run (When i < 10)
+* Then you say what should happen to I after the instruction is done (i++)
+* Each time the instruction is done, I is incremented, when i = 10, the loop stops.
 
+#### While
+
+```
+while (i <10){
+do something
+i++
+}
+```
+* runs while the condition is true
+* you need to increment or decrement the variable explicitly in the loop.
+
+#### Do While
+
+``` 
+do {
+dosomething
+i++
+} while (i < 1)
+```
+
+* similar to the while, but the while is declared after the do statement.
+
+-----
 
 
