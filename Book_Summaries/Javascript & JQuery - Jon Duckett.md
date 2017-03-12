@@ -524,3 +524,105 @@ Given this array called costs:
 costs[2].phone
 
 ```
+---------
+
+### Built In Objects
+
+1.  Browser Object Model
+	This contains objects that represent the current browser window or tab.
+2. Document Object Model
+	This uses objects to create a representation of the current page. Creates a new object for each new element
+3. Global Javascript Objects
+	Represents things that the Javascript language needs to create a model of. Eg, dates and times.
+	
+	
+-------
+
+### Browser Object Model
+
+* Window -  current browser/Tab
+* Document - current webpage
+* History - pages in browser history
+* Location - current url of the page
+* Navigator - Information about browser
+* Screen - Devices display information
+
+Window is the parent, where every other object is a child the window. 
+
+------
+MAKE A DIAGRAM
+### Document Object Model
+
+Used to create a model of the current webpage
+
+* `Document`(Root) -  Represents the page as a whole
+	* `<html>`
+		* `<head>`
+			* `<title>`
+		* `<body>`
+			* `<div>`
+				* attribute
+			* `<p>`
+			* text
+
+-------
+
+### Global Javascript Objects
+
+* These are a bunch of individual objects that relate to different parts of the Javascript language
+* Usually start with a captial letter
+
+Example objects for data types:
+* String
+* Number
+* Boolean
+
+Example Objects to help with real world concepts:
+
+* Date
+* Math
+* Regex
+
+-----------------
+
+### Data types Revisited
+
+#### Primative data types
+
+1. String (Is a object)
+2. Number (Is a object)
+3. Boolean (Is a object)
+4. Undefined (Is not a object)
+5. Null (Is a object)
+
+#### Complex Data Types
+
+1. Objects 
+
+
+* Arrays and Functions are classified as objects.
+* If they are objects, we can call functions on an object or use build in methods on these. 
+* To see all of these, look online. 
+
+--------
+
+### Creating Instances of different types of objects
+
+Follows the structure:
+
+` var name = new objectType();`
+
+Example:
+
+` var today = new Date();`
+
+-----------
+
+## Decisions and Loops
+
+
+
+
+
+
+
