@@ -150,8 +150,6 @@ You will most likely see results after a 7 day cycle, with 10 minute sessions ea
 
 ### Coach Sommer 
 
-*SORT THE QUOTE LINING OUT*
-
 > If the commitment is to a long-term goal, and not to a series of smaller intermediate goals, then only one “decision needs to be made and adhered to. Clear, simple, straightforward. Much easier to maintain than having to make small decision after small decision to stay the course when dealing with each step along the way. This provides far too many opportunities to inadvertently drift from your chosen goal. The single decision is one of the most powerful tools in the toolbox.
 
 --------------------------------------------------------------
@@ -181,7 +179,7 @@ You will most likely see results after a 7 day cycle, with 10 minute sessions ea
 -------------
 ### Marc Andreessen (One of the internets founding fathers) 
 
-> The number-one theme that companies have when they really struggle is they are not charging enough for their product 
+> The number-one theme that companies have when they really struggle is they are not charging enough for their product .
 
 > The keys to success is to be so good that they can't ignore you, and that smart people should make things.
 
@@ -282,7 +280,6 @@ Being busy is most often used as a guise for avoiding the few critically importa
 4. Everyone of them were passionate about giving back.
 
 ---------------------------
-  
 ### Reid Hoffman (The Oracle of SIlicon Valley)
 
 * Solve the simplest, easiest and most valuable problem first.
@@ -324,7 +321,6 @@ Being busy is most often used as a guise for avoiding the few critically importa
 
 ---------------------------------
 ### James Altucher (Hedge fund manager, best selling author)
-
 
 * Write down 10 ideas each morning, a mix of good and bad. Followed by first steps to achieve these.
 * Say no. "I can't do it. I hope everything is well.
@@ -388,7 +384,6 @@ You make yourself `rare`  by combining two or more "Pretty goods" until no-one e
 --------
 ### Daymond John (Billionare Investor)
 > Your dayjob wont make you rich, it will be your homework
-
 * Read your goals before you go to bed and when you wake up. 
 * Money is a great servent, but a horrible master.
 * Have goals that expire after 6 months.
@@ -407,7 +402,6 @@ Ask yourself:
  
  ` Is there a grand challenge or a billion-person problem that you can focus on `
  
-
 * Problems should be seen as gold mines. The biggest problems have the biggest opportunities.
 * When the majority of people doubt you, you are either gravely wrong, or about to make history.
 * The best way to become a billionaire is to help a billion people
@@ -443,7 +437,7 @@ Peters Laws :
 
 ## Wise
 
-###Jocko Willink (Navy Special Operations Expert)
+### Jocko Willink (Navy Special Operations Expert)
 
 * Discipline equals freedom
 * Have a backup. 
@@ -469,7 +463,6 @@ Peters Laws :
 
 * For conflict resolution, Say less.
 * Treat everyone with the kindness you would treat a lover.
-
 
 -------------
 
