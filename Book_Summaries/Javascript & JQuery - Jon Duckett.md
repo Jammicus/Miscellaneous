@@ -169,21 +169,25 @@ object.method(parameters)
 
 ### Declaring a Function
 
-``` function addTwoNumbers(numberOne,numberTwo){
+``` 
+function addTwoNumbers(numberOne,numberTwo){
 return x+y
-}```
+}
+```
 
 * The name of the function is `` addTwoNumbers`` 
 * The parameters are   `` numberOne,numberTwo``
 * The function when run will give back the value of `` x+y``
-* to call the function, you will say ``addTwoNumbers(10,5)``
+* to call the function, you will say `` addTwoNumbers(10,5) ``
 * You can pass variables to a  function, `` addTwoNumbers(aNumber,anotherNumber)``
 
 ### Getting A Single Value Out Of a Function
 
 *  You do this by assigning the value to a variable
 
-``` var sumOfThreeAndFive = sum(3,5) ```
+```
+var sumOfThreeAndFive = sum(3,5) 
+```
 
 ### Getting Multiple Values Out Of a Function
 * Done by using an array
