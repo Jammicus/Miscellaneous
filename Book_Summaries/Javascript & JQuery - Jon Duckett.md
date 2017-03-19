@@ -713,5 +713,295 @@ i++
 * similar to the while, but the while is declared after the do statement.
 
 -----
+## Document Object Model
+
+-------
+### What is the DOM?
+
+* The DOM specifies how browsers should create a model of an HTML page, and how JavaScript can access and update the contents of a webpage while it is in the browser window.
+* The DOM is represented as a tree.
+* Parts of the webpage are represented as elements. Elements can have attributes and text values.
+
+-------------
+### Working with the DOM
+
+Accessing and updating the DOM tree involves two steps:
+
+1. Locate the node that represents the elements you want to work with
+2. Use its text content, child elements and attributes.
+
+#### Ways Of Accessing the elements
+
+1. To select an individual element, use 
+	* getElementById(elements ID attribute)
+	* querySelector(css selector)
+
+2. To select multiple elements
+	* getElementByClassName(class name)
+	* getElementsByTagName(tagname)
+	* querySelectorAll (Css selector)
+	
+3. Traversing between element nodes
+	* parentNode
+	* previousSibling/ nextSibling
+	* firstChild/ lastChild
+	
+#### Working with those elements
+
+* Access/update text of elements
+	1.Select the `<li>` element
+	2.use firstChild property to get the text node
+	3.use the txt nodes only property (nodeValue) to get the text from the elmeent
+	
+* Working with HTML Conent
+	1. innterHTML allows you to access child and text conent
+	2. to just work the text conent, use textConent
+	3. There are many methods that allow you to add/remove nodes, see DOM maniuplation
+	
+* Access or update attribute vaues
+	1.Can use the following:
+		* hasAttribute()
+		* getAttribute()
+		* setAttribute()
+		* remoteAttribute()
+		
+
+--------
+#### Caching Dom Queries
+
+Methods that find elements in the DOM are called DOM queries.
+If you need to work with an element more than once, you should assign it to a variable
+
+` var elementOne = document.getElementById('one); `
+
+---------
+
+#### Accessing Elements
+
+When a DOM query returns more than on element, it will returned in a NodeList form.
+This is a collected of nodes.
+
+* Methods that return  a single element node:
+	* getElementById('id');
+	* querySelector('css selector')
+* Methos that reutrn one or more elements as a node list
+	* getElementByClassName('class')
+	* getElementByTagName('tagName')
+	* querySelectorAll('css selector')
+
+-------
+
+#### Selecting Elements Using ID Attributes
+
+```
+/// Select the element and store it
+var el = document.getElementById('one);
+/// Change the value of the class attribute
+el.className = 'cool';
+```
+-----
+
+#### Nodelists 
+
+* NodeLists are treated as arrays
+* Key difference is they are not actually arrays, they are a type of object called collection.
+* You use ` item(index)` to return a specific node form the list, or the traditional array[x] syntax
+
+------
+
+#### Live and Static Nodelists
+
+* A live NodeList occurs when your script updates the page, the NodeList is updated as well. 
+* A static NodeList occurs when the script updates your page, the NodeList is not updated as well.
+* This occurs depending on what methods you use to get the elements.
+
+-------
+
+#### Selecting Elements Using Class Attributes
+
+* use ` getElementsByClassName() `
+
+---------
+#### Selecting elements by tag name
+
+* use ` getElementsByTagName() `
+
+-------
+
+#### Selecting Elements Using CSS Selectors
+
+* `querySelector(selector) ` returns the first match
+* ` querySelectorAll(selector)` returns all elements
+
+------
+
+#### Repeating Actions For An Entire Nodelist
+
+*  Use for loops
+
+```
+var hotItems = document.querySelectorAll('li.hot');
+for (var i = 0; i < hotItems.length; i++){
+hotItems[i].className = 'cool';
+}
+```
+
+-----
+
+#### Traversing The DOM
+
+Given you have an element node, you can select another element in relationship to it. This is known as traversing the DOM
+
+You can do this with:
+
+* parentNode
+* previousSibling
+* nextSibling
+* firstChild
+* lastChild
+
+------
+
+#### Whitespace Nodes
+
+Some browsers add a text node whenever they come accross white spaces between elements. This can cause issues when traversing the DOM
+
+You can strip all the whitespace out of a page. THis will make the page smaller and faster to load, but may make the code harder to read
+
+Another way to deal  with this is to avoid using these DOM properties altogether. 
+
+JQuery for example is a solution for this.
+
+------
+
+#### Previous & Next Siblings
+
+If there is a element that has siblings from the same parent, you can use `element.previousSibling` and ` element.nextSibling` to access these elements
+
+----
+
+#### First and Last Child
+
+If there is a element that has siblings from the same parent, you can use ` element.firstChild` and `element.lastChild` to get these. 
+
+For example, if we have 4 `li` elements, this would not be suitable to get the third `li` element.
+
+-------
+
+#### How To Get/Update Element Conent
+
+* Navigage to the text node
+	* This works best when the element contains only text.
+* Work with the containing element
+	* Allows you to access its text nodes and child elements. 
+* You will often be working with the property ` nodeValue` 
+
+---------
+#### Acessing & Updating a text node with nodevalue
+
+
+` document.getElementById('one').firstChild.nextSibling.nodeValue; 
+`
+
+* In order to use nodeValue, you must be on a text node, not the element that contains the text.
+
+---------------
+
+#### Accessing and Changing a text Node
+
+* You need to access the element node, then its text node.
+
+* The text node will have a property called nodeValue which will return the text in the node.
+
+* Can also use nodeValue property to update the text
+
+```
+
+//Get second list item
+var itemTwo = document.getElementById('two');
+
+//get its text content
+var elText = itemTwo.firstChild.nodeValue;
+
+//Change pine nuts to kale
+elText = elText.replace('pine nuts', 'kale');
+
+//Update the list item
+itemTwo.firstChild.nodeValue = elText;
+
+```
+
+-----
+
+#### Adding or Removing HTML Content
+
+Two possible ways:
+
+1. using the InnerHTML property of a node. (This is not advised)
+2. DOM manipulation
+
+#### Adding/Removing with HTML Conent.
+
+This should not be used due to security risks.
+
+Approach:
+
+1. Store the new content as a string variable, including the markup (To remove, make the string empty.)
+2. Select the element whose content you want to replace
+3. Set the elements innerHTML property to be the new String.
+
+#### Adding/Removing with DOM Manipulation Methods
+
+Approach:
+
+1. Use a DOM method and store it in a variable
+2. Use another DOM method to attach it /remove it from the DOM tree
+
+Full Steps:
+
+1. use createElement and store in a variable
+2. Use createTextNode() and store in a vairable
+3. Use appendChild() to add it to the tree. AppendChild allows you to specify which element you want this to node added to, as a child of that node.
+
+------
+
+#### Adding An Element To The DOM Tree
+
+```
+var newEl = document.createElement('li');
+
+var newText = document.createTextNode ('bob');
+
+// Attach the new text node to the new element
+newEl.appendChild(newText);
+
+//Find the position where the new element should be added.
+var position = document.getElementByTagName('ul')[0];
+
+//Insert the new element into its position
+position.appendChild(newEl);
+```
+-------
+
+#### Removing An Element From the DOM Tree
+
+1.  Store the element to be removed in a variable
+2. Store the parent of the that element in a variable
+3. Remove the element from its containing element.
+
+
+```
+//Element to remove
+var removeEl = document.getElementsByTagName('li')[3];
+
+//Its containing element
+var containerEl = removeEl.parentNOde;
+
+//Removing the element
+//containerEl= removeEl.parentNode;
+
+```
+
+
 
 
