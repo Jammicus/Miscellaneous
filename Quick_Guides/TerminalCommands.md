@@ -19,7 +19,7 @@ Compiled from https://ss64.com/osx/
 | apropos  | Search the whatis database for strings  |   |
 | asr   | Apple Software Restore  |   |
 | atsutil | Font registation system utility | |
-| awk | FInd and Replace text within files | |
+| awk | Find and Replace text within files | |
 
 
 ### B
@@ -42,7 +42,7 @@ Compiled from https://ss64.com/osx/
 | caffeinate  | Stops the system sleeping  |   |
 | cal  | Displays a calendar  |   |
 | calendar  | Sets reminders  |   |
-|  caller  | returns what a subroutine is doing  |   |
+|  caller  | Returns what a subroutine is doing  |   |
 | cancel  | Stops print jobs   |   |
 | case  |  Perform a command given a specific condition  |   |
 | cat  | Concatenate and display conent of files  |   |
@@ -52,7 +52,7 @@ Compiled from https://ss64.com/osx/
 | chown   | Change the files owner  |   |
 | chroot  | Run commands from a different root  |   |
 | cksum  | Show checksum and byte counts  |   |
-| Clear  | reset the terminal window  |   |
+| Clear  | Reset the terminal window  |   |
 | cmp  | Compare two files  |   |
 | comm  | Compare two files line by line  |   |
 | command   | Run a command  |   |
@@ -61,7 +61,7 @@ Compiled from https://ss64.com/osx/
 | cp  | Copy x files to speicifc location  |   |
 | cron  | Daemon that executes scheduled commands  |   |
 | crontab  |  Run a command at a certain date/time |   |
-| csplit  | split a file based on context  |   |
+| csplit  | Split a file based on context  |   |
 |  csrutil | Set system integrity protection  |   |
 | curl| Transfer data to/from a server| |
 | cut | Divide a file into chunks | |
@@ -72,7 +72,7 @@ Compiled from https://ss64.com/osx/
 | date   | Change date/time   |   |
 | dc  | Desk Calculator  |   |
 | dd  | Convert and copy files  |   |
-| declare   | define variables  |   |
+| declare   | Define variables  |   |
 | defaults  | Set preferences, show hidden files  |   |
 | diff   | Display differences between 2 files  |   |
 |diff3   | Same as above, with 3 files   |   |
@@ -82,9 +82,9 @@ Compiled from https://ss64.com/osx/
 | diskutil  | Disk utilities  |   |
 | disown   | Removes job from login   |   |
 | ditto  | Copies files and folders  |   |
-| dot_clean  |  removes dot underscore files  |   |
+| dot_clean  |  Removes dot underscore files  |   |
 | drutil  | CD/DVD burners  |   |
-|dscacheutil   | flushes DNS cache  |   |
+|dscacheutil   | Fushes DNS cache  |   |
 | dseditgroup  | Controls for groups  |   |
 | dsenableroot  | Enables root access  |   |
 | dsmemberutil  | Displays user & group rights  |   |
@@ -115,7 +115,7 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-| false  | DO nothing  |   |
+| false  | Do nothing  |   |
 | fc  | Fix command  |   |
 |  fdisk | Disk partition manipulator  |   |
 | fdestup  | FileVault configuration  |   |
@@ -124,12 +124,12 @@ Compiled from https://ss64.com/osx/
 | find  | Search for files   |   |
 | fmt | Format a pagagraph  |   |
 | fold  | Wrap text to specific width  |   |
-| For  | for loops  |   |
+| For  | For loops  |   |
 |  fsck | Filesystem check and repair  |   |
 | fsaclctl  | Filesystem enabled/disable support  |   |
 |  fs_usage | Filesystem useage  |   |
 | ftp  | File transfer  program  |   |
-| function  | define function macro  |   |
+| function  | Define function macro  |   |
 | fuser  | List processes that have >=1 files open  |   |
 
 ### G
@@ -137,9 +137,9 @@ Compiled from https://ss64.com/osx/
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
 | GetFileInfo  | Returns attributes of HFS files  |   |
-|  goto | jump to label and continue  |   |
-| grep  | search files based on regex  |   |
-|  groups |  print group names a given user is  a part of  |   |
+|  goto | Jump to label and continue  |   |
+| grep  | Search files based on regex  |   |
+|  groups |  Print group names a given user is  a part of  |   |
 | gzip   | Compession/decompression  |   |
 
 ### H
@@ -147,19 +147,19 @@ Compiled from https://ss64.com/osx/
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
 | halt  |  Stop + restart OS |   |
-| hash  | refresh remembered location of commands   |   |
+| hash  | Refresh remembered location of commands   |   |
 |  head | Display first lines of a file  |   |
-| hdiutil  | disk image manipulation  |   |
-| history  | command history |   |
-| hostname  |  print/set system name |   |
+| hdiutil  | Disk image manipulation  |   |
+| history  | Command history |   |
+| hostname  |  Print/set system name |   |
 
 ### I
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
 | iconv   | Convert character set of a file  |   |
-| id  | print user and group ids  |   |
-| if  |  if statements |   |
+| id  | Print user and group ids  |   |
+| if  |  If statements |   |
 | if config  | Configure network interface parameters  |   |
 | iostat  | Report CUP & I/O stats  |   |
 | ipconfig  | View/Control IP configuration  |   |
@@ -172,7 +172,7 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-| jobs  | list active jobs  |   |
+| jobs  | List active jobs  |   |
 | join  | Join lines based on common field  |   |
 
 
@@ -190,11 +190,11 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-| l  |  list files in long format | ls -l  |
+| l  |  List files in long format | ls -l  |
 |  last | Indicate login history of users  |   |
 | launchctl  | Load/unload daemons  |   |
 |  ll |  List files, even invisible files | ls -la  |
-|  less | display one screens output at a time  |   |
+|  less | Display one screens output at a time  |   |
 | let  | Evaluate expressions  |   |
 | lipo  | Convert binary  |   |
 | ln  | Make links between files  |   |
@@ -202,16 +202,16 @@ Compiled from https://ss64.com/osx/
 | locate  |  Find a file |   |
 | logname  | Print current login name   |   |
 |  login |  Login to computer |   |
-| logout  | exit login shell  |   |]|   |   |   |
+| logout  | Exit login shell  |   |]|   |   |   |
 |  look |  DIsplay lines that start with specific string |   |
-|  lp |  print files |   |
-| lpr  |  print files |   |
+|  lp |  Print files |   |
+| lpr  |  Print files |   |
 | lprm  | Remove jobs from the print queue  |   |
 | lpstat  | Printer status information  |   |
-| ls  |  list file information |   |
-| lsregister  |  reset launch services database |   |
+| ls  |  List file information |   |
+| lsregister  | Reset launch services database |   |
 | lsbom  |  List bill of materrials flles |   |
-| lsof  | list open files  |   |
+| lsof  | List open files  |   |
 
 ### M
 
@@ -222,7 +222,7 @@ Compiled from https://ss64.com/osx/
 | mdutil  |  Manage spotlight metadata store |   |
 | mkdir  | Create folder  |   |
 |  mkfifo | Make FIFOs  |   |
-| more  |  display output one screen at a time |   |
+| more  |  Display output one screen at a time |   |
 |  mount | Mount file system  |   |
 |  mv | Move or rename files or directories  |   |
 
@@ -230,12 +230,12 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|  nano | text editor  |   |
+|  nano | Text editor  |   |
 | nc/netcat  | Read/write data across networks  |   |
-| net  |  network resources |   |
+| net  |  Network resources |   |
 | netstat  |  Show network status |   |
 |  networksetup | Network preferences  |   |
-|  nice | priority of commands  |   |
+|  nice | Priority of commands  |   |
 | nohup  | Run command immune to hangups  |   |
 | ntfs.util  |  NTFS file system utility |   |
 
@@ -253,10 +253,10 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|  passwd | change user password  |   |
+|  passwd | Change user password  |   |
 | paste  | Merge lines of files  |   |
-| pbcopy  | copy data to clipboard  |   |
-| pbpaste  | paste data from clipboard  |   |
+| pbcopy  | Copy data to clipboard  |   |
+| pbpaste  | Paste data from clipboard  |   |
 | pgrep  | List processes by name  |   |
 |  ping |  Test network connection |   |
 | pkill  | Kill processes by name  |   |
@@ -286,11 +286,11 @@ Compiled from https://ss64.com/osx/
 | rcp  | Copy files between machines  |   |
 | read  | Read one line from standard input  |   |
 |  readonly |  Set variable to read only |   |
-|  reboot |  stop & restart system |   |
+|  reboot |  Stop & restart system |   |
 |  return | Exit function  |   |
 | rev  |  Reverse lines of a file |   |
-|  rm | remove files  |   |
-|  rmdir |  remove folders |   |
+|  rm | Remove files  |   |
+|  rmdir |  Remove folders |   |
 | rpm  | Remove package manager  |   |
 | rsync  | Remote file copy  |   |
 
@@ -314,7 +314,7 @@ Compiled from https://ss64.com/osx/
 |  shasum |  Print/check SHA checksums |   |
 |  shift |  Shift positional parameters |   |
 |  shopt | Set shell options  |   |
-|  shutdown | showdown/restart computer  |   |
+|  shutdown | Showdown/restart computer  |   |
 |  sips | Scriptable image processing system  |   |
 | sleep  | Delay for a specified time  |   |
 | softwareupdate  | System software update  |   |
@@ -331,7 +331,7 @@ Compiled from https://ss64.com/osx/
 |  suspend | Suspend execution of current shell  |   |
 | sw_vers  | Print operating system version  |   |
 |  system_profiler | Report system configuration  |   |
-| systemsetup  | COmputer and display system settings  |   |
+| systemsetup  | Computer and display system settings  |   |
 
 ### T
 
@@ -350,30 +350,30 @@ Compiled from https://ss64.com/osx/
 |  top | Display process information  |   |
 | touch  | Change file timestamps  |   |
 |  tput | Set terminal-dependent capabilities  |   |
-|  tr |  character manipulation |   |
+|  tr |  Character manipulation |   |
 | trap  | Run command when shell signal is received  |   |
 | tranceroute  |Trace route to host  |   |
 | true  | Boolean  |   |
 | tty  | Print terminal name  |   |
-|type| desribe command | |
+|type| Desribe command | |
 
 ### U
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
 | ufs.util  | Mount/unmount UFS file system  |   |
-| ulimit  | limit the use of system-wide resources  |   |
+| ulimit  | Limit the use of system-wide resources  |   |
 | unmask  | User file creation mask  |   |
 | umount  | Unmount device  |   |
 | unalias  |  Remove alias |   |
-| uname  | print system info  |   |
+| uname  | Print system info  |   |
 |  unexpand |  Convert spaces to tabs |   |
 |  uniq |  Uniquify files |   |
 |  units | Convert units from one type to another  |   |
 | unset  | Remove vairable/function name  |   |
 | until  |Loop command   |   |
 | uptime  | Show how long system has been running  |   |
-| users  |Print logged in user names   |   |
+| users  | Print logged in user names   |   |
 | uuencode | Encode binary file  |   |
 | uudecode  | Decode a file created by uuencode  |   |
 | uuidgen  | Generate unique ID  |   |
@@ -412,7 +412,7 @@ Compiled from https://ss64.com/osx/
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|  Yes |  PRint string until interrupted |   |
+|  Yes |  Print string until interrupted |   |
 
 ### Z
 
