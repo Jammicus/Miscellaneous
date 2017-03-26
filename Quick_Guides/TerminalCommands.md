@@ -77,296 +77,352 @@ Compiled from https://ss64.com/osx/
 | diff   | Display differences between 2 files  |   |
 |diff3   | Same as above, with 3 files   |   |
 |  dig | DNS lookup   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  dirname | Converts pathname to path  |   |
+| dirs  | Shows list of remembered directories  |   |
+| diskutil  | Disk utilities  |   |
+| disown   | Removes job from login   |   |
+| ditto  | Copies files and folders  |   |
+| dot_clean  |  removes dot underscore files  |   |
+| drutil  | CD/DVD burners  |   |
+|dscacheutil   | flushes DNS cache  |   |
+| dseditgroup  | Controls for groups  |   |
+| dsenableroot  | Enables root access  |   |
+| dsmemberutil  | Displays user & group rights  |   |
+| dscl  | Directory Service  |   |
+| du  | Estimates file space usage  |   |
+
+
+
+
 ### E
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| echo   |  Shows text on screen  |   |
+| ed  | Text editor  |   |
+| Enable  | Enable/disable shell comands  |   |
+| env  | Set/show enviroment variables  |   |
+| eval  | Evalutate commands  |   |
+| exec  |  Do a command |   |
+| exit  | Close shell  |   |
+| execsnoop  | Snoop process execution  |   |
+| expand  | Convert tabs to spaces  |   |
+| export  |  Set environment varibales |   |
+| expr | Evaluate expressions  |   |
+
 
 ### F
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| false  | DO nothing  |   |
+| fc  | Fix command  |   |
+|  fdisk | Disk partition manipulator  |   |
+| fdestup  | FileVault configuration  |   |
+| fg  | Send job the foreground  |   |
+| file  | Determine file type   |   |
+| find  | Search for files   |   |
+| fmt | Format a pagagraph  |   |
+| fold  | Wrap text to specific width  |   |
+| For  | for loops  |   |
+|  fsck | Filesystem check and repair  |   |
+| fsaclctl  | Filesystem enabled/disable support  |   |
+|  fs_usage | Filesystem useage  |   |
+| ftp  | File transfer  program  |   |
+| function  | define function macro  |   |
+| fuser  | List processes that have >=1 files open  |   |
 
 ### G
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| GetFileInfo  | Returns attributes of HFS files  |   |
+|  goto | jump to label and continue  |   |
+| grep  | search files based on regex  |   |
+|  groups |  print group names a given user is  a part of  |   |
+| gzip   | Compession/decompression  |   |
 
 ### H
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| halt  |  Stop + restart OS |   |
+| hash  | refresh remembered location of commands   |   |
+|  head | Display first lines of a file  |   |
+| hdiutil  | disk image manipulation  |   |
+| history  | command history |   |
+| hostname  |  print/set system name |   |
 
 ### I
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| iconv   | Convert character set of a file  |   |
+| id  | print user and group ids  |   |
+| if  |  if statements |   |
+| if config  | Configure network interface parameters  |   |
+| iostat  | Report CUP & I/O stats  |   |
+| ipconfig  | View/Control IP configuration  |   |
+| info  | Help info   |   |
+|  install | Copy files & set attributes   |   |
+|  iosnoop | Snoop I/O events   |   |
+
 
 ### J
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| jobs  | list active jobs  |   |
+| join  | Join lines based on common field  |   |
+
 
 ### K
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  kextfind | List kernel extensions  |   |
+| kextstat   | Diplay status of kernal extensions  |   |
+| kextunload  | Stop driver instances  |   |
+|  kill | Stop processes by its PID  |   |
+|  killall | Stop processes by name  |   |
 
 ### L
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| l  |  list files in long format | ls -l  |
+|  last | Indicate login history of users  |   |
+| launchctl  | Load/unload daemons  |   |
+|  ll |  List files, even invisible files | ls -la  |
+|  less | display one screens output at a time  |   |
+| let  | Evaluate expressions  |   |
+| lipo  | Convert binary  |   |
+| ln  | Make links between files  |   |
+| local  |  Set local variable |   |
+| locate  |  Find a file |   |
+| logname  | Print current login name   |   |
+|  login |  Login to computer |   |
+| logout  | exit login shell  |   |]|   |   |   |
+|  look |  DIsplay lines that start with specific string |   |
+|  lp |  print files |   |
+| lpr  |  print files |   |
+| lprm  | Remove jobs from the print queue  |   |
+| lpstat  | Printer status information  |   |
+| ls  |  list file information |   |
+| lsregister  |  reset launch services database |   |
+| lsbom  |  List bill of materrials flles |   |
+| lsof  | list open files  |   |
 
 ### M
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| man  |  Help manual |   |
+| mdfind  | Spotlight search  |   |
+| mdutil  |  Manage spotlight metadata store |   |
+| mkdir  | Create folder  |   |
+|  mkfifo | Make FIFOs  |   |
+| more  |  display output one screen at a time |   |
+|  mount | Mount file system  |   |
+|  mv | Move or rename files or directories  |   |
 
 ### N
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  nano | text editor  |   |
+| nc/netcat  | Read/write data across networks  |   |
+| net  |  network resources |   |
+| netstat  |  Show network status |   |
+|  networksetup | Network preferences  |   |
+|  nice | priority of commands  |   |
+| nohup  | Run command immune to hangups  |   |
+| ntfs.util  |  NTFS file system utility |   |
 
 ### O
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| onintr  | Control schell interrupts  |   |
+| open  |Open a file/folder/URL/application   |   |
+| opensnoop  | Snoop file opens  |   |
+|  osacompile | Compile Applescript  |   |
+|  osascript | Execute Applescript  |   |
 
 ### P
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  passwd | change user password  |   |
+| paste  | Merge lines of files  |   |
+| pbcopy  | copy data to clipboard  |   |
+| pbpaste  | paste data from clipboard  |   |
+| pgrep  | List processes by name  |   |
+|  ping |  Test network connection |   |
+| pkill  | Kill processes by name  |   |
+|  pkgutil | Query/manipulate packages  |   |
+|  plutil | Property list utility  |   |
+|  pmset | Power Management settings  |   |
+| popd  | Restore previous value of the current directory  |   |
+| pr  | Convert text files for printing  |   |
+| printenv  | List environment variables  |   |
+| printf  | Format and print data  |   |
+| ps  | Process status  |   |
+|  pushd |  Save then change directory |   |
+|  pwd | Print working directory  |   |
+
+
 
 ### Q
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| quote  | Display disk usage and limits  |   |
 
 ### R
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| rcp  | Copy files between machines  |   |
+| read  | Read one line from standard input  |   |
+|  readonly |  Set variable to read only |   |
+|  reboot |  stop & restart system |   |
+|  return | Exit function  |   |
+| rev  |  Reverse lines of a file |   |
+|  rm | remove files  |   |
+|  rmdir |  remove folders |   |
+| rpm  | Remove package manager  |   |
+| rsync  | Remote file copy  |   |
 
 ### S
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  Say | Text to speech  |   |
+| Screen  | Multiple terminal screens  |   |
+|  screncapture | Capture screen image to file/disk  |   |
+|  scselect | Switch between network locations  |   |
+|  scutil | Manage system configuration parameters  |   |
+|  sdiff | Merge two files interactively  |   |
+| security  | Administer keychains/keys  |   |
+|  sed | Stream editor  |   |
+| select  | Generate list of items  |   |
+|  serverinfo |  Server information |   |
+|  set | Set a shall variable and value  |   |
+|  setfile | Set attributes of HTF files  |   |
+|  Sharing | Create share points for afp,ftp,smb  |   |
+|  shasum |  Print/check SHA checksums |   |
+|  shift |  Shift positional parameters |   |
+|  shopt | Set shell options  |   |
+|  shutdown | showdown/restart computer  |   |
+|  sips | Scriptable image processing system  |   |
+| sleep  | Delay for a specified time  |   |
+| softwareupdate  | System software update  |   |
+|  sort | Sort text files  |   |
+|  source | Exeute commands from file  |   |
+|  spctl | Security assement policy  |   |
+|  split | Split a file into pieces   |   |
+| srm  | Remove files/directories securely  |   |
+| stat  | Display files status  |   |
+|  stop | Stop a job or process  |   |
+|  su | Substitute user identity  |   |
+| sudo  | Execute a command as another user  |   |
+| sum  | Print files checksum  |   |
+|  suspend | Suspend execution of current shell  |   |
+| sw_vers  | Print operating system version  |   |
+|  system_profiler | Report system configuration  |   |
+| systemsetup  | COmputer and display system settings  |   |
 
 ### T
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| tail  | Output last part of a file  |   |
+|  tar | Tape archiever  |   |
+| tccutil  | Manage databases privacy  |   |
+| tcpdump  | Dump network traffic  |   |
+| tee  | Direct output to multiple files  |   |
+|  test | Conditional validation  |   |
+| textutil  | File manipulation  |   |
+|  time |  Show program resource usage |   |
+| times  |  Print shell & shell process times |   |
+| tmutil  | Time machine utility  |   |
+|  top | Display process information  |   |
+| touch  | Change file timestamps  |   |
+|  tput | Set terminal-dependent capabilities  |   |
+|  tr |  character manipulation |   |
+| trap  | Run command when shell signal is received  |   |
+| tranceroute  |Trace route to host  |   |
+| true  | Boolean  |   |
+| tty  | Print terminal name  |   |
+|type| desribe command | |
 
 ### U
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| ufs.util  | Mount/unmount UFS file system  |   |
+| ulimit  | limit the use of system-wide resources  |   |
+| unmask  | User file creation mask  |   |
+| umount  | Unmount device  |   |
+| unalias  |  Remove alias |   |
+| uname  | print system info  |   |
+|  unexpand |  Convert spaces to tabs |   |
+|  uniq |  Uniquify files |   |
+|  units | Convert units from one type to another  |   |
+| unset  | Remove vairable/function name  |   |
+| until  |Loop command   |   |
+| uptime  | Show how long system has been running  |   |
+| users  |Print logged in user names   |   |
+| uuencode | Encode binary file  |   |
+| uudecode  | Decode a file created by uuencode  |   |
+| uuidgen  | Generate unique ID  |   |
+| uucp  | Unix to unix copy  |   |
 
 ### V
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| vi  | Text editor  |   |
 
 ### W
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  wait | Wait for processes to complete  |   |
+| wall  | Write messages to users  |   |
+|  wc | Print byte,word,line counts  |   |
+|  whatis | Search whatis database for words  |   |
+|  whereis | Locate program  |   |
+| which  | Locate a program file in users path  |   |
+| while  |Loop command   |   |
+| who  | Print all usernames currently logged in  |   |
+| whoami  | Print the current user id and name  |  id -un |
+|  write | Send message to another user  |   |
 
 ### X
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| xargs  | Execute utility - passing arguments  |   |
+| xattr  | Display and manipulate extended attributes  |   |
 |   |   |   |
 
 ### Y
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  Yes |  PRint string until interrupted |   |
 
 ### Z
 
 | Command | Description  | Example  |
 | ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+|  zip |  Compress files |   |
+
+### MISC
+
+| Command | Description  | Example  |
+| ------------ | ------------ | ------------ |
+|  !! |  Repeat last command |   |
+
