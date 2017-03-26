@@ -8,9 +8,9 @@ Compiled from https://ss64.com/osx/
 ### A
 
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
-|  afconvert  | Audio File Convert   |   |
+|  afconvert  | Audio File Convert   |  `afconvert [option...] input_file [output_file]` |
 | afinfo  | Audio FIle Information   |   |
 | afplay   | Audio File Play  |   |
 | airport  | Manage Apple Airport  |   |
@@ -24,7 +24,7 @@ Compiled from https://ss64.com/osx/
 
 ### B
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | basename  | Converts pathname to a filename   |   |
 | bash   | Shell  |   |
@@ -37,7 +37,7 @@ Compiled from https://ss64.com/osx/
 
 ### C
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | caffeinate  | Stops the system sleeping  |   |
 | cal  | Displays a calendar  |   |
@@ -67,7 +67,7 @@ Compiled from https://ss64.com/osx/
 | cut | Divide a file into chunks | |
 ### D
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | date   | Change date/time   |   |
 | dc  | Desk Calculator  |   |
@@ -96,7 +96,7 @@ Compiled from https://ss64.com/osx/
 
 ### E
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | echo   |  Shows text on screen  |   |
 | ed  | Text editor  |   |
@@ -113,7 +113,7 @@ Compiled from https://ss64.com/osx/
 
 ### F
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | false  | Do nothing  |   |
 | fc  | Fix command  |   |
@@ -134,7 +134,7 @@ Compiled from https://ss64.com/osx/
 
 ### G
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | GetFileInfo  | Returns attributes of HFS files  |   |
 |  goto | Jump to label and continue  |   |
@@ -144,7 +144,7 @@ Compiled from https://ss64.com/osx/
 
 ### H
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | halt  |  Stop + restart OS |   |
 | hash  | Refresh remembered location of commands   |   |
@@ -155,7 +155,7 @@ Compiled from https://ss64.com/osx/
 
 ### I
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | iconv   | Convert character set of a file  |   |
 | id  | Print user and group ids  |   |
@@ -170,7 +170,7 @@ Compiled from https://ss64.com/osx/
 
 ### J
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | jobs  | List active jobs  |   |
 | join  | Join lines based on common field  |   |
@@ -178,7 +178,7 @@ Compiled from https://ss64.com/osx/
 
 ### K
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  kextfind | List kernel extensions  |   |
 | kextstat   | Diplay status of kernal extensions  |   |
@@ -188,7 +188,7 @@ Compiled from https://ss64.com/osx/
 
 ### L
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | l  |  List files in long format | ls -l  |
 |  last | Indicate login history of users  |   |
@@ -215,7 +215,7 @@ Compiled from https://ss64.com/osx/
 
 ### M
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | man  |  Help manual |   |
 | mdfind  | Spotlight search  |   |
@@ -241,7 +241,7 @@ Compiled from https://ss64.com/osx/
 
 ### O
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | onintr  | Control schell interrupts  |   |
 | open  |Open a file/folder/URL/application   |   |
@@ -251,7 +251,7 @@ Compiled from https://ss64.com/osx/
 
 ### P
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  passwd | Change user password  |   |
 | paste  | Merge lines of files  |   |
@@ -275,13 +275,13 @@ Compiled from https://ss64.com/osx/
 
 ### Q
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | quote  | Display disk usage and limits  |   |
 
 ### R
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | rcp  | Copy files between machines  |   |
 | read  | Read one line from standard input  |   |
@@ -296,7 +296,7 @@ Compiled from https://ss64.com/osx/
 
 ### S
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  Say | Text to speech  |   |
 | Screen  | Multiple terminal screens  |   |
@@ -335,7 +335,7 @@ Compiled from https://ss64.com/osx/
 
 ### T
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | tail  | Output last part of a file  |   |
 |  tar | Tape archiever  |   |
@@ -359,7 +359,7 @@ Compiled from https://ss64.com/osx/
 
 ### U
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | ufs.util  | Mount/unmount UFS file system  |   |
 | ulimit  | Limit the use of system-wide resources  |   |
@@ -381,13 +381,13 @@ Compiled from https://ss64.com/osx/
 
 ### V
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | vi  | Text editor  |   |
 
 ### W
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  wait | Wait for processes to complete  |   |
 | wall  | Write messages to users  |   |
@@ -402,27 +402,27 @@ Compiled from https://ss64.com/osx/
 
 ### X
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 | xargs  | Execute utility - passing arguments  |   |
 | xattr  | Display and manipulate extended attributes  |   |
-|   |   |   |
+
 
 ### Y
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  Yes |  Print string until interrupted |   |
 
 ### Z
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  zip |  Compress files |   |
 
 ### MISC
 
-| Command | Description  | Example  |
+| Command | Description  | Syntax  |
 | ------------ | ------------ | ------------ |
 |  !! |  Repeat last command |   |
 
