@@ -280,7 +280,7 @@ Being busy is most often used as a guise for avoiding the few critically importa
 4. Everyone of them were passionate about giving back.
 
 ---------------------------
-### Reid Hoffman (The Oracle of SIlicon Valley)
+### Reid Hoffman (The Oracle of Silicon Valley)
 
 * Solve the simplest, easiest and most valuable problem first.
 * Part of doing strategy is to solve the easiest problem.
@@ -503,9 +503,6 @@ Peters Laws :
 ### Good
 
 When dealing with setbacks, say good and mention list the ways that this is a good thing
-
-
-
 
 
 
