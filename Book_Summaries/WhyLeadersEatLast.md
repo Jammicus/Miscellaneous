@@ -161,4 +161,19 @@
 	* Strong feelings after a first date/ job interview is dopamine fueled
 	* Building trust takes time and paitence.
 
-	COntinue from pg 211
+--
+
+## Becoming a leader
+
+* Its commitment to make another person into a leader
+* Confronting threats alone is impossible, you need to make others leaders to help you with this
+
+--
+
+## Shared Struggle
+
+* Its not the work we remember with fondness, but the camarderie, how the group came together to get things done
+* Its about coming together during the hard times, than being there together through the good times.
+* During the hard times, you must help each other through it, rather than going alone
+* Struggles should be defined as success stories on how the team got through it
+* Follows must feel that this hardship is for the best of the common goal
