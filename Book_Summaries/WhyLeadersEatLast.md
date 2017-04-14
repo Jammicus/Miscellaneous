@@ -7,7 +7,7 @@
 * Leaders must prioritize the well-being of their people, and advance the well-being of one another and the organization
 * Leading with empathy will inturn make your followers work harder for you
 
---
+-------
 ## Employees are People Too
 
 * Listen to what others have to say
@@ -18,7 +18,7 @@
 * ` When you have people who trust you, they're going to do a better job for you to earn or keep that trust `
 * Remember above else that they are humans with emotions, care for them deeply
 
---
+---------
 
 ## We See What We Want to See
 
@@ -26,7 +26,7 @@
 * To create this environment it will have to be a series of little things that are implemented over time
 * The first thing you should do is to make it so that your employees feel inspired, safe, fulfilled and grateful when they return from work.
 
---
+---------
  ## The Awesome Responsibility
 
 * While your employees are at work, their safety and happiness are your resposibility, they deserve your love and care
@@ -34,7 +34,7 @@
 * In sickness and in health, take care of them
 * As a leader, it is your sole responsibility to protect your people, and in turn, your people will protect each other and advance the organization together.
 
---
+---------
 
 ## From "Me" to "We"
 
@@ -48,26 +48,26 @@
 * When the circle of safety is working they will feel valued by their colleagues and feel cared for by our superiors. 
 * The ultimate question "How safe do you feel where you work?"
 
----
+----------
 
 ## It's All About the Group
 * Always protect your own, there will be internal disagreements,but when outside attacks come, you rally together
 
---
+---------
 
 ## Generosity and Other Ways to Build Trust
 
 * Helping others gives both of you a shot of oxytocin AND others who witness it
 * Aim to flood the group with oxytocin
 
---
+---------
 
 ## Cortisol
 
 * The greatest problem for a team
 * This should be reduced at all costs
 
---
+---------
 
 
 ## Fire Your Children
@@ -79,7 +79,7 @@
 * When the time is taken to build proper relationships and when leaders choose to put their people before their numbers, when we can actually feel a sense of trust for each other, the oxytocin release in our bodies can reverse many of the negative effects of operating in a high-stress, cortisol-soaked environment.
 * As long as there are human beings brought together for a common cause, leaders can choose to set any kind of culture they want
 
---
+---------
 
 ## Why We Have Leaders
 
@@ -93,13 +93,13 @@
 * Leaders are the pones willing to look out for those to the left of them and the right of them
 * What makes a good leader is that they eschew the spotlight in favor of spending time and energy to do what they need to do to support and protect their people
 
----
+----------
 
 ## The Ceramic Cup
 
 * “This is the most important lesson I can impart to all of you,” he offered. “All the perks, all the benefits and advantages you may get for the rank or position you hold, they aren’t meant for you. They are meant for the role you fill. And when you leave your role, which eventually you will, they will give the ceramic cup to the person who replaces you. Because you only ever deserved a Styrofoam cup”
 
---
+---------
 
 ## Eating Last Is Repaid with Loyalty and Hard Work
 
@@ -107,7 +107,7 @@
 * "It is better that we all suffer a litte, so that none of us has to suffer a lot"
 * The safety of a strong tribe provides its memebers makes the stribe stronger and better equipped to deal with the dangers and uncertainty of the outside world. 
 
----
+----------
 
 ## Know When to Break the Rules
 
@@ -117,23 +117,24 @@
 * Our confidence to do what's right is determined by how trusted we feel by our leaders
 * You must give your followers complete flexibility
 
---
+---------
 
 ## When Leaders Eat First
 
 * Too many of the environments in  which we work today frustrate our natural inclinations to trust and cooperate
 * " No one wakes up  in the morning to go to work with the hope that someone will manage us. We wake up in the morning and go to work with the hope that someone will lead 
 
---
+---------
 ## Abstraction Kills
 
 * There is a lack of leaders who do see their followers as people
 * Care is often only extended to ourselves and our own safety, not our followers
---
+
+---------
 ## Modern Abstraction
 * you must go to all levels of the organisation and make yourself present. Don't take results from the spreadsheets
 
---
+---------
 ## Managing the Abstraction
 
 * Rule 1 -  Keep it real, bring people together
@@ -161,14 +162,14 @@
 	* Strong feelings after a first date/ job interview is dopamine fueled
 	* Building trust takes time and paitence.
 
---
+---------
 
 ## Becoming a leader
 
 * Its commitment to make another person into a leader
 * Confronting threats alone is impossible, you need to make others leaders to help you with this
 
---
+---------
 
 ## Shared Struggle
 
