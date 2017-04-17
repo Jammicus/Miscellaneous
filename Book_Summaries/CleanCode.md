@@ -99,4 +99,79 @@ When using a try-catch block, think if this happens -> this should be done
 
 ### 8. Boundaries
 
+Dont pass objects that are often changed around your code. 
 
+-----------------
+
+### 9. Unit Tests
+
+Your automated tests should cover all of your codes functionality.
+
+You should do this in a TDD approach (Write the test -> Write the minimal amount of code to pass the test)
+
+Test should be fast and independant of each other
+
+------------------
+
+### 10. Classes
+
+Place your constants first, then variables, then methods.
+
+This applies in methods as well (Constants, variables then method body)
+
+Keep utility methods and all variables private.
+
+Classes should be a small as possible, and should have on responibility ( Remember S.O.L.I.D)
+
+Class Cohension = A method that accesses more of the class's variables is more cohesive to the class.  Aim for high cohesion.
+
+----
+
+### 11. Systems.
+
+TO DO
+
+---
+
+### 12. Emergency.
+
+Remember Kent Becks 4 rules for simple design:
+
+1. Runs all test
+2. Contains no duplication
+3. Expresses the programmers intent
+4. Has only the needed classes and methods (Keep things to a minimal)
+
+-----
+
+### 13. Concurrency
+
+Keep mangagement for concurrency seperate from your other code
+
+Limit the access data that your threads will use. Use copies of the data.
+
+Know what will be thread safe/ is not thread safe, blocking/non blocking.
+
+Understand the key concepts of concurrency, deadlocks, mutual exclusion ect...
+
+----
+
+### 14. Successive Refinements
+
+TO DO
+
+----
+
+### 15. JUnit Internals
+
+TO DO
+
+----
+### 16. Refactoring 
+
+TO DO
+---
+
+### 17. Smells and Heuristics
+
+TO DO
