@@ -1006,6 +1006,41 @@ var containerEl = removeEl.parentNOde;
 
 ```
 
+-------
+
+### Comparing Techniques: Updating HTML Content
+
+* document.write()
+	* Adds content that was not in the original source code.
+	* Only works correctly when the page first loads
+	* Generally do not use this.
+* element.innerHTML
+	* allows you to get/update the enter content of a element as a string.
+	* This is faster than DOM manipulation when adding a large amount of elements
+	* Simple way to remove all content from one element(pass it a blank string)
+	* Should not be used to add conent that has come from a user, this is a secruity risk
+	* Event handlers can get broken when doing this.
+* DOM manipulation
+	* Good when a element has many siblings
+	* Does not affect event handlers
+	* Allows a script to add elements incrementally
+	* Slower than innerHTML when doing many changes
+	* Involves writing more code than other methods
+
+----
+
+### Cross-Site Scripting (XSS) Attacks
+
+#### How XSS Happens
+
+* When a user places malicious code into a website	
+	* When a user creates profiles or adds comments
+	* When multiple authors may contribute to articles
+	* When Data comes from a third party
+	* When files and images can be uploaded
+
+#### What can these attacks do? 
+
 
 
 
