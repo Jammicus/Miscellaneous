@@ -1,5 +1,7 @@
 # Dive Into Python 3 
 
+---------------
+
 
 ## Your First Python Program
 
@@ -478,19 +480,143 @@ Example
 	* split()
 	* count()
 	* replace()
+	
 ------
 
-## Regular Expressions TODO
+## Regular Expressions 
+
+* A standardized way of searching, replacing, and parsing test with complex patterns of characters.
+* YOu can even embed comments within regular expressions
+
+### QuickIntro
+
+* `^` Matches the start of a string
+* `$` Matches the end of a string
+* `?` Makes a given pattern optional
+* `|` Is OR
+
+Example
+
+```
+pattern = '^M?M?M(CM|CD|D?C?C?C?)$'
+```
+
+### {N,M} Syntax
+
+* {N,M} Matches all the characters in a range
+
+Example 
+
+`pattern = '^M{0,3}$`
+
+* This matches m0,m1,m2,m3
+
+
+### Sumary
+
+* `^` matches the beginning of a string
+* `$` matches the end of a string
+* `\b` matches a word boundary
+* `\d` matches any numeric digit
+* `\D\` matches any non numeric character
+* `x?` matches an optional x character (in other words, matches x zero or one times)
+* `x*` matches x zero or one times
+* `x+` matches x one or more times
+* `x{n,m}` matches x to the all possible elements between n and m
+* `(a|b|c)` matches a or b or c
+* `(x)` is a remembered group. Can get the value of what matched by using `groups()` method of a object return by `re.search`
+* `[xyz]` is either x or y or z, but only one of them
+* `re.sub()` performs regular expression based string substitutions
+
 -------
 
-## Closures & Generators TODO
+## Closures & Generators 
 
 ### Basics
-s
 
+* Need to use the `re` module
+
+Example:
+
+```
+re.sub('$','es',noun)
+```
+* this adds ES to the end of noun
+
+```
+ re.sub('y$','ies','vacancy')
+```
+* This transforms words ending in y to words ending in ies
+
+* This works by defining a condition to match, then what to do when that condition is patch (Pattern matching)
+
+### A List of Functions
+
+* you have to define all posible rules as functions.
+* You then use the `rules` keyword, with `(conditionToMatch,whatToApply)`
+* YOu then use a if statement to apply it.
+
+
+Example:
+
+```
+import re
+
+def match_sxz(noun):
+	return re.search('[sxz]$,noun)
+	
+def apply_sxz(noun):
+	return re.sub('$','es',noun)
+	
+def match_h(noun):
+	return re.search('[^aeioudgkprt]h$',noun)
+
+def apply_h(noun):
+	return re.sub('$','es',noun)
+	
+rules = ((match_sxz, apply_sxz),
+			(match_h, apply_h))
+
+def plural(noun):
+	for matches_rule, apply_rule in rules:
+	if matches_rule(noun):
+		return apply_rule(noun)
+```
+
+* Each mathc rule has its own function, whcih calls the results of `re.search()`
+* Each apply rule has its own function that calls `re.sub()`
+* the `rules` data structure is used, which is a pair of functions
+* Using a for loop, you pull out the match and applies rules from the `rules` structure.
+* The first iteration matches the first set of match and apply, then the second iteration applies the second match and apply, and so on.
+* The `rules` data structure contains function objects, not names of functions. 
+* `Rules` variable can be seen as a sequence of pairs of functions
+* This terminates as soon as thereis a match (I think)
+
+### A List of Patterns
+
+* You can create a function that creates a new function
+
+Example:
+
+```
+
+import re
+
+def build_match_and_apply_functions(pattern, search, replace) :
+	def matches_rule(word):
+		return re.search(pattern, word)
+	def apply_rule(word):
+		return re.sub(search, replace,word)
+	return (matches, apply_rule)
+```
+
+* Each def in this function is a rule
+* You return the rules 
+* You then pass the relevent parameters and it will apply the rules to each of these parameters
+* 
 ------
 
-## Classes & Iterators
+## Classes & Iterators 
 
 ### Defining Classes
 
@@ -535,6 +661,7 @@ Example
 import fibonacci2
 fib = fibonacci2.Fib(100)
 fib
+
 ```
 
 * the third line creates the instance of the class, with the value of fibonacci2.fib(100)
@@ -544,7 +671,8 @@ fib
 * Variables that are specific to one class
 * Each of these variables can have seperate values for each class instanization
 
-Example
+Example:
+
 ```
 def __next__(self):
 	fib=self.a
@@ -552,9 +680,223 @@ def __next__(self):
 
 ```
 
+
 * max is an instance variable
 
 
 ### Fibonacci Iterator
 
 * Iterators are classes that define `__iter__()` method
+
+Example
+
+```
+class Fib:
+	def __init__(self, max):
+		self.max = max
+	
+	def__iter__(self):
+		self.a = 0
+		self.b = 1
+		return self
+	def__next__(self):
+		fib = self.a
+		if(fib > self.max)
+			raise StopIteration
+		self.a, self.b = self.b, self.a + self.b
+		return fib
+```
+* Building iterations from scratch, you must you a class rather than a function
+* Calling `Fib(max)` creates the instance of the class, which calls `__init__()`
+* `__iter__()` method is called whenever anyone calls `iter(fib)`
+* `__next__()` is called when someone calls next() on the class instance
+* 
+
+
+------
+
+## Advanced Iterators TODO
+
+
+----
+
+## Unit Testing
+
+* Writing unit tests before you write a piece of code is good practice (TDD)
+* Unit tests make sure that you do not over code. Then all test cases pass, a function is complete
+* When refactoring, unit tests help make sure that your function works in the way it was intended
+* Having a good set of tests helps prevent your code from breaking someone elses code
+
+### A single Question
+
+* Each test case should answer a single question about the code it is testing
+* Each test should be able to:
+	* Run by itself, without human input
+	* Determine by itself whether a function it has tested has passed or failed the test, without humans interpreting the results
+	* Run in isolation, separate from other test cases.
+
+Example:
+
+```
+import roman1
+import unittest
+
+class KnownVlaues(unittest.TestCase):
+	known_values = ( (1, 'I'),
+						(2, 'II'),
+						(3, 'III'),
+						(4, 'IV'),
+						(5, 'v'))
+	
+	def test_to_roman_known_values(self):
+		for integer, numeral in self.known_values:
+			result = roman1.to_roman(integer)
+			self.assertEqual(numeral, result)
+			
+	if __name__ == '__main__'
+		unittest.main()
+		
+```
+
+* You must sublcass the `TestCase` class of the `unittest` module
+* Every individual test is its own method. 
+* Test methods take no parameters, and return no values, and must have a name beginning with `test`
+* Running ` unittest.main()` runes each test case.
+
+### Halt
+
+* You tests must also fail when given a bad input instead of a god input.
+* You can assert that an exception is thrown when a bad error is done
+
+
+----------
+
+## Files
+
+### Reading From Text Files
+
+* To open a file, do the following:
+
+` ourFile = open( 'folder/lname.type', encoding='utf-8')
+
+* Python has a build in `open()` function
+* Directories use `/`. This works on all operating systems
+* Directory path does not begin with a slash or a drive letter, so its a relative path
+* The encoding is platform dependant. Becareful waht encoding you use.
+* If you need the default character encoding, import `locale` module and call `locale.getpreferredencoding()`
+
+### Stream Objects
+* `open()` returns a string object, which has its own methods and attributes
+
+Example
+
+```
+ourFile = open(x,encoding='utf-8')
+
+ourFile.name
+
+ourFile.mode
+
+ourFile.encoding
+
+```
+
+
+### Reading Data from A text file
+
+* after opening use `ourFile.read()`, this will get all the text and return a string
+* Empty files will return an empty string
+* `read()` read can take a parameter than defines how many characters should be returned
+* `.tell()` 
+* `.seak(x)` moves you to the x byte of the file
+* You can then read from there, or do other operations (Think of it as a pointer to part of the file)
+
+### Closing Files
+
+* You should close files as soon as you are finished with them, as keeping files open consumes a considerbale amount of memory
+* This is done by `ourFile.close()`
+* `ourFile` object will still exist, but you cannot read from it anymore.
+
+
+### Reading Data One line at a time
+
+* Lines are seperated by enter
+* Line ending are delt with automatically by python
+
+Example:
+
+```
+line_number = 0
+
+with open('folder/file.type', encoding='utf-8') as a_fiie:
+	for a_line in a_file:
+		line_number+= 1
+		printsomethinghere
+		
+```
+
+* with open will automatically close files
+* use for loops to read a line at a time.
+
+
+### Writing To Text Files
+
+* Open and then start writing.
+* You need to pass `mode='w'` into the open() function
+* `append` mode will add data to the end of the file, this is done by pass `mode='a'` to the `open()` function
+* Either of these will create the file automatically if the file does nto exist
+* Remember to close the file as soon as you are done
+* to write into the file, use `ourFile.write('abcdef')`
+
+### Standard Input, Output , and Error
+
+* Have to use the `sys` module
+* Same as java
+* Basic exmaple: `sys.stdoout.write('haha')`
+
+
+----------------------
+## XML (TODO)
+
+### Crash Course
+
+* Used to describe hierarchical structured data
+* XML document contains one or more elements, which have a start and end tags
+
+Example:
+
+```
+<hello>
+
+</hello>
+```
+
+* Can have nested elements
+* Elements can have attributes, which must be `name=values`
+* Elements can aslo have text
+
+Example:
+
+```
+<foo lang='en'>
+Hello world
+</foo>
+
+```
+
+
+-------
+
+## HTTP Web Services (TODO)
+
+---
+
+## Packaging Python Libraries (TODO)
+
+-------
+
+## Porting Code To Python 3 with 2to3 (TODO)
+
+--------
+
+## Special Method Names (TODO)
