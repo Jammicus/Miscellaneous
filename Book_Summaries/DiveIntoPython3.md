@@ -76,10 +76,10 @@ def approximate_size(size, a_kilobyle_is_1024=true):
  
  Example:
  
- ` if size < 0 : 
+ ```
+  if size < 0 : 
  		raise ValueError('This is not big enough')
- 	
-`
+ ```	
 
 * Functions that raise it do not have to handle it.
 * If an exception is not delt with in the function that raised it, it is passed to the function who called it, then the function who called that and so on until it reaches the top of the stack.
@@ -158,12 +158,12 @@ except ImportError:
 
 #### Common Numerical Operations
 
-* /
-* // (rounds down)
-* +
-* -
+* `/`
+* `//` (rounds down)
+* `+`
+* `-`
 * `**` (x power of y)
-* % modulo (Remainder)
+* `%` modulo (Remainder)
 
 #### Fractions
 
