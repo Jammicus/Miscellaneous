@@ -888,10 +888,134 @@ Hello world
 -------
 
 ## HTTP Web Services (TODO)
+* Python 3 comes with two libraries for interacting with HTTP webservices:
+	* `http.client` - Low level libary that implements  RFC 2616
+	* `urllib.request` - Abstraction layer built ontop of `http.client`
+* You should not use either of these, the open source library `httplib2`
+
+### Features of HTTP
+
+* Caching - Minimizing the need to request data from another source
+* Last Modified Checking - When you request data for the first time, the server can send back a `last-modified` header. 
+	* This will tell you when the page was lst modified
+	* When accessing it again, you can send a `if-modified-since` header with the request. If the data has changed, the new data is sent back with a `200 status code`. If it hasnt changed, data is not sent.
+* ETag Checking -  alternative way of doing `if-modified-since`
+* Compression -  Way to reducing the size of the data sent
+	* Can do this using `gzip` or `deflate`
+	* Can ask the server to send the data in a compressed format
+	* Done by using a `Accept-Encoding` header stating what compression algorithms you support.
+	* If the server supports the same compression algorithm, will send the data using that compression algorithm
+* Redirects - If a website changes its URL, it allows you to redirect from the old URL to the new URL
+
 
 ---
 
-## Packaging Python Libraries (TODO)
+## Packaging Python Libraries 
+
+* Python comes with a packaging framework called `Distutils`
+* It integrates with the python Package Index, which is a central repository for open source Python Libraries
+* You need to ensure you have a root directory where everything that your python script will need is in.
+* A readme file should be included.
+
+### Writing Your Setup Script
+
+* The Distutils setup script should do as little as possible.
+* The more exotic your installation process is, the more exotic your bug reports will be.
+* the first line must be `from distutils.core import setup`
+* The `setup()` function must take named arguements for every parameter. This is a hard requirement.
+* The following named arguements are required for `setup()`
+	* name - the name of the package
+	* version - the version number of the package
+	* author - your full name
+	* author_email - your email address
+	* url - home page of your project. (This can be your PyPI package page if you do not have a homepage
+* The following can be including in the setup script, but are not required:
+	* description - one line summary of the project
+	* long_description
+	* classified - a list of specially formatted strings
+
+Example of the stup method:
+
+```
+from distutils.core import setup
+setup(
+	name = 'test project',
+	packages = ['testProject'],
+	version = '1.0.2',
+	description = 'This is our test project'
+	author = 'James'
+	)
+```
+	
+### Classifying Your Package
+
+* Classifiers are used for others to search and find your package
+* These are tags that are used in search engines
+* Classifiers are optional, but you should include at least three classifiers
+* The three classifiers you should include are:
+	* Programming Language. This should include ` Programming Language :: Python ` and ` Programming Language :: Python :: 3`
+	* Licence
+	* Operating System - Does it only run on Windows? Or can it run on multiple platforms
+* The following classifiers are recommended, but not essential:
+	* Development status - Alpha, beta? Complete?
+	* Intended Aucdience -  Desktop users? Science/research, developers?
+	* Framework - Django, zope?
+	* Topic
+
+Example 
+
+```
+Programming Language :: Python
+License :: OSI approved :: BSD License
+Operating System :: OS Independent
+Development Status :: 5 - Production/Stable
+Environment :: Web Environment
+Framework :: Django
+Intended Audience :: Developers
+Topic :: Internet :: WWW/HTTP
+Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Topic :: Internet :: WWW/HTTP :: WSGI
+Topic :: Software Development :: Libraries :: Python Modules
+```
+
+
+### Specifying Additional Files With a Manifest
+
+* Distutils by default will include the following in your release package:
+	* README.text
+	* setup.py
+	* .py files needed by the multi-file modules listed in the packages parameter
+	* Individual .py files listed in the py_modules parameter
+* The default manifest file is called  `MANIFEST.in` 
+* The commands in a manifest file allows you to include or exclude specific files and directories.
+* You should only include a manifest file if you do not want to include all files in your directory
+
+### Cheking Your Setup Script For Errors
+* In the command line, the following will check that your script is okay:
+
+``` 
+YourPackage.exe check running check
+```
+
+### Creating A Source Distribution
+
+* By minimum, you should build a source disribution that contains your source code, your Distutils setup script, your readMe file, and needed additonal files
+* TO do this, pass `sdist` command to your setup script
+
+Example:
+
+```
+yourPackage.exe setup.py sdist
+```
+### Creating A Graphic Installer
+
+* To upload software to the Python Package Index requires you to do the following:
+	* Register yourself
+	* Register your software
+	* Upload the packages you created with `setup.py sdist` and ` setup.py bdist_*`
+
+
+
 
 -------
 
