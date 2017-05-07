@@ -654,6 +654,7 @@ class Fib:
 ### Instantiating Classes
 
 * You call the class as if it was a function, while passing the arguments that `__init__()` requires.
+* Syntax for this is ` variable = importName.ClassName(parametersForInitMethod)`
 
 Example
 
@@ -670,18 +671,20 @@ fib
 
 * Variables that are specific to one class
 * Each of these variables can have seperate values for each class instanization
+* `max` in the below example is an instance variable
 
 Example:
 
 ```
+def __init__(self, max):
+	self.max = max
+
 def __next__(self):
 	fib=self.a
 	if fib> self.max:
 
 ```
 
-
-* max is an instance variable
 
 
 ### Fibonacci Iterator
