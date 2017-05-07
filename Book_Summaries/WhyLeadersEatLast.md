@@ -1,6 +1,7 @@
 # Why Leaders Eat Last -  Simon Sinek
 ---
 [Amazon Link] (https://www.amazon.co.uk/Leaders-Eat-Last-Together-Others-ebook/dp/B00HFIBQ3A/ref=sr_1_2?s=books&ie=UTF8&qid=1494148455&sr=1-2&keywords=why+leaders+eat+last)
+
 ----
 ## The Value of Empathy
 

@@ -1,6 +1,11 @@
 # Clean Code Summary  (Robert C. Martin)
 
 -------------------------------------------
+
+[Amazon Link](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&qid=1494149847&sr=8-1&keywords=Clean+code)
+
+-----
+
 ## 1. Clean Code
 
 Bad code will bring down a project. Broken window theorem claims that when someone sees bad code in a project, they will undervalue the project and also contirbute bad code. 
