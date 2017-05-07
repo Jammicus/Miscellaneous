@@ -1,6 +1,9 @@
 # Regular Expressions CookBook
 
 ---------
+[Amazon Link](https://www.amazon.co.uk/Regular-Expressions-Cookbook-Jan-Goyvaerts-ebook/dp/B008Y4OP1O/ref=sr_1_1?ie=UTF8&qid=1494148633&sr=8-1&keywords=regular+expressions+cookbook)
+
+-----
 
 ## Regular Expressions Defined
 

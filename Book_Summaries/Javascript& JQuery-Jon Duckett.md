@@ -1,6 +1,11 @@
 # Javascript & JQuery - Jon Duckett
 
 --------
+
+[Amazon Link](https://www.amazon.co.uk/d/Books/JavaScript-JQuery-Interactive-Front-end-Web-Development/1118531647/ref=sr_1_4?ie=UTF8&qid=1494148653&sr=8-4&keywords=Jon+Duckett)
+
+-----
+
 ## Introduction
 ----
 

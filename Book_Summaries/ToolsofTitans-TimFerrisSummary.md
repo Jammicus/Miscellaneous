@@ -1,6 +1,9 @@
 # Tools of Titans - Tim Ferris
 ---------------------
 
+[Amazon Link] (https://www.amazon.co.uk/Tools-Titans-Billionaires-World-Class-Performers-ebook/dp/B01LF32ZNU/ref=sr_1_1?s=books&ie=UTF8&qid=1494148475&sr=1-1&keywords=tools+of+titans)
+----
+
 **Note: This Summary will only include parts of the book that has relevence to myself.** 
 
 Format (Name: Profession) 

@@ -2,6 +2,10 @@
 
 -----
 
+[Amazon Link](https://www.amazon.co.uk/How-Set-Your-Desk-Surprisingly-ebook/dp/B00J18O4U4/ref=sr_1_2?ie=UTF8&qid=1494148688&sr=8-2&keywords=Matt+Perman)
+
+-------
+
 ## Why Desk Setup Matters
 
 * Set your desk up well in order to minimize resistance so that you can give your focus and energy to actually doing your work.

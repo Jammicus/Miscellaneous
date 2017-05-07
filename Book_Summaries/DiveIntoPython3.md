@@ -2,6 +2,9 @@
 
 ---------------
 
+[Amazon Link](https://www.amazon.co.uk/Dive-Into-Python-Pilgrim-2009-07-31/dp/B01JXTT234/ref=sr_1_2?ie=UTF8&qid=1494148748&sr=8-2&keywords=dive+into+python+3)
+
+------
 
 ## Your First Python Program
 

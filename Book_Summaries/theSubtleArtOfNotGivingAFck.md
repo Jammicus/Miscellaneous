@@ -1,6 +1,10 @@
 # The Subtle Art of Not Giving a F*ck - Mark Manson
 -----
 
+[Amazon Link](https://www.amazon.co.uk/Subtle-Art-Not-Giving-Counterintuitive-ebook/dp/B019MMUA8S/ref=sr_1_1?s=books&ie=UTF8&qid=1494148494&sr=1-1&keywords=mark+manson)
+
+-----
+
 ## Don't Try
 
 * Self improvement and success often occur together. This does not mean that they're the same thing
