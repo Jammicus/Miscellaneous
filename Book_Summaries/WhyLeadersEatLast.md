@@ -1,6 +1,6 @@
 # Why Leaders Eat Last -  Simon Sinek
 ---
-[Amazon Link] (https://www.amazon.co.uk/Leaders-Eat-Last-Together-Others-ebook/dp/B00HFIBQ3A/ref=sr_1_2?s=books&ie=UTF8&qid=1494148455&sr=1-2&keywords=why+leaders+eat+last)
+[Amazon Link](https://www.amazon.co.uk/Leaders-Eat-Last-Together-Others-ebook/dp/B00HFIBQ3A/ref=sr_1_2?s=books&ie=UTF8&qid=1494148455&sr=1-2&keywords=why+leaders+eat+last)
 
 ----
 ## The Value of Empathy
@@ -28,8 +28,9 @@
 * To create this environment it will have to be a series of little things that are implemented over time
 * The first thing you should do is to make it so that your employees feel inspired, safe, fulfilled and grateful when they return from work.
 
----------
- ## The Awesome Responsibility
+-------
+
+## The Awesome Responsibility
 
 * While your employees are at work, their safety and happiness are your resposibility, they deserve your love and care
 * Being a leader is like being a parent, and the company is like a new family to join
