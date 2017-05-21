@@ -134,7 +134,11 @@ Class Cohension = A method that accesses more of the class's variables is more c
 
 ### 11. Systems.
 
-TO DO
+Always use the simpliest thing that can work.
+
+You should follow the Seperation of concerns principle. Do not allow convience to break modularity. (For example, hard coding dependancies is easy, but will break things in the future)
+
+Aim to have full decoupling. This future proofs your work
 
 ---
 
@@ -163,20 +167,93 @@ Understand the key concepts of concurrency, deadlocks, mutual exclusion ect...
 
 ### 14. Successive Refinements
 
-TO DO
+You should be consistently going through you code asking yourself how you can improve / refine it
+
+(The book explains incredibly well how to do this, with examples, I don't feel a summarised version would do it justice)
 
 ----
 
 ### 15. JUnit Internals
 
-TO DO
+(The book explains incredibly well how to do this, with examples, I don't feel a summarised version would do it justice)
 
 ----
 ### 16. Refactoring 
 
-TO DO
+When refactoring, its paramount that what you are refactoring continues to work, and contiues to give the expected behaviour
+
+Its a good idea to start at the top of your class / area you want to refactor, and slowly work your way down
 ---
 
 ### 17. Smells and Heuristics
+ 
+ Smells are things should be not be apparent in your code
 
-TO DO
+* Comments:
+	* Inappropriate information
+	* Obsolete comments
+	* Redundant comments
+	* Poor, informative comments
+	* Commented-out code
+* Environment
+	* Having builds that require more than one step (You should not need many steps to build individual elements)
+	* Tests that require more than one step
+* Functions:
+	* Too many arguments (No arguements are best, anything greater than 3 is bad)
+	* Output arguments (If your function must change the state of something, have it change the state of the object its called on)
+	* Flag arguements (Boolean arguments should be removed)
+	* Dead Functions (Any method which is never called should be removed)
+* General
+	* Multiple languages in one source file
+	* Obvious Behavior is Unimplemented (Follow the principle of least surprise - Any function or class should only implement behaviours that another programmer could reasonably expect)
+	* Incorrect Behavior at the boundaries - Check boundary conditions, dont rely on your intuition!
+	* Overriden Safeties 
+	* Duplication
+	* Code at the wrong level of abstraction - Code should be seperated based on their level of abstraction 
+	* Base classes depending on its derivaties
+	* Too much information (Keep it simple!)
+	* Dead code (Code that is not executed)
+	* Vertical Separation - Functions and variables that are defined far away from where they are used Define local variables above their first usage and put private functions just below their first usage
+	* Inconsistency
+	* Clutter
+	* Artifical Coupling - Things that dont depend on each other should not be artifically coupled
+	* Feature envy  - Classes should only be interested in the variables and functionsass they belong to, not other classes
+	* Selector Arguments 
+	* Obsured Intent - Make the intent of your code visible to your readers
+	* Misplaced Responsibility
+	* Inappropriate static - Try to use non static methods to static methods. If in doubt, make the function non static.
+	* Not using explanatory variables
+	* Function names not saying that they do
+	* Make sure you understand the algorithm you have written / used
+	* Make your local dependencies physical by calling its functions
+	* Prefer Polymorphism over IF/else or switch/case
+	* Follow standard and language conventions
+	* Replace magic numbers with named constants
+	* Be  precise
+	* Structure over convntion
+	* Encapsulate your conditionals
+	* Avoid negative conditionals (Eg, !buffer.shouldNotCompact())
+	* Functions should only do one thing
+	* Don't be arbitary - Have a reason for how you structure your code
+	* Encapsulate your boundary conditions - Have variables that represent your boundary conditions
+	* Functions should descend only one level of abstraction
+	* Keep configurable data at high levels
+	* Avoid transitive navigation (Getting one object through another)
+* Names:
+	* Choose descriptive names
+	* Choose names at the appropriate level of abstraction
+	* Use convention names where possible
+	* Have unambiguous names
+	* Use long names for long scopes
+	* Avoid encoding
+	* Names should describe side effects
+* Tests:
+	* Insufficient tests
+	* Use a coverage tool
+	* Dont skip trivial tests
+	* Ignored tests is a question about an ambiguity
+	* Test boundary conditions
+	* Exhaustively test near bugs
+	* Patterns of failure are revealing
+	* Test coverage patterns can be revealing
+	* Tests should be fast
