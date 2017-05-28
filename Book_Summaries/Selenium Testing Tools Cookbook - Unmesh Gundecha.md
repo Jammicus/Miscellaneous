@@ -486,7 +486,7 @@ Example test:
        FileUtils.copyFile(screenshotFile, new File(scrFile));       try {         //Verify baseline image with actual image         assertEquals(CompareUtil.Result.Matched,         CompareUtil.CompareImage(baseScrFile,scrFile));       } catch (Error e) {         //Capture and append Exceptions/Errors         verificationErrors.append(e.toString());       }}     @After     public void tearDown() throws Exception {       //Close the browser       driver.quit();       String verificationErrorString = verificationErrors.toString();       if (!"".equals(verificationErrorString)) {         fail(verificationErrorString);       }} }
 ```
 
-## Testing On MObile Browsers
+## Testing On Mobile Browsers
 
 TODO
 
@@ -547,5 +547,142 @@ server.newHar("bmiCalculator");
 
 ## Testing HTML5 Web Applications
 
+
+### Automating the HTML5 Video Player
+
+* Need to test the `<video>` element
+* * Can use `play()` and `pause()` in an javascript executor to start and stop the video
+
+Example
+
+```
+@Test   public void testHTML5VideoPlayer() throws Exception {       File scrFile = null;       //Get the HTML5 Video Element       WebElement videoPlayer = driver.findElement(By.id("vplayer"));       //We will need a JavaScript Executor for interacting       //with Video Element's       //methods and properties for automation       JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;       //Get the Source of Video that will be played in Video Player       String source = (String) jsExecutor.executeScript("return         arguments[0].currentSrc;", videoPlayer);       //Get the Duration of Video       long duration = (Long) jsExecutor.executeScript("return         arguments[0].duration", videoPlayer);       System.out.println(duration);       //Verify Correct Video is loaded and duration       assertEquals("http://html5demos.com/assets/dizzy.mp4", source);
+       
+       assertEquals(25, duration);
+       
+       //Play the Video
+       jsExecutor.exectureScript("return arguments[0].play()", VideoPlayer);
+       
+       Thread.sleep(5000);
+       
+       //Pause the video       jsExecutor.executeScript("arguments[0].pause()", videoPlayer);       //Take a screen-shot for later verification       scrFile = ((TakesScreenshot)driver).getScreenshotAs         (OutputType.FILE);       FileUtils.copyFile(scrFile, new File("c:\\tmp\\pause_play.png"));}
+
+```
+
+### Automating Interaction on the HTML5 Canvas Element
+
+* The `<Canvas>` element is used for drawing and charting applications by using javascript.
+* `<canvas>` has several methods, such as:
+	* ` paths`
+	* `boxes`
+	* `circles`
+	* `characters`
+	* `images`
+
+Example
+
+```
+@Test   public void testHTML5CanvasDrawing() throws Exception {     //Get the HTML5 Canvas Element     WebElement canvas = driver.findElement(By.id("imageTemp"));     //Select the Pencil Tool     Select drawtool = new Select(driver.findElement(By.id("dtool")));     drawtool.selectByValue("pencil");     //Create a Action Chain for Draw a shape on Canvas
+     
+     Actions builder = new Actions(driver);builder.clickAndHold(canvas).moveByOffset(10, 50).               moveByOffset(50,10).
+				moveByOffset(-10,-50).               moveByOffset(-50,-10).release().perform();
+               
+ //Get a screenshot of Canvas element after Drawing and     //compare it to the base version     //to verify if the Drawing is performed     FileUtils.copyFile(WebElementExtender.captureElementBitmap(canvas),       new File("c:\\tmp\\post.png"));     assertEquals(CompareUtil.Result.Matched,       CompareUtil.CompareImage("c:\\tmp\\base_post.png",       "c:\\tmp\\post.png"));   }
+```
+
+* We first select the pencil option from the drawing tool drop down
+* We then draw the shape
+* We finally capture the element and compare with a base line image to assert that the image drawn is correct
+
+
+### Web Storage - Testing Local Storage
+
+* HTML5 provides a `localstorage` interface through javascript
+* This interface stores data indefinatly 
+* In Chrome, you can see this data by click on Inspect Element in the resources tab
+
+
+Example
+
+```
+@Test   public void testHTML5LocalStorage() throws Exception {     String lastName;     JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;     //Get the current value of localStorage.lastname, this should be     //Smith     lastName = (String) jsExecutor.executeScript("return localStorage.       lastname;");     assertEquals("Smith", lastName);}
+```
+
+### Web Storage - Testing Session Storage
+
+* This is similar to local storage, however this only stores data for one session (Until the window is closed)
+* We use the `sessionStorage` interface through Javascript to get this information
+
+Example
+
+```
+@Test   public void testHTML5SessionStorage() throws Exception {     String clickcount=null;     WebElement clickButton = driver.findElement(By.id("click"));
+     
+     WebElement clicksField = driver.findElement(By.id("clicks"));     JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;     //Get current value of sessionStorage.clickcount, should be null     clickcount = (String) jsExecutor.executeScript("return       sessionStorage.clickcount;");     assertEquals(null, clickcount);     assertEquals("0", clicksField.getAttribute("value"));     //Click the Button, this will increase the     //sessionStorage.clickcount value by 1     clickButton.click();     //Get current value of sessionStorage.clickcount, should be 1     clickcount = (String) jsExecutor.executeScript("return       sessionStorage.clickcount;");     assertEquals("1", clickcount);     assertEquals("1", clicksField.getAttribute("value"));}
+```
+
+
+### Cleaning Local and Session Storage
+
+* When running mutliple tests in batch on the same environment, it is advised to clean the the storage before each test
+
+
+For Local Storage:
+```
+   //To Remove a specific Key along with it's value   JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;   jsExecutor.executeScript("localStorage.removeItem(lastname);");```
+
+For Session Storage:
+
+```
+ //To Remove a specific Key along with it's value   JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;   jsExecutor.executeScript("sessionStorage.removeItem(lastname);");
+```
+
+Clearing all items for local storage
+
+```
+ //To Clear Storage values   JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;   jsExecutor.executeScript("localStorage.clear();");
+```
+
+Clearing all items for session storage
+
+```
+ //To Clear Storage values   JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;   jsExecutor.executeScript("sessionStorage.Clear();");
+```
+
+
+## Recording Videos of Tests
+
+### Recording Videos of Tests Using Monte Media Library IN Java
+
+* Monte Media Library provides a class called `ScreenRecorder` to record movies of tests
+
+To create a recorder You need the following:
+
+* A setup() method to start the screen recorder
+* A test to a record
+* A tearDown() method to stop the recorder
+
+
+Example
+
+```
+import org.openqa.selenium.firefox.FirefoxDriver;       import org.openqa.selenium.WebDriver;       import org.openqa.selenium.WebElement;       import org.openqa.selenium.By;       import org.openqa.selenium.support.ui.ExpectedCondition;       import org.openqa.selenium.support.ui.WebDriverWait;       import org.monte.media.math.Rational;       import org.monte.media.Format;       import org.monte.screenrecorder.ScreenRecorder;       import static org.monte.media.AudioFormatKeys.*;       import static org.monte.media.VideoFormatKeys.*;       import org.junit.*;       import static org.junit.Assert.*;
+      import java.awt.*;public class GoogleSearch {      private WebDriver driver;      private StringBuffer verificationErrors = new StringBuffer();      private ScreenRecorder screenRecorder;}
+```
+
+
+```
+@Before   public void setUp() throws Exception {      // Create an instance of GraphicsConfiguration to get the      // Graphics configuration      // of the Screen. This is needed for ScreenRecorder class.        GraphicsConfiguration gc = GraphicsEnvironment            .getLocalGraphicsEnvironment()            .getDefaultScreenDevice()            .getDefaultConfiguration();      // Create a instance of ScreenRecorder with the required      // configurations      screenRecorder = new ScreenRecorder(gc,         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey,           MIME_AVI),         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey,           ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,            CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,            DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),            QualityKey, 1.0f,            KeyFrameIntervalKey, (int) (15 * 60)),   new Format(MediaTypeKey, MediaType.VIDEO,     EncodingKey,"black",      FrameRateKey, Rational.valueOf(30)),        null);// Create a new instance of the Firefox driver
+
+    driver = new FirefoxDriver();          //Call the start method of ScreenRecorder to begin recording          screenRecorder.start();       }```
+ 
+``` 
+ 
+ @Test       public void testGoogleSearch() throws Exception {          // And now use this to visit Google          driver.get("http://www.google.com");          // Find the text input element by its name          WebElement element = driver.findElement(By.name("q"));          // Enter something to search for          element.sendKeys("Cheese!");          // Now submit the form. WebDriver will find the form for us          // from the element          element.submit();try {             // Google's search is rendered dynamically with JavaScript.             // Wait for the page to load, timeout after 10 seconds             (new WebDriverWait(driver, 10)).until(new               ExpectedCondition<Boolean>() {                 public Boolean apply(WebDriver d) {                 return d.getTitle().toLowerCase().startsWith("cheese!");}});             // Should see: "cheese! - Google Search"             assertEquals("cheese! - Google Search", driver.getTitle());          } catch (Error e) {             //Capture and append Exceptions/Errors             verificationErrors.append(e.toString());} }
+```
+ 
+```
+         @After       public void tearDown() throws Exception {          //Close the browser          driver.quit();          // Call the stop method of ScreenRecorder to end the recording          screenRecorder.stop();          String verificationErrorString = verificationErrors.toString();          if (!"".equals(verificationErrorString)) {             fail(verificationErrorString);          }}
+```
 
 
