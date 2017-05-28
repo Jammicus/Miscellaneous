@@ -18,9 +18,9 @@
 
 ## Working With Selenium API
 * Once you have found an element, selenium provides many methods to interact and manipulate elements
-* To get the text from an element, use .getText()
-* To get a elements attribute alue, use .getAttribute("x") on the element
-* To get the CSS value, use .getCssValue("x")
+* To get the text from an element, use `.getText()`
+* To get a elements attribute, use `.getAttribute("x")` on the element
+* To get the CSS value, use `.getCssValue("x")`
 * To do actions on a element, use the Actions class
 
 Eg
@@ -34,8 +34,8 @@ builder.keyDown(Keys.CONTROL)
 //Note, you must use build().perform() at the end to do the series of actions
 ```
 
- * To double click, use .doubleClick(element) from the actions class
- * To drag and drop, Use dragAndDrop(source,target) in the actions builder class
+ * To double click, use `.doubleClick(element)` from the actions class
+ * To drag and drop, Use `dragAndDrop(source,target)` in the actions builder class
 
 ### Executing Javascript Code
  
@@ -57,7 +57,7 @@ builder.keyDown(Keys.CONTROL)
 
  ### Maximizing the Browser Window
  
- * Use `driver.manage().window().maximize();
+ * Use `driver.manage().window().maximize();`
 
 TODO AUTOMATING DROPDOWNS
  
@@ -80,11 +80,11 @@ driver.manage().timeouts().implicitluWait(10, TimeUnit.SECONDS);
 * Explicit waits wait until a condition is met
 * Selenium provides the ExpectedCondition class for this.
 * Some of the methods provided are:
-	* elementToBeClickable(x)
-	* elementToBeSelected(x)
-	* presenceOfElementLocated(x)
-	* textTobePresentInElement(x,y)
-	* titleContains(x)
+	* `elementToBeClickable(x)`
+	* `elementToBeSelected(x)`
+	* `presenceOfElementLocated(x)`
+	* `textTobePresentInElement(x,y)`
+	* `titleContains(x)`
 * Explicit waits work by checking the object every 500ms to see whether the operation can be before
 * You also need to specify when after a certain period of polling, selenium should stop
 
@@ -133,18 +133,18 @@ return d.findElement(By.id("page4"));
 ### Checking Elements Presence
 
 
-* Use isElementPresent(x)
+* Use `isElementPresent(x)`
 
 ### Checking Elements Status
 
 * Use one of the following:
-	* isEnabled()
-	* isSelected()
-	* isDisplayed()
+	* `isEnabled()`
+	* `isSelected()`
+	* `isDisplayed()`
 
 ### Identifying and Handling Pop windows By Name
 
-* You can switch between windows using `webdriver.switchTo().window(Windowtitle)
+* You can switch between windows using `webdriver.switchTo().window(Windowtitle)`
 * The window title should be the windows Name Attribute value
 
 ### Identifying and Handlign Pop windows By Title
@@ -246,8 +246,8 @@ public void testPrompt() {
 ### Using the PageFactory class for exposing elements from  a page
 
 * Before exposing elements of the page, you need to:
-	* IDentify locators that will be needed
-	* Define the structure of the page &  classes for the objects of the page
+	* Identify locators that will be needed
+	* Define the structure of the page & classes for the objects of the page
 
 #### The example
 
@@ -341,7 +341,7 @@ package seleniumcookbook.tests;import org.junit.Test;import static org.junit.A
 
 ```
 
-#### Using the LoadableComponent Class
+####Using the LoadableComponent Class
 
 ```
 package seleniumcookbook.tests.pageobjects;       import org.openqa.selenium.WebDriver;       import org.openqa.selenium.chrome.ChromeDriver;       import org.openqa.selenium.WebElement;       import org.openqa.selenium.support.PageFactory;       import org.openqa.selenium.support.ui.LoadableComponent;       import static org.junit.Assert.*;       public class BmiCalcPage extends LoadableComponent<BmiCalcPage> {  private WebElement heightCMS;private WebElement weightKg;private WebElement Calculate;private WebElement bmi;private WebElement bmi_category;private WebDriver driver;
@@ -391,7 +391,8 @@ public class SearchTest {           @Test           public void testProductSea
 
 ## Extending Selenium
 
-### Creating an Extension Class for Web Tables
+
+###Creating an Extension Class for Web Tables
 
 * Currently there is no build in support for web tables or table elements 
 
