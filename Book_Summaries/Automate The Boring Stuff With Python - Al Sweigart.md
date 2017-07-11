@@ -1487,17 +1487,117 @@ Example (not listing all keys here)
 
 ### Working With Excel Spreadsheets
 
+**CONTINUE**
+
 ### Working With PDF and Word Documents 
+
+* Need to use the PyPDF2 module. 
+* Can be installed using pip
+* PDFs are very hard to parase, so PyPDF2 might make some mistakes.
+
+
+#### Extracting Text from PDFs
+
+* PyPDF2 cannot extract images, charts or other media from PDFs.
+* However it can extract text and return it as a string
+* You do this by specifying the page with `pdfReader.getPage(x)` then using `.extractText()`
+
+Example
+
+```
+>>> import PyPDF2>>> pdfFileObj = open('meetingminutes.pdf', 'rb') >>> pdfReader = PyPDF2.PdfFileReader(pdfFileObj)>>> pdfReader.numPages 19>>> pageObj = pdfReader.getPage(0) >>> pageObj.extractText()
+```
+
+#### Decrypting PDFs
+
+* Some PDFs come encrypted.
+* You can specify the password that is needed in your python code by using `.decrypt('rosebud')`
+* If you close the python program then try and open it in a new python program, you have to decrypt it again
+
+Example
+
+```
+>>> import PyPDF2>>> pdfReader = PyPDF2.PdfFileReader(open('encrypted.pdf', 'rb'))
+>>> pdfReader.decrypt('rosebud') 
+1>>> pageObj = pdfReader.getPage(0)
+```
+
+#### Creating PDFs
+
+* You can use PdfFileWriter objects to create new PDF files.
+* Unfortinately PyPDF2 can only copy pages, rotating pages, overlaying pages and encrypting files, not writing directly to a new file.
+* You cannot directly edit a PDF. You have to create a new PDF then copy the content over.
+
+Steps:
+
+1. Open one or more PDfs into PdfFileReader objects
+2. Create a new PdfFileWriter object
+3. Copy pages from the PdfFileReader object into the PdfFileWriter object
+4. Use the PdfFileWriter object to write the output PDF
+5. Then call PdfFilesWriter's `write()`
+
+#### Copying Pages.
+
+Example
+
+```
+>>> import PyPDF2>>> pdf1File = open('meetingminutes.pdf', 'rb') 
+>>> pdf2File = open('meetingminutes2.pdf', 'rb')>>> pdf1Reader = PyPDF2.PdfFileReader(pdf1File) 
+>>> pdf2Reader = PyPDF2.PdfFileReader(pdf2File) 
+>>> pdfWriter = PyPDF2.PdfFileWriter()>>> for pageNum in range(pdf1Reader.numPages):pageObj = pdf1Reader.getPage(pageNum)pdfWriter.addPage(pageObj)>>> for pageNum in range(pdf2Reader.numPages):pageObj = pdf2Reader.getPage(pageNum)pdfWriter.addPage(pageObj)>>> pdfOutputFile = open('combinedminutes.pdf', 'wb') >>> pdfWriter.write(pdfOutputFile)>>> pdfOutputFile.close()>>> pdf1File.close()>>> pdf2File.close()
+```
+
+#### Rotating Pages
+
+* use `rotateClockwise(degrees)` or `rotateCounterClockwise(degrees)`
+* Degrees can be one of the following:
+	* 90
+	* 180
+	* 270
+
+Example
+
+```
+>>> import PyPDF2>>> minutesFile = open('meetingminutes.pdf', 'rb') 
+>>> pdfReader = PyPDF2.PdfFileReader(minutesFile)>>> page = pdfReader.getPage(0) 
+>>> page.rotateClockwise(90){'/Contents': [IndirectObject(961, 0), IndirectObject(962, 0), 
+--snip--}>>> pdfWriter = PyPDF2.PdfFileWriter()>>> pdfWriter.addPage(page)>>> resultPdfFile = open('rotatedPage.pdf', 'wb')>>> pdfWriter.write(resultPdfFile) >>> resultPdfFile.close()>>> minutesFile.close()
+
+```
+
+#### Encrypting PDFs
+
+* Use `.encrypt(password)`
+
+Example
+
+```
+>>> import PyPDF2>>> pdfFile = open('meetingminutes.pdf', 'rb') 
+>>> pdfReader = PyPDF2.PdfFileReader(pdfFile) 
+>>> pdfWriter = PyPDF2.PdfFileWriter()>>> for pageNum in range(pdfReader.numPages):           pdfWriter.addPage(pdfReader.getPage(pageNum))>>> pdfWriter.encrypt('swordfish')>>> resultPdf = open('encryptedminutes.pdf', 'wb') >>> pdfWriter.write(resultPdf)>>> resultPdf.close()
+```
+
+
+#### Reading Word Documents
+
+CONTNIUE
+
 
 ### Working with CSV Files and JSON Data
 
-### Keeping TIme, Scheduling Tasks, and Launching Programs
+CONTINUE
+
+### Keeping Time, Scheduling Tasks, and Launching Programs
+CONTINUE
 
 ### Sending Email and Text Mesages
+CONTINUE
 
 ### Manipulating Images
+CONTINUE
 
 ### Controlling The Keyboard and mouse With GUI Automation
+CONTINUE
 
 ## Running Programs
 
