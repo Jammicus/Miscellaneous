@@ -147,7 +147,7 @@ for i in range(5,-1,-1)
 	print(i)
 ```
 This will decrement everytime by -1
-
+--
 ### Importing Modules
 
 #### Import Keyword
@@ -176,7 +176,7 @@ from random
 for i in range(5):
 	print(randint(1,10))
 ```
-
+--
 ### Functions
 
 #### def Statement with parameters
@@ -301,7 +301,7 @@ except ZeroDivisonError:
 	print("Error: Invalid argument.')
 	
 ```
-
+--
 ### Lists
 
 #### List Data Type
@@ -449,7 +449,7 @@ True
 
 * list() and tuple() will return list versions of tuples and tuple versions of list respectively
 
-
+--
 ### Dictionaries and Structuring Data
 
 #### Dictionary Data Type
@@ -525,7 +525,7 @@ If key exists, will return key value, otherwise will return fallbackvalue
 
 `dictionary.setdefault(key,value)`
 
-
+--
 ### Manipulating Strings
 
 #### String Literals
@@ -633,7 +633,7 @@ pyperclip.paste()
 ```
 
 
-
+--
 ## Automating Tasks
 
 ### Pattern Matching With Regular Expressions
@@ -668,6 +668,7 @@ mo = phoneNumRegex.search('My number is 415-555-4242.') >>> print('Phone number 
 3. Pass the string you want to search into the regex objects `search()` method. This will return a match object or None
 4. Call the Match objects `group` method to return a string of the actual matched text
 
+--
 ### More Pattern matching With Regular expressions
 
 #### Grouping with Parentheses
@@ -1054,7 +1055,7 @@ Example
 >>> import pprint>>> cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}] >>> pprint.pformat(cats)"[{'desc': 'chubby', 'name': 'Zophie'}, {'desc': 'fluffy', 'name': 'Pooka'}]">>> fileObj = open('myCats.py', 'w')>>> fileObj.write('cats = ' + pprint.pformat(cats) + '\n')83>>> fileObj.close()
 
 ```
-
+--
 
 ### Organizing Files
 
@@ -1266,7 +1267,7 @@ Example
 
 #### Logging
 
-
+--
 ### WebScraping
 
 #### Opening Web pages
@@ -1485,10 +1486,11 @@ Example (not listing all keys here)
 	* browser.refresh()
 	* browser.quit()
 
+--
 ### Working With Excel Spreadsheets
 
 **CONTINUE**
-
+--
 ### Working With PDF and Word Documents 
 
 * Need to use the PyPDF2 module. 
@@ -1582,23 +1584,848 @@ Example
 
 CONTNIUE
 
-
+--
 ### Working with CSV Files and JSON Data
 
-CONTINUE
+#### The CSV Module
 
+* Each line in a CSV file represesnts a row in the spreat sheet
+* Commars are used to seperate the cells in a row
+
+Example CSV
+
+```
+4/5/2015 13:34,Apples,734/5/2015 3:41,Cherries,854/6/2015 12:46,Pears,144/8/2015 8:59,Oranges,524/10/2015 2:07,Apples,1524/10/2015 18:10,Bananas,234/10/2015 2:40,Strawberries,98
+```
+
+#### Reader Objects
+
+* Reader objects are used to read CSV files from the csv module
+* These objects allow you to iterate over the lines in a csv file
+* You need to open the csv file then use `.reader()` on it
+* Once that is done you can place the CSV file in a list, with each index representing a line from the CSV file
+
+
+Example
+
+```
+>>> import csv>>> exampleFile = open('example.csv') 
+>>> exampleReader = csv.reader(exampleFile) 
+>>> exampleData = list(exampleReader)
+>>> exampleData   [['4/5/2015 13:34', 'Apples', '73'], ['4/5/2015 3:41', 'Cherries', '85'],   ['4/6/2015 12:46', 'Pears', '14'], ['4/8/2015 8:59', 'Oranges', '52'],   ['4/10/2015 2:07', 'Apples', '152'], ['4/10/2015 18:10', 'Bananas', '23'],   ['4/10/2015 2:40', 'Strawberries', '98']]
+
+# Format is [x][y]
+>>> exampleData[0][0] 
+'4/5/2015 13:34'>>> exampleData[0][1] 
+'Apples'>>> exampleData[0][2] 
+'73'>>> exampleData[1][1] 
+'Cherries'>>> exampleData[6][1] 
+'Strawberries'
+```
+
+
+#### Reading Data from Reader Objects in a for loop
+
+* For large CSV files, you need to use the Reader object in a for loop.
+* Doing this will avoid loading the entire file into memory at once
+
+Example
+
+```
+>>> import csv>>> exampleFile = open('example.csv')>>> exampleReader = csv.reader(exampleFile) 
+>>> for row in exampleReader:           print('Row #' + str(exampleReader.line_num) + ' ' + str(row))
+              Row #1 ['4/5/2015 13:34', 'Apples', '73']   Row #2 ['4/5/2015 3:41', 'Cherries', '85']   Row #3 ['4/6/2015 12:46', 'Pears', '14']   Row #4 ['4/8/2015 8:59', 'Oranges', '52']   Row #5 ['4/10/2015 2:07', 'Apples', '152']   Row #6 ['4/10/2015 18:10', 'Bananas', '23']   Row #7 ['4/10/2015 2:40', 'Strawberries', '98']
+```
+
+#### Writer Objects
+
+* Writer objects allow you to write data to a CSV file
+* You create Writer objects using `csv.writer()`
+* To write a row, use `writerow(list)`
+* Remember to close the object when you are done!!
+
+Example
+
+```
+>>> import csv>>> outputFile = open('output.csv', 'w', newline='') 
+>>> outputWriter = csv.writer(outputFile)>>> outputWriter.writerow(['spam', 'eggs', 'bacon', 'ham'])21>>> outputWriter.writerow(['Hello, world!', 'eggs', 'bacon', 'ham']) 32>>> outputWriter.writerow([1, 2, 3.141592, 4])16>>> outputFile.close()
+```
+
+#### The Delimiter and Lineterminator Keyword Arguments
+
+* To can use the delimter keyword to state how the CSV entries should be seperated
+* You can use the lineterminator tab to state what the program should do after the end of line is reached (By default, this will give you a blank line in between rows)
+
+Example
+
+```
+>>> import csv>>> csvFile = open('example.tsv', 'w', newline='')>>> csvWriter = csv.writer(csvFile, delimiter='\t', lineterminator='\n\n')>>> csvWriter.writerow(['apples', 'oranges', 'grapes']) 24>>> csvWriter.writerow(['eggs', 'bacon', 'ham'])17>>> csvWriter.writerow(['spam', 'spam', 'spam', 'spam', 'spam', 'spam']) 32>>> csvFile.close()
+```
+
+#### JSON and APIs
+
+* JSON is a way to format ata as a human readable string
+* JSON is the native way that javascript stores its data structures
+
+Example JSON file:
+
+```
+{"name": "Zophie", "isCat": true, "miceCaught": 0, "napsTaken": 37.5, "felineIQ": null}
+```
+#### The JSON Module
+
+* Handles all the details of translating between a string with JSON data and Python values.
+* JSON can store the following data types:
+	* Strings
+	* Integers
+	* Floats
+	* Booleans
+	* Lists
+	* Dictionaries
+	* NonType
+* Cannot represent python specific types (eg, Regex, Writer so on...)
+
+#### Reading JSON with the loads() Function
+
+* `json.loads(JSONString)` translates JSON data into a python Dictionary (Note, ordering is not kept, this may be different to the order it was in the JSON file!)
+* The JSON String MUST be in double quotes!
+
+Example
+
+```
+>>> stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'>>> import json>>> jsonDataAsPythonValue = json.loads(stringOfJsonData)>>> jsonDataAsPythonValue{'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None}
+```
+
+#### Writing JSON with the dumps() Function
+
+* `json.dumps(pythonValue)` takes a python value and turns it into a JSON-formatted string.
+
+Example
+
+```
+>>> pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None}>>> import json>>> stringOfJsonData = json.dumps(pythonValue)>>> stringOfJsonData'{"isCat": true, "felineIQ": null, "miceCaught": 0, "name": "Zophie" }'
+```
+--
 ### Keeping Time, Scheduling Tasks, and Launching Programs
-CONTINUE
 
+* The time module allows you to get the current time from your system clock.
+
+#### time.time() Function
+
+* `time.time()` returns a floating point number that represents the current time since the "Unix epoch"
+
+Example
+
+```
+>>> import time 
+>>> time.time() 
+1425063955.068649
+```
+Example of time it takes to run a method
+
+```
+import time udef calcProd():       # Calculate the product of the first 100,000 numbers.       product = 1       for i in range(1, 100000):           product = product * i       return productstartTime = time.time() prod = calcProd()endTime = time.time()print('The result is %s digits long.' % (len(str(prod))))print('Took %s seconds to calculate.' % (endTime - startTime))
+```
+#### The time.sleep() Function
+
+* This function allows you to pause your programs for a set time.
+* This is a blocking action - While the program is sleeping, the program cannot do any other executions
+
+Example
+
+```
+>>> import time>>> for i in range(3):           print('Tick')           time.sleep(1)           print('Tock')           time.sleep(1)     
+TickTockTickTockTickTock>>> time.sleep(5)
+```
+
+#### Rounding Numbers
+
+* Python provides `round()`
+* This will make working with time values easier 
+
+Example
+
+```
+>>> import time>>> now = time.time() 
+>>> now 
+1425064108.017826>>> round(now, 2) 
+1425064108.02>>> round(now, 4) 
+ 1425064108.0178>>> round(now) 
+1425064108
+```
+
+#### DateTime Module
+
+* Provides data and time information in cleaner format
+* Also allows you to do arithmetic on dates
+* To get the current date, use : `datetime.datetime.now()`
+* The returned format is in `(year,month,day,hour,minute,second)`
+
+Example
+
+```
+>>> import datetime>>> datetime.datetime.now()datetime.datetime(2015, 2, 27, 11, 10, 49, 55, 53) 
+>>> dt = datetime.datetime(2015, 10, 21, 16, 29, 0) 
+>>> dt.year, dt.month, dt.day(2015, 10, 21)>>> dt.hour, dt.minute, dt.second(16, 29, 0)
+```
+
+* Unix epoch timestamp can be conerted to a datetime object with `datetime.datetime.fromtimestamp()`
+
+Example
+
+```
+#1,000,000 seconds behind the timestamp
+>>> datetime.datetime.fromtimestamp(1000000) 
+datetime.datetime(1970, 1, 12, 5, 46, 40)>>> datetime.datetime.fromtimestamp(time.time()) 
+datetime.datetime(2015, 2, 27, 11, 13, 0, 604980)
+```
+
+Example: date time arithmetic
+
+```
+
+>>> halloween2015 = datetime.datetime(2015, 10, 31, 0, 0, 0)>>> newyears2016 = datetime.datetime(2016, 1, 1, 0, 0, 0) 
+>>> oct31_2015 = datetime.datetime(2015, 10, 31, 0, 0, 0)>>> halloween2015 == oct31_2015 
+True
+# The later the time is, the greater it is. >>> halloween2015 > newyears2016 
+False>>> newyears2016 > halloween2015 
+True>>> newyears2016 != oct31_2015 
+True
+```
+
+#### The timedelta Data Type
+
+* This represents a duration of time rather than a moment in time
+* To create a timedelta object, use `datetime.timedelta(weeks,days,hours,minutes,seconds,milliseconds,microseconds)`
+* Timedelta objects represents the total duration in days,seconds and microseconds, with each of these being an attribute
+
+Example
+
+```
+>>> delta = datetime.timedelta(days=11, hours=10, minutes=9, seconds=8)
+>>> delta.days, delta.seconds, delta.microseconds(11, 36548, 0)>>> delta.total_seconds() 986948.0>>> str(delta)'11 days, 10:09:08'
+```
+
+* You can do date arithmetic on datetime values
+
+```
+>>> dt = datetime.datetime.now()>>> dtdatetime.datetime(2015, 2, 27, 18, 38, 50, 636181) >>> thousandDays = datetime.timedelta(days=1000) >>> dt + thousandDays   datetime.datetime(2017, 11, 23, 18, 38, 50, 636181)
+```
+
+#### Pausing Until a Specific Date
+
+* `time.sleep()` will allow you to pause your program
+* You can create a while loop containing `time.sleep()` to stop the program until a specific date.
+* Its good practice to use `time.sleep(1)` if you are doing this. `time.sleep(1)` does not block the program while the while loop is executing
+
+Example:
+
+```
+import datetimeimport timehalloween2016 = datetime.datetime(2016, 10, 31, 0, 0, 0)while datetime.datetime.now() < halloween2016:    time.sleep(1)
+```
+
+#### Converting datetime Objects into Strings
+
+* This can be done by using the `strftime()` method
+* This method can take the following derivates as parameters:
+	* `%Y` = Year with century, as in '2014'
+	* `%y` = Year without century, '00' to '99' (1970 to 2069)
+	* `%m` = Month as a decimal number, '01' to '12'
+	* `%B` = Full month name, as in 'November'
+	* `%b` = Abbreviated month name, as in 'Nov'
+	* `%d` = Day of the month, '01' to '31' 
+	* `%j` = Day of the year, '001' to '366'
+	* `%w` = Day of the week, '0' (Sunday) to '6' (Saturday)
+	* `%A` = Full weekday name, as in 'Monday'
+	* `%a` = Abbreviated weekday name, as in 'Mon'
+	* `%H` = Hour (24-hour clock), '00' to '23'
+	* `%I` = Hour (12-hour clock), '01' to '12'
+	* `%M` = Minute, '00' to '59'
+	* `%S` = Second, '00' to '59'
+	* `%p` = 'AM' or 'PM'
+	* `%%` = Literal '%' character
+
+Example
+
+```
+>>> oct21st = datetime.datetime(2015, 10, 21, 16, 29, 0) 
+>>> oct21st.strftime('%Y/%m/%d %H:%M:%S')'2015/10/21 16:29:00'>>> oct21st.strftime('%I:%M %p')'04:29 PM'>>> oct21st.strftime("%B of '%y") 
+>>> "October of '15"
+```
+
+#### Converting Strings into datetime Objects
+
+* Use `strptime(string,deritives)`
+
+Example
+
+```
+>>> datetime.datetime.strptime('October 21, 2015', '%B %d, %Y') datetime.datetime(2015, 10, 21, 0, 0)>>> datetime.datetime.strptime('2015/10/21 16:29:00', '%Y/%m/%d %H:%M:%S') datetime.datetime(2015, 10, 21, 16, 29)>>> datetime.datetime.strptime("October of '15", "%B of '%y") datetime.datetime(2015, 10, 1, 0, 0)>>> datetime.datetime.strptime("November of '63", "%B of '%y") datetime.datetime(2063, 11, 1, 0, 0)
+```
+
+#### Multithreading
+
+* Thread module allows you to do multithreading
+* To create a thread, use: `threading.Thread(target=methodNameHere)`
+* the target should be whatever method you want the thread to run when the thread is started
+* Note that a python program will not terminate until all threads have terminated
+
+Example
+
+```
+ import threading, time      print('Start of program.')def takeANap(): time.sleep(5)print('Wake up!')threadObj = threading.Thread(target=takeANap)threadObj.start() print('End of program.')
+```
+
+#### Passing Arguments to the Thread's Target Function
+
+* You do this by using `args=[x,y,z]` in the `threading.thread` parameters
+* If you want to pass keyword arguments, you can use `kwargs={'argument':'value'}`
+
+Example
+
+```
+>>> import threading>>> threadObj = threading.Thread(target=print, args=['Cats', 'Dogs', 'Frogs'], kwargs={'sep': ' & '})>>> threadObj.start()Cats & Dogs & Frogs
+```
+
+#### Launching Other Programs from Python.
+
+* `Popen()` is a built in function that can be used to open other programs
+* It takes the filename as its arguments
+
+Windows example
+
+```
+>>> import subprocess>>> subprocess.Popen('C:\\Windows\\System32\\calc.exe') <subprocess.Popen object at 0x0000000003055A58>
+```
+
+Linux example
+
+```
+>>> import subprocess>>> subprocess.Popen('/usr/bin/gnome-calculator') <subprocess.Popen object at 0x7f2bcf93b20
+```
+
+* `poll()` can be used on a subprocess to check whether it has been finished or not
+* If it has not finished, it will return `None`
+* If it has finished, it will return a integer exit code
+* `wait()` method will block the method from completing until another process has terminated 
+
+Example
+
+```
+>>> calcProc = subprocess.Popen('c:\\Windows\\System32\\calc.exe') 
+>>> calcProc.poll() == NoneTrue
+#Returned 0, meaning that the program has closed>>> calcProc.wait()0>>> calcProc.poll() 
+>>> 0
+```
+
+#### Passing Command Line Arguments to Popen()
+
+* To do this, you pass a list of arguments to `Popen()`
+* The first string in the list needs to be the executable filename of the program you want to launch.
+* Everything else are command line arguments
+
+
+Example
+
+```
+>>> subprocess.Popen(['C:\\Windows\\notepad.exe', 'C:\\hello.txt']) 
+<subprocess.Popen object at 0x00000000032DCEB8>
+```
+
+#### Task Scheduler, launchd, and cron
+
+* These are build in schedulers for various operating systems. 
+* Should take advantage of these rather than writing your own clock-checking code.
+
+#### Opening Websites With Python
+
+* `webbrowser.open()` function can launch a webbrowser from your program rather than opening the browser application.
+
+#### Running Other Python Scripts
+
+* Pass the python executable to `Popen(), along with the file name of the .py script
+
+Example
+
+```
+>>> subprocess.Popen(['C:\\python34\\python.exe', 'hello.py']) 
+<subprocess.Popen object at 0x000000000331CF28>
+```
+
+#### Opening Files with Default Applications
+
+* Each OS has their own program that will open default files.
+	* Windows = `start`
+	* OSx = `open`
+	* Linux = `see`
+* To open a file in a default program, pass either `start`, `open` or `see` to `Popen()`
+
+Windows Example
+
+```
+>>> fileObj = open('hello.txt', 'w') >>> fileObj.write('Hello world!')12
+
+>>> fileObj.close()>>> import subprocess
+# Uses start on windows to open the program>>> subprocess.Popen(['start', 'hello.txt'], shell=True)
+```
+
+Mac Example
+
+```
+>>> subprocess.Popen(['open', '/Applications/Calculator.app/']) 
+>>> <subprocess.Popen object at 0x10202ff98>
+```
+
+
+--
 ### Sending Email and Text Mesages
+
+#### SMTP
+
+* Simple Mail Transfer Protocol (STMP) - Used for sending email
+
+#### Sending Emails
+
+* Have functions that are used for each step of sending an email
+
+Example
+
+```
+>>> import smtplib>>> smtpObj = smtplib.SMTP('smtp.example.com', 587)>>> smtpObj.ehlo()(250, b'mx.example.com at your service, [216.172.148.131]\nSIZE 35882577\ n8BITMIME\nSTARTTLS\nENHANCEDSTATUSCODES\nCHUNKING')>>> smtpObj.starttls()(220, b'2.0.0 Ready to start TLS')>>> smtpObj.login('bob@example.com', 'MY_SECRET_PASSWORD')(235, b'2.7.0 Accepted')>>> smtpObj.sendmail('bob@example.com', 'alice@example.com', 'Subject: So long.\nDear Alice, so long and thanks for all the fish. Sincerely, Bob') {}>>> smtpObj.quit()(221, b'2.0.0 closing connection ko10sm23097611pbd.52 - gsmtp')
+```
+
+#### Connecting to an SMTP Server
+
+* This is the server that your internet provider uses to send mail
+* Here are the following STMP server domain names
+	* Gmail = `smtp.gmail.com`
+	* Outlook.com/Hotmail.com = `smtp-mail.outlook.com`
+	* Yahoo Mail = `smtp.mail.yahoo.com`
+ 	* AT&T = `smpt.mail.att.net (port 465)`
+	* Comcast = `smtp.comcast.net`
+	* Verizion = `smtp.verizon.net (port 465)`
+* You then need to create a SMTP object by using `smptlib.SMTP()`, using the domain name as a string arugment
+* the SMTP object represents a connection to the server, with methods for sending emails.
+
+Example
+
+```
+>>> smtpObj = smtplib.SMTP('smtp.gmail.com', 587) >>> type(smtpObj)<class 'smtplib.SMTP'>
+```
+	
+* You also need to know what encryption the server  is using, and will need to call either `smtplib.SMTP()` or `smtplib.SMTP_SSL()`
+
+#### Sending the SMTP "Hello" Message
+
+* to ensure that the connection is working, call `ehlo()` to your smtpObject
+* This should be the first method you call after getting the SMTP object, **or you will get errors**
+
+#### Starting TLS Encryption
+
+* If you are connecting to port 587, you need to call `starttls()` next.
+* This will enable encryption for your connection.
+* Port 465 already has this set up, so you do not need to worry about it.
+
+Example
+
+```
+#If it returns 220, this means the server is ready
+>>> smtpObj.starttls()(220, b'2.0.0 Ready to start TLS')
+```
+
+#### Logging in to the SMTP Server
+
+* Use `.login(emailAddress,password)`
+* Google has additional security that needs to be addressed, see `http://nostarch.com/automatestuff/` for more information
+
+Example
+```
+>>>smtpObj.login('my_email_address@gmail.com', 'MY_SECRET_PASSWORD') 
+(235, b'2.7.0 Accepted')
+```
+
+#### Sending an Email
+
+* use `sendmail(yourEmailAddress,recipientEmailAddress, Body)`
+* if you want to add a subject, in the email body use `Subject: .... \n`
+* The return value is a dictionary, with key value pairs for email deliverys that **failed**
+
+Example
+
+```
+>>> smtpObj.sendmail('my_email_address@gmail.com', 'recipient@example.com', 'Subject: So long.\nDear Alice, so long and thanks for all the fish. Sincerely, Bob'){}
+```
+
+#### Disconnecting from the SMTP Server
+
+* call the `quit()` method when you have finished sending emails
+* It should return the value 221, which means that the session is ending
+
+Example
+
+```
+>>> smtpObj.quit()(221, b'2.0.0 closing connection ko10sm23097611pbd.52 - gsmtp')
+```
+
+#### IMAP
+
+* Used to retrieve emails from the server.
+* `imapclient` and `pyzmail` are the ideal modules for doing this.
+
+#### Connecting to an IMAP Server
+
+* Need an IMAPClient object to connect to an IMAP server and receive email.
+* Each email provider will have their own IMAP server domain name
+	* Gmail = `imap.gmail.com`
+	* Outlook/hotmail = `imap-mail.outlook.com`
+	* Yahoo = `imap.mail.yahoo.com`
+	* AT&T = `imap.mail.att.net`
+	* Comcast = `imap.comcast.net`
+	* Verizon = `incoming.verizon.net`
+* Most email providers will require SSL encryption.
+	* Can add this as a parameter in `.IMAPClient()`
+
+Example
+```
+>>> import imapclient>>> imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
+```
+
+#### Logging in to the IMAP Server
+
+* Use `login(emailaddress,password)`
+* Will return `Success` if it was successful
+* Gmail will need additional information
+
+Example
+
+```
+>>>imapObj.login('my_email_address@gmail.com', 'MY_SECRET_PASSWORD') 
+'my_email_address@gmail.com Jane Doe authenticated (Success)'
+```
+
+#### Selecting a folder
+* To search for email you need to select a folder first.
+* Can get a list of folders by calling `list_folders()`
+	* This will return a list of tuples containing information about folders
+
+Example
+
+```
+>>> import pprint>>> pprint.pprint(imapObj.list_folders())
+ [(('\\HasNoChildren',), '/', 'Drafts'), (('\\HasNoChildren',), '/', 'Filler'), (('\\HasNoChildren',), '/', 'INBOX'), (('\\HasNoChildren',), '/', 'Sent'),--snip--(('\\HasNoChildren', '\\Flagged'), '/', '[Gmail]/Starred'), (('\\HasNoChildren', '\\Trash'), '/', '[Gmail]/Trash')]
+```
+
+* to select a folder, use `select_folder(Foldername,readonly=True)`
+
+#### Performing the Search
+
+* Once a folder is selected, can use `.search()`
+* Search takes a list of strings which are formatted to the IMAPs search keys:
+	* `all` = Returns all messages in the folder. You may run in to imaplib size limits if you request all the messages in a large folder.
+	* `'BEFORE date', 'ON date', 'SINCE date'` = These three search keys return, respectively, messages that were received by the IMAP server before, on, or after the given date. The date must be formatted like 05-Jul-2015. Also, while 'SINCE 05-Jul-2015' will match messages on and after July 5, 'BEFORE 05-Jul-2015' will match only mes- sages before July 5 but not on July 5 itself.
+	* `'SUBJECT string', 'BODY string', 'TEXT string'` = Returns messages where string is found in the subject, body, or either, respectively. If string has spaces in it, then enclose it with double quotes: 'TEXT "search with spaces"'.
+	* `'FROM string', 'TO string', 'CC string', 'BCC string'` = Returns all messages where string is found in the “from” emailaddress, “to” addresses, “cc” (carbon copy) addresses, or “bcc” (blind carbon copy) addresses, respectively. If there are multiple email addresses in string, then separate them with spaces and enclose them all with double quotes:'CC "firstcc@example.com secondcc@example.com"'.
+	* `'SEEN', 'UNSEEN'` = Returns all messages with and without the \Seen flag, respec- tively. An email obtains the \Seen flag if it has been accessed with a fetch() method call (described later) or if it is clicked when you’re checking your email in an email program or web browser. It’s more common to say the email has been “read” rather than “seen,” but they mean the same thing.
+	* `'ANSWERED', 'UNANSWERED'` = Returns all messages with and without the \Answered flag, respectively. A message obtains the \Answered flag when it is replied to
+	* `'DELETED', 'UNDELETED'` = Returns all messages with and without the \Deleted flag, respec- tively. Email messages deleted with the delete_messages() method are given the \Deleted flag but are not permanently deleted until the expunge() method is called 
+	* `'DRAFT', 'UNDRAFT'` = Returns all messages with and without the \Draft flag, respec- tively. Draft messages are usually kept in a separate Drafts folder rather than in the INBOX folder
+	* `'FLAGGED', 'UNFLAGGED'`= Returns all messages with and without the \Flagged flag, respectively. This flag is usually used to mark email mes- sages as “Important” or “Urgent.”
+	* `'LARGER N', 'SMALLER N'` = Returns all messages larger or smaller than N bytes, respectively.
+	* `'NOT search-key'` = Returns the messages that search-key would not have returned.
+	* `'OR search-key1search-key2'` = Returns the messages that match either the first or secondsearch-key.
+
+Example Searches 
+
+```
+imapObj.search(['ALL']) 
+# Returns every message in the currentlyselected folder.imapObj.search(['ON 05-Jul-2015'])
+# Returns every message sent on July 5, 2015.
+imapObj.search(['SINCE 01-Jan-2015', 'BEFORE 01-Feb-2015', 'UNSEEN'])# Returns every message sent in January 2015 that is unread. (Note that this means on and after January 1 and up to but not including February 1.)imapObj.search(['SINCE 01-Jan-2015', 'FROM alice@example.com']) 
+# Returns every message from alice@example.com sent since the start of 2015.imapObj.search(['SINCE 01-Jan-2015', 'NOT FROM alice@example.com'])# Returns every message sent from everyone except alice@example.com since the start of 2015.imapObj.search(['OR FROM alice@example.com FROM bob@example.com']) 
+# Returns every message ever sent from alice@example.com or bob@example.com.imapObj.search(['FROM alice@example.com', 'FROM bob@example.com']) 
+# Trick example! This search will never return any messages, because messages must match all search keywords. Since there can be only one “from” address, it is impossible for a message to be from both alice@example.com and bob@example.com.
+```
+* `search()` returns unique IDs of the email rather than the email itself, as integers.
+* Can then pass the ID to `fetch()` to get the email
+
+```
+>>> UIDs = imapObj.search(['SINCE 05-Jul-2015'])>>> UIDs[40032, 40033, 40034, 40035, 40036, 40037, 40038, 40039, 40040, 40041]
+```
+
+#### Size Limits
+
+* If you create a search that matches a large amount of emails, you may get the following error: `imaplib.error: got more than 10000 bytes`
+* If this does happen, you may need to disconnect and reconnnect to the server
+* Alternatively, you can increase the limit by increasing`._MAXLINE`
+
+Example
+
+```
+>>> import imaplib>>> imaplib._MAXLINE = 10000000
+```
+#### Fetching an Email and Marking It as Read
+
+* to get the email, use `.fetch(UID,['BODY[]'])
+* `BODY[]` tells fetch to download the body content for the emails specified in your UID List
+* Can use `pprint` to print the body in a readable format
+
+Example
+
+```
+>>> rawMessages = imapObj.fetch(UIDs, ['BODY[]'])>>> import pprint>>> pprint.pprint(rawMessages){40040: {'BODY[]': 'Delivered-To: my_email_address@gmail.com\r\n'                   'Received: by 10.76.71.167 with SMTP id '--snip--
+'\r\n''------=_Part_6000970_707736290.1404819487066--\r\n',
+# Sequence number (Similar to UID)'SEQ': 5430}}
+```
+* If you want to mark the email as read, change `readonly=True` in `select_folder` to `readonly=False`
+
+Example
+
+```
+>>> imapObj.select_folder('INBOX', readonly=False)
+```
+
+#### Getting Email Addresses from a Raw Message
+
+* Pyzmail can parse raw messages and return PyzMessage objects.
+* You do this by passing the rawMessages to `PyzMessage.factory`
+
+Example
+
+```
+>>> import pyzmail>>> message = pyzmail.PyzMessage.factory(rawMessages[40041]['BODY[]'])
+```
+* You can them use methods like `.get_subject()` to conveniently get the information
+
+Example
+
+```
+>>> message.get_subject()'Hello!'>>> message.get_addresses('from')[('Edward Snowden', 'esnowden@nsa.gov')] >>> message.get_addresses('to')[(Jane Doe', 'my_email_address@gmail.com')] >>> message.get_addresses('cc')[]>>> message.get_addresses('bcc')[]
+```
+
+#### Getting the Body for a Raw Message
+
+* If the email is only plaintext. PyzMessage object will have `html_part = nNone`
+* If it is a html email, PyzMessage will have `text_part = NOne`
+* If its a mix, you need to use `get_payload()` to get the email as a byte type, then use `.decode()` to parse it
+	* .`decode` needs either `(text_part.charset)` or `(html_part.charset)` to it to decode it
+
+Example
+
+```
+>>> message.text_part != None True>>> message.text_part.get_payload().decode(message.text_part.charset) 
+ 'So long, and thanks for all the fish!\r\n\r\n-Al\r\n'>>> message.html_part != NoneTrue
+>>>message.html_part.get_payload().decode(message.html_part.charset)'<div dir="ltr"><div>So long, and thanks for all the fish!<br><br></div>-Al <br></div>\r\n'
+```
+
+#### Deleting Emails
+
+* Need to pass the UID to `.delete_messages()` with `\\Deleted` as a parameter
+* Once you have deleted, you need to call `.expunge()` to perminantly remove it
+
+Example
+
+```
+>>> imapObj.select_folder('INBOX', readonly=False) v>>> UIDs = imapObj.search(['ON 09-Jul-2015'])>>> UIDs[40066]>>> imapObj.delete_messages(UIDs)w{40066: ('\\Seen', '\\Deleted')} 
+>>> imapObj.expunge() 
+>>> ('Success', [(5452, 'EXISTS')])
+```
+#### Disconnecting from the IMAP server
+
+* Call `.logout`
+
+#### Text Messages
+
 CONTINUE
 
+--
 ### Manipulating Images
 CONTINUE
-
+--
 ### Controlling The Keyboard and mouse With GUI Automation
-CONTINUE
 
+####  Installing  pyautogui module
+
+* This module can send virtual keypresses and mouse clicks.
+* When using GUI Automation, python may execute too fast.
+
+Installing on windows:
+No other dependancies needed
+Installing on OSX
+```
+sudo pip3 install pyobjc-framework-Quartz, sudo pip3install pyobjc-core, and then sudo pip3 install pyobjc.
+```
+Installing on Linux:
+```
+sudo pip3 install python3-xlib, sudo apt-get install scrot, sudo apt-get install python3-tk, and sudo apt-get install python3-dev.
+```
+
+#### Shutting Down Everything by Logging out
+* On windows and Linux, use `CTRl-ALT-DEL`
+* On OSX, use ` COMMAND-SHIFT-OPTION-Q`
+
+#### Pauses and Fail-Safes
+
+* Can tell your script to wait after every function call, which will give you a short time to control the mouse and keyboard if something goes wrong.
+* YOu do this by assigning the number of seconds you it to puase to `pyautogui.PAUSE`
+* You can also enable a failsafe feature. If you move your mouse to the top left corner of the screen, the program will terminate. 
+* You can enable this by assigning `pyautogui.FAILSAFE = True`
+
+Example
+
+```
+>>> import pyautogui>>> pyautogui.PAUSE = 1>>> pyautogui.FAILSAFE = True
+```
+
+#### Controlling Mouse Movement
+
+* Mouse functions of PyAutoGUI use x and y coordinates.
+* For a 1902x1080 resolution:
+	* Top left corner of screen = 0,0
+	* Top Right corner of screen = 1919,0
+	* Bottom left corner of screen = 0,1079
+	* Bottom right corner of screen = 1919,1070
+* You can get your resolution by caling `pyautogui.size()`
+* You can also assign variables to hold the width and height of your screen by doing: ` width, height = pyautogui.size()`
+
+#### Moving the Mouse
+
+* `zpyautogui,moveTo(x,y,duration=x)` will move the mouse to the specified coordinates.
+* Duration can be used to specify how long it should take to move the mouse to that position
+* Duration is optional, if you leave it out, it will move instantly
+
+Example
+
+```
+>>> import pyautogui >>> for i in range(10):      pyautogui.moveTo(100, 100, duration=0.25)      pyautogui.moveTo(200, 100, duration=0.25)      pyautogui.moveTo(200, 200, duration=0.25)      pyautogui.moveTo(100, 200, duration=0.25)
+```
+
+* pyautogui.moveRel() moves the mouse cursor relative to its current positon.
+
+Example
+
+```
+>>> import pyautogui >>> for i in range(10):      pyautogui.moveRel(100, 0, duration=0.25)      pyautogui.moveRel(0, 100, duration=0.25)
+      pyautogui.moveRel(-100, 0, duration=0.25)                   				pyautogui.moveRel(0, -100, duration=0.25)
+```
+
+#### Getting the Mouse Position
+
+* Can getermine the mouse's current position by calling `pyautogui.position()`
+* This will return a tuple containg the x and y values respectively
+*
+Example
+
+```
+>>> pyautogui.position() 
+(311, 622)>>> pyautogui.position() 
+(377, 481)>>> pyautogui.position() 
+(1536, 637)
+```
+
+#### Clicking the Mouse
+
+* `pyautogui.click(x,y,button=z)`
+* By default this will left click
+* To right click, use `button='right'`
+
+Example
+
+```
+>>> import pyautogui>>> pyautogui.click(10, 5)
+```
+
+* Alternatively, you can use `pyauto.mouseDown()` followed by `pyauto.mouseUp()`
+* Here are more useful mouse clicking methods:
+	* `.doubleClick()`
+	* `.rightClick()`
+	* `.middleClick()`
+
+#### Dragging the Mouse
+
+* Can use the following:
+	* `.dragTo(x,y,duration=z)`
+	* `.dragRel(x,y,duration=z)`
+	* `.moveTo(x,y,duration=z)`
+	* `.moveRel(x,y,duration=z)`
+
+#### Scrolling the Mouse
+
+* `.scroll(numberOfTimesToScroll)`
+
+#### Getting a screenshot
+
+* `.screenshot()`
+
+```
+>>> import pyautogui>>> im = pyautogui.screenshot()```
+
+#### Sending a String from the Keyboard
+
+* `typewrite()` sends virtual kep presses.
+* Its important to click on where you want the text to go first. 
+
+Example (Important to keep them on the same line to rpevent python from prompting you!)
+
+```
+>>> pyautogui.click(100, 100); pyautogui.typewrite('Hello world!')
+```
+
+* By default python will enter all the text instantly. To add a wait add a float value as a second parameter to `typewrite`
+
+#### Key Names
+* Instead of using a string, you can pass a list of keys
+* This will press the keys in the order they are in the list
+
+Example
+
+```
+>>> pyautogui.typewrite(['a', 'b', 'left', 'left', 'X', 'Y'])
+```
+
+* Some keys have special attributes
+* Below is a list:
+	* `'a', 'b', 'c', 'A', 'B', 'C', '1', '2', '3', '!', '@', '#', and so on` = Keys for single characters
+	* `'enter' (or 'return' or '\n')` = The ENTER key
+	* `'esc'` = The ESC key
+	* `'shiftleft', 'shiftright'` = The left and right SHIFT keys
+	* `'altleft', 'altright'` = The left and right ALT keys
+	* `'ctrlleft', 'ctrlright'` = The left and right CTRL keys
+	* `'tab' (or '\t')` = The TAB key
+	* `'backspace', 'delete'` = The BACKSPACE and DELETE keys
+	* `'pageup', 'pagedown'` = The PAGE UP and PAGE DOWN keys
+	* `'home', 'end'` = The HOME and END keys
+	* `'up', 'down', 'left', 'right'` = The up, down, left, and right arrow keys
+	* `'f1', 'f2', 'f3', and so on` = The F1 to F12 keys	* `'volumemute', 'volumedown', 'volumeup'` = The mute, volume down, and volume up keys (some keyboards do not have these keys, but your operating system will still be able to understand these simulated keypresses)
+	* `'pause'` = The PAUSE key
+	* `'capslock', 'numlock', 'scrolllock'` = The CAPS LOCK, NUM LOCK, and SCROLL LOCK keys
+	* `'insert'` = The INS or INSERT key
+	* `'printscreen'` = The PRTSC or PRINT SCREEN key
+	* `'winleft', 'winright'` = The left and right WIN keys (on Windows)
+	* `'command'` = The Command key (on OS X)
+	* `'option'` = The OPTION key (on OS X)
+
+#### Pressing and Releasing the Keyboard key
+
+* `.keyDown(key)` and `'.keyUp(key)` 
+* Can press other keys while the key is down
+
+Example
+
+```
+>>> pyautogui.keyDown('shift'); pyautogui.press('4'); pyautogui.keyUp('shift')
+```
+
+#### Hotkey Combinations
+
+* Can use `.hotkey(key1,key2..)` to do hotkey commands (Such as copy/paste)
+
+Example
+
+```
+>>> import pyautogui, time >>> def commentAfterDelay():      pyautogui.click(100, 100)      pyautogui.typewrite('In IDLE, Alt-3 comments out a line.')      time.sleep(2)      pyautogui.hotkey('alt', '3')>>> commentAfterDelay()
+```
+
+--
 ## Running Programs
 
 ### In Windows

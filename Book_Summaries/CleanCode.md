@@ -59,17 +59,19 @@ Think  "Does the name and parameters alone accurately
 Good code will reduce the need for comments. As mentioned above, you're code should be readable to another developer without the need for comments.
 
 However, there are some good scenarios when a comments will be useful:
-	* Informative comments (Eg, structure of a data type)
-	* Warnings
-	* TODOS
-	* Indicating importance
-	* Documenting an API
+
+* Informative comments (Eg, structure of a data type)
+* Warnings
+* TODOS
+* Indicating importance
+* Documenting an API
 
 You should try and avoid the following types of coments:
-	* Comments lacking in clarity
-	* Changelog comments
-	* Commenting a function rather than splitting it up into sub functions
-	* Comments that reference non local inforomation
+
+* Comments lacking in clarity
+* Changelog comments
+* Commenting a function rather than splitting it up into sub functions
+* Comments that reference non local inforomation
 
 --------------------------------------------------------------------
 
@@ -78,9 +80,10 @@ You should try and avoid the following types of coments:
 Classes and files should not be too long. If over 200 lines, think about splitting it up
 
 A good class will be read like an article. It should have the following format:
-	* A heading
-	* Key information
-	* Implementations
+
+* A heading
+* Key information
+* Implementations
 
 Tabs and whitespace should be used for clarity and give the page a good structure.
 
@@ -90,7 +93,15 @@ Try keeping the formatting consistent throughout a project.
 
 ### 6. Objects + Data Structures 
 
-CONTINUE
+Use private variables to keep the internal structre hidden
+
+Try to minimise the number of instance variables
+
+Your base classes should know nothing about the classes that will extend it
+
+Try to use fundamental data structures than inventing your own
+
+Objects should represent one thing
 
 -----------------------------------------------------
 
@@ -115,6 +126,8 @@ Your automated tests should cover all of your codes functionality.
 You should do this in a TDD approach (Write the test -> Write the minimal amount of code to pass the test)
 
 Test should be fast and independant of each other
+
+One assert per test
 
 ------------------
 
