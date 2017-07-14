@@ -1,4 +1,4 @@
-# Automate The Borign Stuff With Python - Al Sweigart
+# Automate The Boring Stuff With Python - Al Sweigart
 
 -------
 
@@ -14,12 +14,16 @@
 *  `-` (Subtraction)
 *  `+` (Addition)
 
+---
+
 ### Variables
 
-* Can only be one word
 * Can only use letters, numbers and _
 * Cannot begin with a number
 * Are case sensitive
+* No keyword before a variable, just the name of the variable
+
+---
 
 ### Boolean Operators
 
@@ -30,12 +34,12 @@
 * ` not x`
 * `x==y`
 
-
+---
 
 ### Flow Control
 
 #### If Statements
-* IF statmeents have the form of `if x == y:
+* If statmeents have the form of `if condition:`
 
 Eg
 
@@ -46,9 +50,11 @@ else:
 	print ('Hello, stranger.')	
 	
 ```
-**Remember indentation**
+
+---
 
 #### Elif statements
+
 * `elif` is an else if statement that will match even if the if before has been matched. 
 * Below is a elif statement that will match against name, and then check age.
 
@@ -59,7 +65,7 @@ elif age <12:
 	print('You are not a kid Alice')
 ```
 
-* if you have multiple `elif`, it will only match once then terminate, rather than checking against each `elif`
+* If you have multiple `elif`, it will only match once then terminate, rather than checking against each `elif`
 
 ```
 if name == 'Alice'
@@ -72,11 +78,13 @@ elif age >100 :
 	print('something else')		
 
 ```
+---
+
 #### While
 
-* while statement continue till a condition is met.
+* while statement continues until the condition is met.
 * Make sure to ensure that the loop will terminate!
-* **Remember indentation and colon!**
+
 
 ```
 spam = 0
@@ -85,7 +93,10 @@ while spam < 5:
 	spam = spam +1
 ```
 
+---
+
 #### Break
+
 * If you place a break in the while loop body, it will exit the loop 
 
 ```
@@ -96,8 +107,10 @@ while True:
 		break
 print('Thanks!')
 ```
+---
 
 #### Contiune
+
 * Continue statements are also used inside loops. When the program hits a contiue statement, it heads straight to the start of the loop and reevaluates the loops condition
 
 Example
@@ -117,7 +130,10 @@ print ('Access granted')
 
 Here the loop continues until the name joe is entered, If joe enters the wrong password, then the loop will go to the beginning
 
+---
+
 #### Truthy & Falsey
+
 * Some values are equivilent to true and false (known as truthy values)
 * Examples:
 	* `''` == falase
@@ -125,7 +141,10 @@ Here the loop continues until the name joe is entered, If joe enters the wrong p
 	* `0.0` == false
 	* Everything else == true
 
+---
+
 #### For Loops
+
 * For loops use in and range to know when to terminate and what starting value to have
 * For loops use `range()` to get values
 
@@ -143,11 +162,13 @@ this will print 12,13,14,15
 Example
 
 ```
+#This will decrement everytime by -1
 for i in range(5,-1,-1)
 	print(i)
 ```
-This will decrement everytime by -1
---
+
+
+---
 ### Importing Modules
 
 #### Import Keyword
@@ -165,6 +186,9 @@ for i in range(5):
 ```
 import random, sys, os, math
 ```
+
+---
+
 #### From Keyword
 
 * You can also use `from` keyword
@@ -172,11 +196,13 @@ import random, sys, os, math
 * The full name however makes it easier to read
 
 ```
-from random
+from random import randint
 for i in range(5):
 	print(randint(1,10))
 ```
---
+
+---
+
 ### Functions
 
 #### def Statement with parameters
@@ -187,6 +213,7 @@ for i in range(5):
 def hello(name):
 	print('Hello' + name)
 ```
+---
 
 #### Return values and return statements
 
@@ -198,12 +225,15 @@ def getAnswer(answerNumber)
 number= getAnswer(5)
 print(number)
 ```
+----
 
 #### The None Value
 
-* Has no value.
-* Functions that do not return anything return None by default
+* Has no value. Similar to Null in Java
+* Functions that do not return anything return `None` by default
 * None must start with a capital 
+
+---
 
 #### Keyword Arguments and Print()
 
@@ -213,16 +243,18 @@ print(number)
 * More will be taught later
 
 ```
+#this will print: cats,dogs,mice
 print('cats', 'dogs', 'mice', sep=',')
 
 ```
-this will return: cats,dogs,mice
+
+---
 
 #### Local and Global Scope
 
-* Parameters are variables that are defined a functions declaration/body are "local" variables
+* Local variables are variables that are defined within a functions body
 * They can only be used inside that function
-* Global variables (That are declared outside of a fucntion) can be used anywhere. 
+* Global variables are declared outside of a function, and can can be used anywhere. 
 * Functions can access global variables without having to pass them to the function
 
 Example of local variable
@@ -242,18 +274,23 @@ eggs = 31337
 def printSpam():
 	print(eggs)
 ```
-##### Global and Local variables with the same name
+---
+
+#### Global and Local variables with the same name
 
 * Try to avoid using local variables that have the same name as a global variable or another local varaible
 * Technically it is legal to do this however
 
-##### The Global Statement
+---
+
+#### The Global Statement
 
 * If you need to modifiy a global variable within a funciton, use the global statement
 * If you have `global variableName` inside of a function, it says that the function refers to that global variable, so do not change it)
 
 ``` 
 def spam():
+	# says that we will be using the global variable eggs, not defining one within the function
 	global eggs
 	eggs = 'spam'
 eggs = 'global eggs'
@@ -278,12 +315,14 @@ def bacon():
 
 * If you ever want to modify the value stored in a global variable from in a function, you must use a global statement on that variable
 
+---
+
 #### Exception Handling
 
 * Can be handled with `try` and `expect` statements
 * You can put code that may cause an error in the `try` block
 * Then you can handle the error in the `expect` block
-	* `expect` needs to have the error in its definiton
+	* `expect` needs to have the Exception in its definiton
 
 
 Example
@@ -301,7 +340,9 @@ except ZeroDivisonError:
 	print("Error: Invalid argument.')
 	
 ```
---
+
+---
+
 ### Lists
 
 #### List Data Type
@@ -310,14 +351,16 @@ except ZeroDivisonError:
 * Lists can contain different types (Eg, integers and strings)
 * These are seperated by commas
 * Lists are defined within brackets []
-* Items in a list are called `items`
 * Lists are assigned names, but the items inside a list are not assigned names, but rather indexes (Positions in a list)
 
 Example
+
 ```
 spam =[1,2,3]
 ```
-#### Indexs
+---
+
+#### Indexs'
 * To get an item from the list, use `listName[index]`
 * lists start at index 0
 * Negative indexes start from the end of the list
@@ -330,25 +373,35 @@ spam[2] == 2
 spam[-1] == 3
 ```
 
+---
+
 #### Getting Sublists with Slices
 
-* Slcie can get several values from a list in the form of a new list
+* Slice can get several values from a list and returns them as a new list
 * Slice is defined as `listName[startIndex:endIndex]`
 * You can leave the startIndex or endIndex out, and python will assume it starts at the beginning/end respectively
 * If you leave startIndex and endIndex out, it will assume to get the whole list
+
+---
 
 #### Getting a Lists length with len()
 
 * len(listName) will return the number of items in a list
 
+---
+
 #### Changing Values in a list with indexs
 
 * you can change the value at a lists index by `listName[index]=newValue`
+
+---
 
 #### Removing Values from Lists with del Statements
 
 * `del listName[index]` will remove the value from the list
 * Items will then get shifted to the left to fill the position that was removed
+
+---
 
 #### Working With Lists
 
@@ -366,10 +419,12 @@ while True:
 	
 ```
 
+---
+
 #### Using for loops with lists
 
 * For loops will go through lists from start to end, then terminate
-* Best to do this using range and len
+* Best to do this using `range` and `len`
 
 Example
 
@@ -379,10 +434,11 @@ for i in range(len(supplies)):
 	print('Index' + str(i) + in supplies is : '+supplies[i])
 	
 ```
+---
 
 #### The in and not in Operators
 
-* Can detmine whether a item is in a list using `in` and `not in`
+* Can determine whether a item is in a list using `in` and `not in`
 
 ```
 'howdy' in ['hello', 'hi', 'howdy', 'heyas'] 
@@ -391,10 +447,15 @@ False'cat' not in spam
 True
 ```
 
+---
+
 #### Methods
 
-* Same as a function, but is called on a value.
-* has the syntax `value.methodName(Parameters)`
+* Same as a function, but is called on a object
+* has the syntax `object.methodName(Parameters)`
+* Remember everything in python is an object!
+
+---
 
 #### adding values to lists using append() and insert()
 
@@ -406,12 +467,16 @@ True
 
 `listOne.insert(index,value)`
 
+---
+
 #### Removing values from a list with remove()
 
 * rempove takes a value, and if that value is in the list removes it
 * if its not in a list, it will throw an error!
 
 `listOne.remove(valueToRemove)`
+
+---
 
 #### Sorting the Values in a List with the Sort() Method
 
@@ -425,17 +490,22 @@ True
 
 ` listToSort.sort(reverse=True)`
 
+---
 
 #### List like types: Strings and Tuples
 
 * Tuples and strings are treated as lists
 * methods that can be used on lists can be used on these types
 
+---
+
 #### Mutable and Immutable Data types
 
 * Lists are mutable (Can be added, removed or changed)
 * Strings are immutable (Cannot be changed)
 * When using methods that change values on immutable types, it simply creates a new varaibale of that type and assigns the value to it
+
+---
 
 #### Tuple Data Type
 
@@ -444,12 +514,21 @@ True
 * Seperated by ,
 * If it only has one item in a tuple, should have , behind taht value
 * Tuples are immutable
+* Can store different types in a tuple
+
+Example
+
+```
+tupleName = ('hello','world',1991'True)
+```
+---
 
 #### Converting Types with the list() and tuple() Functions
 
 * list() and tuple() will return list versions of tuples and tuple versions of list respectively
 
---
+---
+
 ### Dictionaries and Structuring Data
 
 #### Dictionary Data Type
@@ -466,18 +545,21 @@ myCat['size'
 'fat'
 ```
 
+---
+
 #### Dictionaries vs. Lists
 
-* Dictionaries are unordered, lists are order
-* There are no indexes
+* Dictionaries are unordered, lists are ordered
+* There are no indexes, instead dictionaries use key:value pairs
 * Lists are only equal to each other if they contain the same vaues AND are ordered, dictionaries are equal only if they contain the same values
 * Dictionaries cannot be sliced
 
+---
 
 #### The keys(), values(), and items() methods
 
 * These can be used in for loops
-* values() will return values in a list
+* `values()` will return values in a list
 
 ```
  spam = {'color': 'red', 'age': 42} 
@@ -485,20 +567,21 @@ myCat['size'
 ```
 This will return red and 42
 
-* Keys will return keys in a list
+* `Keys()` will return keys in a list
 
 ```
 for k in spam.keys(): 
 	print(k)
 ```
 
-* items()will return keys and values 
+* `items()` will return keys and values 
 
 ```
 for i in spam.items():	print(i)
 	
 # Return values('color', 'red')('age', 42)
 ```
+---
 
 #### Checking Whether a Key or Value Exists in a Dictionary
 
@@ -509,23 +592,26 @@ spam = {'name': 'Zophie', 'age': 7} 'name' in spam.keys()True
 'Zophie' in spam.values()True'color' in spam.keys() False
 'color' not in spam.keys() True'color' in spamFalse
 ```
+---
+
 
 #### The get() Method
 
-* takes the key of the value to find and a fallback value to return if that key does not exist
+* Takes a key and a fall back value. if the key is not already in the dictionary, it will return the fallback value. If the key is in the dictionary, it will return the value.
+* This does not add the key and value to the dictionary if the key does not exist!
 
 `dictionary.get('key',fallbackValue)`
-If key exists, will return key value, otherwise will return fallbackvalue
+
 
 #### The setdefault() Method
 
 * Alows you to set a key with a value
 * If the key already exists, it returns the keys value.
-* If it does not exist, returns sets the value to the key and returns it
+* If it does not exist, sets the key to the value and returns it
 
 `dictionary.setdefault(key,value)`
 
---
+---
 ### Manipulating Strings
 
 #### String Literals
@@ -533,13 +619,19 @@ If key exists, will return key value, otherwise will return fallbackvalue
 * Begin and end with '
 
 `'This is a string'`
+
 * You can use double quotes, which is advised when punctuation/non letter characters are involed
 
 `"This is also a string..."`
 
+---
+
 #### Escape characters
 
-* use them in single quotes
+* Use them in single quotes
+* Example of an escape character is `\n`
+
+---
 
 #### Raw Strings
 
@@ -553,23 +645,32 @@ print(r'That is carol\'s cat')
 #This returns
 That is carol\'s cat.
 ```
+---
 
 #### Multiline Strings with Triple Quotes
 
 * use `(''' string with multilines''')`
 
+---
+
 #### Multiline Comments
 
 * Use `""" multiline comment"""`
+
+---
 
 #### Indexing and Slicing Strings
 
 * This is done in the same way as lists ([indexStart:indexEnd])
 * Will return a new list that has been sliced
 
+---
+
 #### In and Not in Operators with Strings
 
 * Same as lists!
+
+---
 
 #### Useful String methods
 
@@ -577,6 +678,8 @@ That is carol\'s cat.
 * lower()
 * isupper()
 * islower()
+
+---
 
 #### The isX String method
 
@@ -590,9 +693,14 @@ Examples:
 * isspace (string only contains spaces, tabs and new lines and is not blank)
 * istitle() (returns true if each word in the list starts with a uppercase and follows with lowercase characters)
 
+
+---
+
 #### Startswith(x) and endswith(x)
 
 * Returns true if the string value(x) is at the start or end of the list 
+
+---
 
 #### join() and split()
 
@@ -606,6 +714,8 @@ Example
 
 ```
 
+---
+
 #### Justifying Text with rjust(),ljust() and center()
 
 * rJust(x) and ljust(y) just add characters to the front and end of  astring respectively, where x is the number of whitespaces/chracters
@@ -615,11 +725,15 @@ Example
 'Hello'.rjust(20, '*') '***************Hello''Hello'.ljust(20, '-') 'Hello---------------'Hello'.center(20)' Hello ' 'Hello'.center(20, '=') '=======Hello========'
 ```
 
+---
+
 #### Removing Whitesapce with strip(), rstrip() and lstrip()
 
 * strip() removes white space charactes at the front and end of the string
 * rstrip() removes whitepsace characters from the end of the string
 * lstrip() removes whitespace characters from the front of the string
+
+---
 
 #### Copying and Pasting Strings with the pyperclip module
 
@@ -632,8 +746,8 @@ pyperclip.copy("hello world!")
 pyperclip.paste()
 ```
 
+---
 
---
 ## Automating Tasks
 
 ### Pattern Matching With Regular Expressions
@@ -642,6 +756,8 @@ pyperclip.paste()
 
 * Need to import the `re` module
 * to create a regex, you need to store in a variable and use `re.compile(regexpattern)`
+
+---
 
 #### Matching Regex Objects
 
@@ -657,9 +773,11 @@ phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 mo = phoneNumRegex.search('My number is 415-555-4242.') >>> print('Phone number found: ' + mo.group())
 # OutputPhone number found: 415-555-4242
 ```
+
 * Mo variable is a generaic name to use for match objects.
 * .compile creates the regex object
-*
+
+---
 
 #### Review of Regular Expression Matching
 
@@ -668,7 +786,8 @@ mo = phoneNumRegex.search('My number is 415-555-4242.') >>> print('Phone number 
 3. Pass the string you want to search into the regex objects `search()` method. This will return a match object or None
 4. Call the Match objects `group` method to return a string of the actual matched text
 
---
+---
+
 ### More Pattern matching With Regular expressions
 
 #### Grouping with Parentheses
@@ -684,6 +803,8 @@ Example
 >>> mo.groups()('415', '555-4242')>>> areaCode, mainNumber = mo.groups() >>> print(areaCode)415>>> print(mainNumber)555-4242
 ```
 
+---
+
 #### Matching Multiple Groups with the Pipe
 
 * Pipes match one of many expressions (x|y)
@@ -697,6 +818,8 @@ Example
 >>> batRegex = re.compile(r'Bat(man|mobile|copter|bat)') >>> mo = batRegex.search('Batmobile lost a wheel')>>> mo.group()'Batmobile'>>> mo.group(1) 'mobile'
 ```
 
+---
+
 #### Optional Matching With the Question Mark
 * `?` flags the group that preceeds it as an optinal part of the pattern.
 
@@ -707,6 +830,8 @@ Example
 ```
 This optinally matches "wo" (Matches 0 or more instances)
 
+---
+
 #### Matching Zero or More with Star
 
 * The `*` means "match zero or one of the groups preceding this questionmark"
@@ -716,6 +841,8 @@ Example
 ```
 >>> batRegex = re.compile(r'Bat(wo)*man')>>> mo1 = batRegex.search('The Adventures of Batman') >>> mo1.group()'Batman'>>> mo2 = batRegex.search('The Adventures of Batwoman') >>> mo2.group()'Batwoman'>>> mo3 = batRegex.search('The Adventures of Batwowowowoman') >>> mo3.group()'Batwowowowoman'
 ```
+
+---
 
 #### Matching One or More with +
 
@@ -728,6 +855,8 @@ Example
 >>> batRegex = re.compile(r'Bat(wo)+man')>>> mo1 = batRegex.search('The Adventures of Batwoman') >>> mo1.group()'Batwoman'>>> mo2 = batRegex.search('The Adventures of Batwowowowoman') >>> mo2.group()'Batwowowowoman'
 >>> mo3 = batRegex.search('The Adventures of Batman') >>> mo3 == NoneTrue
 ```
+
+---
 
 #### Matching Specific Repetitions with Curly Brackets
 
@@ -745,6 +874,9 @@ Example
 >>> mo2 == NoneTrue
 ```
 
+---
+
+
 #### Greedy and Nongreedy Matching
 
 * Pythons regular expressions are greedy by default. The match the longest string possible
@@ -756,12 +888,16 @@ Example
 >>> greedyHaRegex = re.compile(r'(Ha){3,5}') >>> mo1 = greedyHaRegex.search('HaHaHaHaHa') >>> mo1.group()'HaHaHaHaHa'>>> nongreedyHaRegex = re.compile(r'(Ha){3,5}?') >>> mo2 = nongreedyHaRegex.search('HaHaHaHaHa') >>> mo2.group()'HaHaHa'
 ```
 
+---
+
 #### The findall() method
 
 * Regex objects hav ea findall() method
 * Where search() will return a mathc object of the first matched text in the string, findall returns the strings of every match in a searched string
 * When there are no groups in a regex (where things are not in brackets), find al returns  alist of string of mathces
 * When there are groups, it returns a list of tuple of strings [('x'),)('y)]
+
+---
 
 #### Character Classes
 
@@ -774,6 +910,8 @@ Example
 	* \s (Any space, tab or new line character)
 	* \S (Any character that is not a space, tab or newline
 
+---
+
 #### Making Your Own Character Classes
 
 * Done by using []
@@ -785,11 +923,15 @@ Example
 >>> vowelRegex = re.compile(r'[aeiouAEIOU]')>>> vowelRegex.findall('RoboCop eats baby food. BABY FOOD.') ['o', 'o', 'o', 'e', 'a', 'a', 'o', 'o', 'A', 'O', 'O']
 ```
 
+---
+
 #### The Caret and Dollar Sign Characters
 
 * Can use `^` at the start of a regex
 * This indicates that a match must occur at the beginning of the searched text
 * `$` can be placed at the end, to indicate the string must end with this pattern
+
+---
 
 #### The Wildcard Character
 
@@ -801,6 +943,8 @@ Example
 ```>>> atRegex = re.compile(r'.at')>>> atRegex.findall('The cat in the hat sat on the flat mat.') 
 >>> ['cat', 'hat', 'sat', 'lat', 'mat']
 ```
+
+---
 
 #### Matching Everything with Dot-Star
 
@@ -814,6 +958,8 @@ Example
 >>> nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)') >>> mo = nameRegex.search('First Name: Al Last Name: Sweigart') >>> mo.group(1)'Al'>>> mo.group(2) 'Sweigart'
 ```
 
+---
+
 #### Matching Newlines with Dot Character
 
 * `.` matches everything APART from new line
@@ -826,6 +972,8 @@ Example
 >>> newlineRegex = re.compile('.*', re.DOTALL)>>> newlineRegex.search('Serve the public trust.\nProtect the innocent. \nUphold the law.').group()'Serve the public trust.\nProtect the innocent.\nUphold the law.'
 ```
 
+---
+
 #### Sibstituting Strings with the sub() Method
 
 * Regular expressions can also substitue new text in the place of a pattern
@@ -836,6 +984,8 @@ Example
 'CENSORED gave the secret documents to CENSORED.'
 ```
 
+---
+
 #### Combining re.IGNORECASE, re.DOTALL, and re.VERBOSE
 
 * By default re.compile() can only take one of the above.
@@ -844,7 +994,9 @@ Example
 ```
 >>> someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 ```
---
+
+---
+
 ### Reading and Writing Files
 
 #### Files and File Paths
@@ -852,6 +1004,8 @@ Example
 * Files have two key properties:
 	* A filename
 	* A path (Location on the computer)
+
+---
 
 #### Backslash on Windows and Forward Slash on OSX and Linux
 
@@ -872,6 +1026,8 @@ Example
 #Printed results:C:\Users\asweigart\accounts.txtC:\Users\asweigart\details.csvC:\Users\asweigart\invite.docx
 ```
 
+---
+
 #### The Current Working Directory
 
 * Every program has a current working directory or cwd
@@ -889,6 +1045,8 @@ Example
 'C:\\Windows\\System32'
 ```
 
+---
+
 #### Absolute vs. Relative Paths
 
 * Abolsute paths always begin with the root folder
@@ -896,10 +1054,14 @@ Example
 * (.) represents this directory
 * (..) represents the parent directory
 
+---
+
 #### Creating New Folders with os.makedirs() 
 
 * This can be done with `os.makedirs(Path)`
 * Will create all necessary folders if the path does not exist
+
+---
 
 #### Handling Absolute and Relative Paths
 
@@ -945,6 +1107,8 @@ Example
  ['C:', 'Windows', 'System32', 'calc.exe']
 ```
 
+---
+
 #### Finding File Size and Folder Contents
 
 * `os.path` module provides functions for finding the size of a file in bytes, and the files and folders inside a given folder
@@ -965,6 +1129,8 @@ Example 2, Ugetting the total size of all the files in the directory using `os.p
 1117846456      
 ```
 
+---
+
 #### Checking Path Validity
 
 * `os.path.exists(path)` will return True if the file or filder exists and false is it does not
@@ -980,6 +1146,8 @@ False>>> os.path.isfile('C:\\Windows\\System32\\calc.exe')
 True
 ```
 
+---
+
 #### The File Reading/Writing Process
 
 The steps for reading or writing files in Python are:
@@ -987,6 +1155,8 @@ The steps for reading or writing files in Python are:
 1. Call open() to get a File Object
 2. Call read() or write() on the File Object
 3. Close the file using close() on the File Object
+
+---
 
 #### Opening Files with the Open() Function
 
@@ -1004,6 +1174,8 @@ Example
 >>> baconFile.write('Hello world!\n') 13>>> baconFile.close()>>> baconFile = open('bacon.txt', 'a')>>> baconFile.write('Bacon is not a vegetable.') 25>>> baconFile.close()>>> baconFile = open('bacon.txt')>>> content = baconFile.read()>>> baconFile.close()>>> print(content)Hello world!Bacon is not a vegetable.
 ```
 
+---
+
 #### Saving Variables with the shelve Module
 
 * Can save variables in your program to binary shelf files using the `shelve` module
@@ -1014,6 +1186,8 @@ Example of saving to a shelve file
 ```
 >>> import shelve>>> shelfFile = shelve.open('mydata') >>> cats = ['Zophie', 'Pooka', 'Simon'] >>> shelfFile['cats'] = cats>>> shelfFile.close()
 ```
+
+---
 
 Steps:
 
@@ -1046,6 +1220,8 @@ Example
 
 ```
 
+---
+
 #### Saving Variables with the print.pformat() Function
 
 * pprint.pformat() can be used to make printing easier to read
@@ -1063,6 +1239,8 @@ Example
 
 * This module gives you functions to copy, move, rename and delete files.
 * Remember to import the module!
+
+---
 
 #### Copying Files and Folders
 
@@ -1084,6 +1262,8 @@ Example
 >>> import shutil, os>>> os.chdir('C:\\')>>> shutil.copytree('C:\\bacon', 'C:\\bacon_backup') 
 'C:\\bacon_backup'
 ```
+
+---
 
 #### Moving and Renaming Files and Folders
 
@@ -1118,11 +1298,15 @@ Example
 'C:\\eggs'
 ```
 
+---
+
 #### Permanently Deleting Files and Folders
 
 * `os.unlink(path)` will delete the file at path
 * `os.rmdir(path)` will delete the folder at path. This folder must be empty
 * `shutil.rmtree(path)` will remove the folder at path with its contents
+
+---
 
 #### Safe Deletes with the send2trash Module
 
@@ -1137,6 +1321,7 @@ Example
 
 * Its good pratice to use `send2trash.send2trash()` to delete files and folders
 
+---
 
 #### Walking a Directory Tree
 
@@ -1156,6 +1341,7 @@ The avoce function will return the following values on each iteration:
 2. A list of strings of the folders in the current folder
 3. A list of strings of the files in the current folder
 
+---
 
 #### Compressing Files with the Zipfile Module
 
@@ -1170,6 +1356,8 @@ Example
 >>> import zipfile, os>>> os.chdir('C:\\') # move to the folder with example.zip >>> exampleZip = zipfile.ZipFile('example.zip')>>> exampleZip.namelist()['spam.txt', 'cats/', 'cats/catnames.txt', 'cats/zophie.jpg'] >>> spamInfo = exampleZip.getinfo('spam.txt')>>> spamInfo.file_size13908>>> spamInfo.compress_size3828>>> 'Compressed file is %sx smaller!' % (round(spamInfo.file_size / spamInfo .compress_size, 2))'Compressed file is 3.63x smaller!'>>> exampleZip.close()
 
 ```
+
+---
 
 ##### Extracting from ZIP Files
 
@@ -1190,6 +1378,8 @@ Example
 'C:\\some\\new\\folders\\spam.txt'>>> exampleZip.close()
 ```
 
+---
+
 ##### Creating and Adding to ZIP Files
 
 * To create your own ZIP, must open a ZipFile object in write mode (By passing 'w') as the second argument
@@ -1201,7 +1391,8 @@ Example
 ```>>> import zipfile>>> newZip = zipfile.ZipFile('new.zip', 'w')>>> newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED) >>> newZip.close()
 ```
 
---
+---
+
 ### Debugging
 
 #### Raising Exceptions
@@ -1229,6 +1420,8 @@ Example
 try:        boxPrint(sym, w, h)except Exception as err:        print('An exception happened: ' + str(err))
 ```
 
+---
+
 #### Getting Traceback
 
 * Trackbacks are details on what caused the exception.
@@ -1243,6 +1436,8 @@ Example
 >>> try:         raise Exception('This is the error message.')except:         errorFile = open('errorInfo.txt', 'w')         errorFile.write(traceback.format_exc())         errorFile.close()         print('The traceback info was written to errorInfo.txt.')
 
 ```
+
+---
 
 #### Assertions
 
@@ -1267,7 +1462,8 @@ Example
 
 #### Logging
 
---
+---
+
 ### WebScraping
 
 #### Opening Web pages
@@ -1280,10 +1476,14 @@ Example
 >>> import webbrowser>>> webbrowser.open('http://inventwithpython.com/')
 ```
 
+---
+
 #### Downloading Files from the Web With the Requests Module
 
 * requests module lets you download files.
 * This does not come with python, so you'll have to install it by entering the following in terminal: `pip install requests` (see end of guide on how to install third party modules)
+
+---
 
 
 #### Downloading a Web Page with the requests.get() Function
@@ -1301,6 +1501,8 @@ Example
 
 * Can tell if a request for the webpage is successful by checking the `status_code_` attribute of the Response object
 
+---
+
 #### Checking for Errors
 
 * call `raise_for_status()` on the Responce object
@@ -1314,6 +1516,8 @@ Example
 ```
 import requests        res = requests.get('http://inventwithpython.com/page_that_does_not_exist')         try:               res.raise_for_status()         except Exception as exc: 					print('There was a problem: %s' % (exc))
 ```
+
+---
 
 #### Saving Downloaded Files to the Hard Drive
 
@@ -1336,10 +1540,14 @@ Summarized process:
 4. `write()` on each iteration
 5. `close()` file
 
+---
+
 #### Parsing HTML with the BeatifulSoup Module
 
 * Known as BS4. 
 * Have to install by: `pip install beautifulsoup4`
+
+---
 
 #### Creating a BeautifulSoup Object from HTML
 
@@ -1360,6 +1568,8 @@ Example
 ```
 >>> exampleFile = open('example.html')>>> exampleSoup = bs4.BeautifulSoup(exampleFile) >>> type(exampleSoup)<class 'bs4.BeautifulSoup'>
 ```
+
+---
 
 #### Finding an Element with the select() Method
 
@@ -1384,6 +1594,8 @@ Example
 >>> elems = exampleSoup.select('#author')>>> type(elems)<class 'list'>>>> len(elems)1>>> type(elems[0])<class 'bs4.element.Tag'>>>> elems[0].getText()'Al Sweigart'>>> str(elems[0])'<span id="author">Al Sweigart</span>'>>> elems[0].attrs{'id': 'author'}
 ```
 
+---
+
 #### Getting Data from an Element's Attributes
 
 * use the `.get(attribute)` method on element.
@@ -1395,6 +1607,8 @@ Example
 >>> import bs4>>> soup = bs4.BeautifulSoup(open('example.html')) >>> spanElem = soup.select('span')[0]>>> str(spanElem)'<span id="author">Al Sweigart</span>'>>> spanElem.get('id')'author'>>> spanElem.get('some_nonexistent_addr') == None True>>> spanElem.attrs{'id': 'author'}
 ```
 
+---
+
 #### Controlling the Browser with the Selenium Module
 
 
@@ -1405,6 +1619,8 @@ Example
 >>> from selenium import webdriver>>> browser = webdriver.Firefox()>>> type(browser)<class 'selenium.webdriver.firefox.webdriver.WebDriver'>
 >>> browser.get('http://inventwithpython.com')
 ```
+
+---
 
 #### Finding Elements on the Page
 
@@ -1446,6 +1662,8 @@ try:    elem = browser.find_element_by_class_name('bookcover')    print('Found
 	* `is_selected()`
 	* `location`   (returns dictionary with x y position)
  
+---
+
 #### Clicking the page
 
 * Use `click` on the element object
@@ -1453,6 +1671,8 @@ try:    elem = browser.find_element_by_class_name('bookcover')    print('Found
 ```
 >>> from selenium import webdriver>>> browser = webdriver.Firefox()>>> browser.get('http://inventwithpython.com')>>> linkElem = browser.find_element_by_link_text('Read It Online') >>> type(linkElem)<class 'selenium.webdriver.remote.webelement.WebElement'>>>> linkElem.click() # follows the "Read It Online" link
 ```
+
+---
 
 #### Filling Out and Submitting Forms
 
@@ -1478,6 +1698,8 @@ Example (not listing all keys here)
 
 ```
 
+---
+
 #### Clicking browser buttons
 
 * Selenium provides the following:
@@ -1486,17 +1708,21 @@ Example (not listing all keys here)
 	* browser.refresh()
 	* browser.quit()
 
---
+---
+
 ### Working With Excel Spreadsheets
 
 **CONTINUE**
---
+
+---
+
 ### Working With PDF and Word Documents 
 
 * Need to use the PyPDF2 module. 
 * Can be installed using pip
 * PDFs are very hard to parase, so PyPDF2 might make some mistakes.
 
+---
 
 #### Extracting Text from PDFs
 
@@ -1509,6 +1735,8 @@ Example
 ```
 >>> import PyPDF2>>> pdfFileObj = open('meetingminutes.pdf', 'rb') >>> pdfReader = PyPDF2.PdfFileReader(pdfFileObj)>>> pdfReader.numPages 19>>> pageObj = pdfReader.getPage(0) >>> pageObj.extractText()
 ```
+
+---
 
 #### Decrypting PDFs
 
@@ -1524,6 +1752,8 @@ Example
 1>>> pageObj = pdfReader.getPage(0)
 ```
 
+---
+
 #### Creating PDFs
 
 * You can use PdfFileWriter objects to create new PDF files.
@@ -1538,6 +1768,8 @@ Steps:
 4. Use the PdfFileWriter object to write the output PDF
 5. Then call PdfFilesWriter's `write()`
 
+---
+
 #### Copying Pages.
 
 Example
@@ -1548,6 +1780,8 @@ Example
 >>> pdf2Reader = PyPDF2.PdfFileReader(pdf2File) 
 >>> pdfWriter = PyPDF2.PdfFileWriter()>>> for pageNum in range(pdf1Reader.numPages):pageObj = pdf1Reader.getPage(pageNum)pdfWriter.addPage(pageObj)>>> for pageNum in range(pdf2Reader.numPages):pageObj = pdf2Reader.getPage(pageNum)pdfWriter.addPage(pageObj)>>> pdfOutputFile = open('combinedminutes.pdf', 'wb') >>> pdfWriter.write(pdfOutputFile)>>> pdfOutputFile.close()>>> pdf1File.close()>>> pdf2File.close()
 ```
+
+---
 
 #### Rotating Pages
 
@@ -1567,6 +1801,8 @@ Example
 
 ```
 
+---
+
 #### Encrypting PDFs
 
 * Use `.encrypt(password)`
@@ -1579,12 +1815,14 @@ Example
 >>> pdfWriter = PyPDF2.PdfFileWriter()>>> for pageNum in range(pdfReader.numPages):           pdfWriter.addPage(pdfReader.getPage(pageNum))>>> pdfWriter.encrypt('swordfish')>>> resultPdf = open('encryptedminutes.pdf', 'wb') >>> pdfWriter.write(resultPdf)>>> resultPdf.close()
 ```
 
+---
 
 #### Reading Word Documents
 
 CONTNIUE
 
---
+---
+
 ### Working with CSV Files and JSON Data
 
 #### The CSV Module
@@ -1597,6 +1835,8 @@ Example CSV
 ```
 4/5/2015 13:34,Apples,734/5/2015 3:41,Cherries,854/6/2015 12:46,Pears,144/8/2015 8:59,Oranges,524/10/2015 2:07,Apples,1524/10/2015 18:10,Bananas,234/10/2015 2:40,Strawberries,98
 ```
+
+---
 
 #### Reader Objects
 
@@ -1623,6 +1863,7 @@ Example
 'Strawberries'
 ```
 
+---
 
 #### Reading Data from Reader Objects in a for loop
 
@@ -1636,6 +1877,8 @@ Example
 >>> for row in exampleReader:           print('Row #' + str(exampleReader.line_num) + ' ' + str(row))
               Row #1 ['4/5/2015 13:34', 'Apples', '73']   Row #2 ['4/5/2015 3:41', 'Cherries', '85']   Row #3 ['4/6/2015 12:46', 'Pears', '14']   Row #4 ['4/8/2015 8:59', 'Oranges', '52']   Row #5 ['4/10/2015 2:07', 'Apples', '152']   Row #6 ['4/10/2015 18:10', 'Bananas', '23']   Row #7 ['4/10/2015 2:40', 'Strawberries', '98']
 ```
+
+---
 
 #### Writer Objects
 
@@ -1651,6 +1894,8 @@ Example
 >>> outputWriter = csv.writer(outputFile)>>> outputWriter.writerow(['spam', 'eggs', 'bacon', 'ham'])21>>> outputWriter.writerow(['Hello, world!', 'eggs', 'bacon', 'ham']) 32>>> outputWriter.writerow([1, 2, 3.141592, 4])16>>> outputFile.close()
 ```
 
+---
+
 #### The Delimiter and Lineterminator Keyword Arguments
 
 * To can use the delimter keyword to state how the CSV entries should be seperated
@@ -1662,6 +1907,8 @@ Example
 >>> import csv>>> csvFile = open('example.tsv', 'w', newline='')>>> csvWriter = csv.writer(csvFile, delimiter='\t', lineterminator='\n\n')>>> csvWriter.writerow(['apples', 'oranges', 'grapes']) 24>>> csvWriter.writerow(['eggs', 'bacon', 'ham'])17>>> csvWriter.writerow(['spam', 'spam', 'spam', 'spam', 'spam', 'spam']) 32>>> csvFile.close()
 ```
 
+---
+
 #### JSON and APIs
 
 * JSON is a way to format ata as a human readable string
@@ -1672,6 +1919,9 @@ Example JSON file:
 ```
 {"name": "Zophie", "isCat": true, "miceCaught": 0, "napsTaken": 37.5, "felineIQ": null}
 ```
+
+---
+
 #### The JSON Module
 
 * Handles all the details of translating between a string with JSON data and Python values.
@@ -1685,6 +1935,8 @@ Example JSON file:
 	* NonType
 * Cannot represent python specific types (eg, Regex, Writer so on...)
 
+---
+
 #### Reading JSON with the loads() Function
 
 * `json.loads(JSONString)` translates JSON data into a python Dictionary (Note, ordering is not kept, this may be different to the order it was in the JSON file!)
@@ -1696,6 +1948,8 @@ Example
 >>> stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'>>> import json>>> jsonDataAsPythonValue = json.loads(stringOfJsonData)>>> jsonDataAsPythonValue{'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None}
 ```
 
+---
+
 #### Writing JSON with the dumps() Function
 
 * `json.dumps(pythonValue)` takes a python value and turns it into a JSON-formatted string.
@@ -1705,10 +1959,14 @@ Example
 ```
 >>> pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': None}>>> import json>>> stringOfJsonData = json.dumps(pythonValue)>>> stringOfJsonData'{"isCat": true, "felineIQ": null, "miceCaught": 0, "name": "Zophie" }'
 ```
---
+
+---
+
 ### Keeping Time, Scheduling Tasks, and Launching Programs
 
 * The time module allows you to get the current time from your system clock.
+
+---
 
 #### time.time() Function
 
@@ -1726,6 +1984,9 @@ Example of time it takes to run a method
 ```
 import time udef calcProd():       # Calculate the product of the first 100,000 numbers.       product = 1       for i in range(1, 100000):           product = product * i       return productstartTime = time.time() prod = calcProd()endTime = time.time()print('The result is %s digits long.' % (len(str(prod))))print('Took %s seconds to calculate.' % (endTime - startTime))
 ```
+
+---
+
 #### The time.sleep() Function
 
 * This function allows you to pause your programs for a set time.
@@ -1737,6 +1998,8 @@ Example
 >>> import time>>> for i in range(3):           print('Tick')           time.sleep(1)           print('Tock')           time.sleep(1)     
 TickTockTickTockTickTock>>> time.sleep(5)
 ```
+
+---
 
 #### Rounding Numbers
 
@@ -1753,6 +2016,8 @@ Example
  1425064108.0178>>> round(now) 
 1425064108
 ```
+
+---
 
 #### DateTime Module
 
@@ -1793,6 +2058,8 @@ True>>> newyears2016 != oct31_2015
 True
 ```
 
+---
+
 #### The timedelta Data Type
 
 * This represents a duration of time rather than a moment in time
@@ -1812,6 +2079,8 @@ Example
 >>> dt = datetime.datetime.now()>>> dtdatetime.datetime(2015, 2, 27, 18, 38, 50, 636181) >>> thousandDays = datetime.timedelta(days=1000) >>> dt + thousandDays   datetime.datetime(2017, 11, 23, 18, 38, 50, 636181)
 ```
 
+---
+
 #### Pausing Until a Specific Date
 
 * `time.sleep()` will allow you to pause your program
@@ -1823,6 +2092,8 @@ Example:
 ```
 import datetimeimport timehalloween2016 = datetime.datetime(2016, 10, 31, 0, 0, 0)while datetime.datetime.now() < halloween2016:    time.sleep(1)
 ```
+
+---
 
 #### Converting datetime Objects into Strings
 
@@ -1853,6 +2124,8 @@ Example
 >>> "October of '15"
 ```
 
+---
+
 #### Converting Strings into datetime Objects
 
 * Use `strptime(string,deritives)`
@@ -1862,6 +2135,8 @@ Example
 ```
 >>> datetime.datetime.strptime('October 21, 2015', '%B %d, %Y') datetime.datetime(2015, 10, 21, 0, 0)>>> datetime.datetime.strptime('2015/10/21 16:29:00', '%Y/%m/%d %H:%M:%S') datetime.datetime(2015, 10, 21, 16, 29)>>> datetime.datetime.strptime("October of '15", "%B of '%y") datetime.datetime(2015, 10, 1, 0, 0)>>> datetime.datetime.strptime("November of '63", "%B of '%y") datetime.datetime(2063, 11, 1, 0, 0)
 ```
+
+---
 
 #### Multithreading
 
@@ -1876,6 +2151,8 @@ Example
  import threading, time      print('Start of program.')def takeANap(): time.sleep(5)print('Wake up!')threadObj = threading.Thread(target=takeANap)threadObj.start() print('End of program.')
 ```
 
+---
+
 #### Passing Arguments to the Thread's Target Function
 
 * You do this by using `args=[x,y,z]` in the `threading.thread` parameters
@@ -1886,6 +2163,8 @@ Example
 ```
 >>> import threading>>> threadObj = threading.Thread(target=print, args=['Cats', 'Dogs', 'Frogs'], kwargs={'sep': ' & '})>>> threadObj.start()Cats & Dogs & Frogs
 ```
+
+---
 
 #### Launching Other Programs from Python.
 
@@ -1918,6 +2197,8 @@ Example
 >>> 0
 ```
 
+---
+
 #### Passing Command Line Arguments to Popen()
 
 * To do this, you pass a list of arguments to `Popen()`
@@ -1932,14 +2213,20 @@ Example
 <subprocess.Popen object at 0x00000000032DCEB8>
 ```
 
+---
+
 #### Task Scheduler, launchd, and cron
 
 * These are build in schedulers for various operating systems. 
 * Should take advantage of these rather than writing your own clock-checking code.
 
+---
+
 #### Opening Websites With Python
 
 * `webbrowser.open()` function can launch a webbrowser from your program rather than opening the browser application.
+
+---
 
 #### Running Other Python Scripts
 
@@ -1951,6 +2238,8 @@ Example
 >>> subprocess.Popen(['C:\\python34\\python.exe', 'hello.py']) 
 <subprocess.Popen object at 0x000000000331CF28>
 ```
+
+---
 
 #### Opening Files with Default Applications
 
@@ -1977,12 +2266,15 @@ Mac Example
 ```
 
 
---
+---
+
 ### Sending Email and Text Mesages
 
 #### SMTP
 
 * Simple Mail Transfer Protocol (STMP) - Used for sending email
+
+---
 
 #### Sending Emails
 
@@ -1993,6 +2285,8 @@ Example
 ```
 >>> import smtplib>>> smtpObj = smtplib.SMTP('smtp.example.com', 587)>>> smtpObj.ehlo()(250, b'mx.example.com at your service, [216.172.148.131]\nSIZE 35882577\ n8BITMIME\nSTARTTLS\nENHANCEDSTATUSCODES\nCHUNKING')>>> smtpObj.starttls()(220, b'2.0.0 Ready to start TLS')>>> smtpObj.login('bob@example.com', 'MY_SECRET_PASSWORD')(235, b'2.7.0 Accepted')>>> smtpObj.sendmail('bob@example.com', 'alice@example.com', 'Subject: So long.\nDear Alice, so long and thanks for all the fish. Sincerely, Bob') {}>>> smtpObj.quit()(221, b'2.0.0 closing connection ko10sm23097611pbd.52 - gsmtp')
 ```
+
+---
 
 #### Connecting to an SMTP Server
 
@@ -2015,10 +2309,14 @@ Example
 	
 * You also need to know what encryption the server  is using, and will need to call either `smtplib.SMTP()` or `smtplib.SMTP_SSL()`
 
+---
+
 #### Sending the SMTP "Hello" Message
 
 * to ensure that the connection is working, call `ehlo()` to your smtpObject
 * This should be the first method you call after getting the SMTP object, **or you will get errors**
+
+---
 
 #### Starting TLS Encryption
 
@@ -2033,6 +2331,8 @@ Example
 >>> smtpObj.starttls()(220, b'2.0.0 Ready to start TLS')
 ```
 
+---
+
 #### Logging in to the SMTP Server
 
 * Use `.login(emailAddress,password)`
@@ -2043,6 +2343,8 @@ Example
 >>>smtpObj.login('my_email_address@gmail.com', 'MY_SECRET_PASSWORD') 
 (235, b'2.7.0 Accepted')
 ```
+
+---
 
 #### Sending an Email
 
@@ -2056,6 +2358,8 @@ Example
 >>> smtpObj.sendmail('my_email_address@gmail.com', 'recipient@example.com', 'Subject: So long.\nDear Alice, so long and thanks for all the fish. Sincerely, Bob'){}
 ```
 
+---
+
 #### Disconnecting from the SMTP Server
 
 * call the `quit()` method when you have finished sending emails
@@ -2067,10 +2371,14 @@ Example
 >>> smtpObj.quit()(221, b'2.0.0 closing connection ko10sm23097611pbd.52 - gsmtp')
 ```
 
+---
+
 #### IMAP
 
 * Used to retrieve emails from the server.
 * `imapclient` and `pyzmail` are the ideal modules for doing this.
+
+---
 
 #### Connecting to an IMAP Server
 
@@ -2090,6 +2398,8 @@ Example
 >>> import imapclient>>> imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
 ```
 
+---
+
 #### Logging in to the IMAP Server
 
 * Use `login(emailaddress,password)`
@@ -2103,7 +2413,10 @@ Example
 'my_email_address@gmail.com Jane Doe authenticated (Success)'
 ```
 
+---
+
 #### Selecting a folder
+
 * To search for email you need to select a folder first.
 * Can get a list of folders by calling `list_folders()`
 	* This will return a list of tuples containing information about folders
@@ -2116,6 +2429,8 @@ Example
 ```
 
 * to select a folder, use `select_folder(Foldername,readonly=True)`
+
+---
 
 #### Performing the Search
 
@@ -2152,6 +2467,8 @@ imapObj.search(['SINCE 01-Jan-2015', 'BEFORE 01-Feb-2015', 'UNSEEN'])# Returns 
 >>> UIDs = imapObj.search(['SINCE 05-Jul-2015'])>>> UIDs[40032, 40033, 40034, 40035, 40036, 40037, 40038, 40039, 40040, 40041]
 ```
 
+---
+
 #### Size Limits
 
 * If you create a search that matches a large amount of emails, you may get the following error: `imaplib.error: got more than 10000 bytes`
@@ -2163,6 +2480,10 @@ Example
 ```
 >>> import imaplib>>> imaplib._MAXLINE = 10000000
 ```
+
+---
+
+
 #### Fetching an Email and Marking It as Read
 
 * to get the email, use `.fetch(UID,['BODY[]'])
@@ -2184,6 +2505,8 @@ Example
 >>> imapObj.select_folder('INBOX', readonly=False)
 ```
 
+---
+
 #### Getting Email Addresses from a Raw Message
 
 * Pyzmail can parse raw messages and return PyzMessage objects.
@@ -2202,6 +2525,8 @@ Example
 >>> message.get_subject()'Hello!'>>> message.get_addresses('from')[('Edward Snowden', 'esnowden@nsa.gov')] >>> message.get_addresses('to')[(Jane Doe', 'my_email_address@gmail.com')] >>> message.get_addresses('cc')[]>>> message.get_addresses('bcc')[]
 ```
 
+---
+
 #### Getting the Body for a Raw Message
 
 * If the email is only plaintext. PyzMessage object will have `html_part = nNone`
@@ -2217,6 +2542,8 @@ Example
 >>>message.html_part.get_payload().decode(message.html_part.charset)'<div dir="ltr"><div>So long, and thanks for all the fish!<br><br></div>-Al <br></div>\r\n'
 ```
 
+---
+
 #### Deleting Emails
 
 * Need to pass the UID to `.delete_messages()` with `\\Deleted` as a parameter
@@ -2229,18 +2556,30 @@ Example
 >>> imapObj.expunge() 
 >>> ('Success', [(5452, 'EXISTS')])
 ```
+
+---
+
+
 #### Disconnecting from the IMAP server
 
 * Call `.logout`
+
+
+---
+
 
 #### Text Messages
 
 CONTINUE
 
---
+
+---
+
 ### Manipulating Images
 CONTINUE
---
+
+---
+
 ### Controlling The Keyboard and mouse With GUI Automation
 
 ####  Installing  pyautogui module
@@ -2259,9 +2598,15 @@ Installing on Linux:
 sudo pip3 install python3-xlib, sudo apt-get install scrot, sudo apt-get install python3-tk, and sudo apt-get install python3-dev.
 ```
 
+
+---
+
 #### Shutting Down Everything by Logging out
 * On windows and Linux, use `CTRl-ALT-DEL`
 * On OSX, use ` COMMAND-SHIFT-OPTION-Q`
+
+
+---
 
 #### Pauses and Fail-Safes
 
@@ -2276,6 +2621,9 @@ Example
 >>> import pyautogui>>> pyautogui.PAUSE = 1>>> pyautogui.FAILSAFE = True
 ```
 
+---
+
+
 #### Controlling Mouse Movement
 
 * Mouse functions of PyAutoGUI use x and y coordinates.
@@ -2286,6 +2634,10 @@ Example
 	* Bottom right corner of screen = 1919,1070
 * You can get your resolution by caling `pyautogui.size()`
 * You can also assign variables to hold the width and height of your screen by doing: ` width, height = pyautogui.size()`
+
+
+---
+
 
 #### Moving the Mouse
 
@@ -2308,6 +2660,9 @@ Example
       pyautogui.moveRel(-100, 0, duration=0.25)                   				pyautogui.moveRel(0, -100, duration=0.25)
 ```
 
+---
+
+
 #### Getting the Mouse Position
 
 * Can getermine the mouse's current position by calling `pyautogui.position()`
@@ -2321,6 +2676,8 @@ Example
 (377, 481)>>> pyautogui.position() 
 (1536, 637)
 ```
+
+---
 
 #### Clicking the Mouse
 
@@ -2340,6 +2697,8 @@ Example
 	* `.rightClick()`
 	* `.middleClick()`
 
+---
+
 #### Dragging the Mouse
 
 * Can use the following:
@@ -2348,9 +2707,13 @@ Example
 	* `.moveTo(x,y,duration=z)`
 	* `.moveRel(x,y,duration=z)`
 
+---
+
 #### Scrolling the Mouse
 
 * `.scroll(numberOfTimesToScroll)`
+
+---
 
 #### Getting a screenshot
 
@@ -2358,6 +2721,8 @@ Example
 
 ```
 >>> import pyautogui>>> im = pyautogui.screenshot()```
+
+---
 
 #### Sending a String from the Keyboard
 
@@ -2371,6 +2736,8 @@ Example (Important to keep them on the same line to rpevent python from promptin
 ```
 
 * By default python will enter all the text instantly. To add a wait add a float value as a second parameter to `typewrite`
+
+---
 
 #### Key Names
 * Instead of using a string, you can pass a list of keys
@@ -2404,6 +2771,8 @@ Example
 	* `'command'` = The Command key (on OS X)
 	* `'option'` = The OPTION key (on OS X)
 
+---
+
 #### Pressing and Releasing the Keyboard key
 
 * `.keyDown(key)` and `'.keyUp(key)` 
@@ -2415,6 +2784,8 @@ Example
 >>> pyautogui.keyDown('shift'); pyautogui.press('4'); pyautogui.keyUp('shift')
 ```
 
+---
+
 #### Hotkey Combinations
 
 * Can use `.hotkey(key1,key2..)` to do hotkey commands (Such as copy/paste)
@@ -2425,7 +2796,9 @@ Example
 >>> import pyautogui, time >>> def commentAfterDelay():      pyautogui.click(100, 100)      pyautogui.typewrite('In IDLE, Alt-3 comments out a line.')      time.sleep(2)      pyautogui.hotkey('alt', '3')>>> commentAfterDelay()
 ```
 
---
+
+---
+
 ## Running Programs
 
 ### In Windows
