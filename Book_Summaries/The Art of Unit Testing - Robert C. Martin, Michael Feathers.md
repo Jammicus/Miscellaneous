@@ -43,4 +43,59 @@
 
 ### Test-driven Development
 
-*
+TDD Steps:
+
+1. Write a failing test to prove code or functionality is missing from the end product. (You write this as if the production code were already working)
+2. Make the test pass by writing production code that meets the expectations of your test.
+3. Refactor your code. 
+
+* Refactoring = Changing a piece of code without changing its functionality.
+
+### The Three Core Skills of Successfufl TDD
+
+* Knowing how to write good tests
+* Writing them test-first
+* Designing them well
+
+## A First Unit Test
+
+* You should have one test class per tested class. 
+* For a unit of work, your test method should have the following format: `[UnitOfWorkName]_[ScenarioUnderTest]_[ExpectedBehavior]`
+	* UnutOfWorkName = The name of the method of group of methods or classes you are testing
+	* Scenario = The conditions under which the test is tested, such as  "bad login'
+	* Expected behavior = What you expect the tested method to do under the specified conditions. These can be:
+		* Returning a value as a result
+		* Changing the state of the system as a result 
+		* Call a third party system as a result
+
+Eg, `IsValidLogInFailed()` could be refactored to be called: `IsValidFileName_BadExtension_ReturnsFalse()`
+
+### Writing Your First Test
+
+* Unit tests compromise of three main actions:
+	* Arrange objects, creating and setting them up as neccessary
+	* Act on an object
+	* Assert that something is as expected
+* Unit testing frameworks have assert methodas you should use!
+
+Example
+
+```
+ public void IsValidFileName_BadExtension_ReturnsFalse() {     LogAnalyzer analyzer = new LogAnalyzer();     bool result = analyzer.IsValidLogFileName("filewithbadextension.foo");     Assert.False(result); }
+
+```
+
+### Setup and teardown
+
+* Setups are used to ensure that the program is in the correct state before the test
+* Tear downs are used to ensure the program is put back into the correct state after the test has occured
+* Generally,these are ran before and after each test. However, some frameworks allow you to specify which tests setups and tear downs should be ran before/after
+* You should avoid using these, They make tests less understandable
+
+
+## Using Stubs to Break Dependencies
+
+### Introducting Stubs
+
+* Stub is a controllable replacement for an existing dependency in the system.
+* Testing using a stub allows you to test your code without dealing with the dependency directly
