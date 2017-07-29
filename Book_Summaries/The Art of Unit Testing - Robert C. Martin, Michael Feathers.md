@@ -99,3 +99,46 @@ Example
 
 * Stub is a controllable replacement for an existing dependency in the system.
 * Testing using a stub allows you to test your code without dealing with the dependency directly
+* External dependencys are objects in your system that your code under test interacts with and over which you have no control (Eg, filesystems, threads so on)
+* A tub is a controllable replacement for an existing dependancy in the system. By using a stub, you can test your code without dealing with the dependency directly
+
+
+**CONTINUE THIS CHAPTER**
+
+
+## Interaction Testing Using Mock Objects
+
+* You should use mock objects when you want to test how your object interacts with other objects
+* Aim to have no more than one mock and stub per test
+
+### Value-Based vs. State-Based vs Interaction Testing
+
+* Interaction testing is testing how an object sends messages (calls methods) to other objects. You use interaction testing when calling another object is the end result of a specific unit of work.
+* Can also think of it as Action Driven testing (Testing a particular action an object takes)
+* **Action testing should only be chosen as the last resort**
+* Mock objects are fake objects in the system that decides whether the unit test has passed or failed. It does this by checking that the object under test calls the fake object as expecting. Generally there is no more than one mock per test
+* Fakes are a term used to describe either a stub or a mack object. If it checks an interaction, its a mock, otherwise, its a stub
+
+### The Difference between Mocks and Stubs
+
+* Stubs can never fail a test. The asserts that the test uses are always against the class under test
+* Mock objects are used to verify whether or not the test has failed
+
+### Fake Chains: Stubs that produce Mocks or Other Stubs
+
+CONTINUE
+
+
+### The Problems with handwritten Mocks are stubs
+
+* Takes time to write the mocks and stubs
+* Difficult to write stubs and mocks for  classes and interfaces which have many methods, properties and events
+* Saving the state for multiple calls of a mock method will result in a lot of boilerplate code within the handwritten files
+* If you need to verify that all parameters on a method call were send correctly by the caller, many asserts will be needed
+* Hard to reuse mock and stub code for other tests
+* Is there a case for a fake which is both a mock and a stub?
+
+##  Isolation (Mocking) Frameworks
+
+* Isolation frameworks are a reusable library that can create and configure fake objects at runtime
+* Objects they create are referred to as dynamic stubs and dynamic mocks
