@@ -18,7 +18,7 @@
 * Employees, no matter what rank, must all be treated as equals
 * Build a culture where people feel like they belong
 * ` When you have people who trust you, they're going to do a better job for you to earn or keep that trust `
-* Remember above else that they are humans with emotions, care for them deeply
+* Remember above all else that they are humans with emotions, care for them deeply
 
 ---------
 
@@ -42,7 +42,7 @@
 ## From "Me" to "We"
 
 * I, me, my should be removed from your vocabulary. Its not we, together, us.
-* As a leader you define a circle of safety around your group. Its your choice as to who you allow into your circle of safety, and your job to keep it safe
+* As a leader you define a circle of safety around your group. **Its your choice as to who you allow into your circle of safety, and your job to keep it safe**
 * This is done by setting a culture free of danger from each other. Which is achieved by giving people a sense of belonging
 * Offer them a culture based on a clear set of human values and beliefs, along with the power to make decisions. Offer them trust and empathy
 * Letting someone into an organization is like adopting a child
@@ -77,7 +77,7 @@
 
 * Think of followers like your children.
 * Rather than fire people, coach people
-* Take extra time determining who you should let in, rather than highing and then firing people
+* Take extra time determining who you should let in, rather than hiring and then firing people
 * People would rather feel safe among their colleagues, have the opportunity to grow and feel a part of something bigger than themselves than work in a place that simply makes them feel rich
 * When the time is taken to build proper relationships and when leaders choose to put their people before their numbers, when we can actually feel a sense of trust for each other, the oxytocin release in our bodies can reverse many of the negative effects of operating in a high-stress, cortisol-soaked environment.
 * As long as there are human beings brought together for a common cause, leaders can choose to set any kind of culture they want
@@ -93,7 +93,7 @@
 * Companies earn their reputations by being willing to do the right thing for their people and their customers or clients
 * If someone wont make personal sacrifices for the group, they are not leaders
 * **THE KEY IS OUR LEADERS ARE SUPPOSED TO SERVE US, NOT THEMSELVES, TO PROTECT THOSE IN OUR CARE**
-* Leaders are the pones willing to look out for those to the left of them and the right of them
+* Leaders are the ones willing to look out for those to the left of them and the right of them
 * What makes a good leader is that they eschew the spotlight in favor of spending time and energy to do what they need to do to support and protect their people
 
 ----------
@@ -135,7 +135,7 @@
 
 ---------
 ## Modern Abstraction
-* you must go to all levels of the organisation and make yourself present. Don't take results from the spreadsheets
+* You must go to all levels of the organisation and make yourself present. Don't take results from the spreadsheets
 
 ---------
 ## Managing the Abstraction

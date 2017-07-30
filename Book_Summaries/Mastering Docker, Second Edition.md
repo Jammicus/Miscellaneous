@@ -170,7 +170,7 @@ docker image build --helpUsage: docker image build [OPTIONS] PATH | URL | -Bui
 * only really need to use `--tag` or `-t`. This is used to name the image
 
 
-### Building Custom Images using Dockerfiles
+#### Building Custom Images using Dockerfiles
 
 * You can build your base docker images from Dockerfiles.
 
@@ -186,5 +186,111 @@ COPY files/nginx.conf /etc/nginx/nginx.confCOPY files/default.conf /etc/nginx/c
 
 * Specifying the -f switch when using `docker build`
 	Eg: `  $ docker image build --file <path_to_Dockerfile> --tag <REPOSITORY>:<TAG>`
-	* Reposity is typically the username you signed upf ro on Docker hub.
+	* Repository is typically the username you signed upf ro on Docker hub.
 	* Can use local to link to a local docker file
+
+Example 
+
+```
+docker image build --file /path/to/your/dockerfile --tag   local:dockerfile-example 
+```
+
+* When the image is build, you can use `docker image ls` to find information about your image
+
+
+#### Using an Existing Container
+
+* Firstly you need to download the image you want as the base. This is done using ` docker image pull`
+
+Example
+
+` docker image pull alpine:latest`
+
+* You then run the container in the foreground so you can add packages to it:
+
+` docker container run -it --name apline-test alpine /bin/sh`
+
+* To add the packages for our linux example, we use the `apk` command
+
+```
+   $ apk update   $ apk upgrade   $ apk add --update nginx   $ rm -rf /var/cache/apk/*   $ mkdir -p /tmp/nginx/   $ exit
+```
+
+* After installing the required packages, you need to stop and save the container. 
+* To stop the container, use `exit`
+* To save the container, use the following:
+
+` docker container commit  <container_name> <REPOSITORY>:<TAG>`
+
+Example
+
+` docker container commit alpine-test local:broken-container`
+
+* To save the container as an image file, run the following:
+
+` docker image save -o <name_of_file.tar> <REPOSITORY>:<TAG>`
+
+Example:
+
+`  docker image save -o broken-container.tar local:broken-container`
+
+#### Building from Scratch
+
+
+* You have to create a dockerfile that uses scratch, and then add the TAR file.
+
+Example
+
+```
+FROM scratchADD files/alpine-minirootfs-3.6.1-x86_64.tar /CMD ["/bin/sh"]
+
+```
+
+* When you have built your Dockerfile and operating system in a TAR file, you can build your image as you would for any other docker image:
+
+` docker image build --tag local:fromscratch . `
+
+* Once build, you can test the image by running the following:
+
+` docker container run -it --name alpine-test local:fromscratch /bin/sh`
+
+* The above example will launch a shall on the Alpine linux image
+
+### Environmental Variables
+
+#### Using Environmental variables in your docker file
+
+* To use environmental variables in your Dockerfile, you use the `ENV` instruction.
+
+Example
+
+```
+ENV <key> <value>
+ENV username admin
+```
+
+* If you wish, you can use an equal sign between the key and value
+
+```
+ENV <key>=<value>
+ENV username=admin
+```
+
+* If you are not using the equal sign, you can only set one environment variable per line.
+* If you are using the equal sign, you can set many variables per line
+
+```
+ENV username=admin database=db1 tableprefix=pr2_
+```
+
+* To veiw what varaibles are set on a given image, you can use `inspect`
+
+`docker image inspect <IMAGE_ID>` 
+
+
+CONTINUE WITH EXAMPLES HERE
+
+
+## Storing and Distributing Images
+
+### Docker Hub

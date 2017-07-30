@@ -44,7 +44,7 @@
 Eg
 
 ```
-if name == 'Alive':
+if name == 'Alice':
 	print('Hi, Alice.')
 else:
 	print ('Hello, stranger.')	
@@ -136,7 +136,7 @@ Here the loop continues until the name joe is entered, If joe enters the wrong p
 
 * Some values are equivilent to true and false (known as truthy values)
 * Examples:
-	* `''` == falase
+	* `''` == false
 	* `0` == false
 	* `0.0` == false
 	* Everything else == true
@@ -360,10 +360,10 @@ spam =[1,2,3]
 ```
 ---
 
-#### Indexs'
+####  List Items
 * To get an item from the list, use `listName[index]`
-* lists start at index 0
-* Negative indexes start from the end of the list
+* Lists start at index 0
+* Negative indexes start from the end of the list (Note. -0 will not give you the last element of a list! use -1)
 
 Example
 
@@ -392,7 +392,7 @@ spam[-1] == 3
 
 #### Changing Values in a list with indexs
 
-* you can change the value at a lists index by `listName[index]=newValue`
+* You can change the value at a lists index by `listName[index]=newValue`
 
 ---
 
