@@ -142,3 +142,4 @@ CONTINUE
 
 * Isolation frameworks are a reusable library that can create and configure fake objects at runtime
 * Objects they create are referred to as dynamic stubs and dynamic mocks
+* Definiton: An isolation framework is a set of programmable apis that make creating fake objects much sipler, faster, and shorter than hand-coding them

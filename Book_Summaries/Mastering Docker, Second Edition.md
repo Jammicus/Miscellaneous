@@ -294,3 +294,11 @@ CONTINUE WITH EXAMPLES HERE
 ## Storing and Distributing Images
 
 ### Docker Hub
+
+* Website where you can find public images.
+* The address is [www.hub.docker.com](www.hub.docker.com)
+
+### Creating Automated Builds
+
+* You can link your github or bitbucket to the docker hub.
+* You need to have created your automated build in Jenkins/Travis and linked it to your github
