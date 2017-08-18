@@ -12,7 +12,7 @@
 	3. Loop back to 1. 
 * Best way to future proof your code is to make it simple, rather than trying to predict the future
 
---
+---
 
 ## What Makes Code Harder To Change?
 
@@ -22,7 +22,7 @@
 * High code complexity
 * Duplication
 
---
+---
 
 ## Code Smells
 
@@ -33,7 +33,7 @@
 	* Increasing depedancys 
 	* Decreasing Comprehensity
 
---
+---
 
 ## Classes of Code Smells
 
@@ -52,7 +52,7 @@
 * Redundancy 
 	* Duplications in the code
 
---
+---
 
 ## Refactoring Long Methods
 
@@ -72,7 +72,7 @@
 * Use automated refactorings that your IDE provides you whenever possbile
 * Do one refactoring at a time
 
---
+---
 
 ## Goals of OO Design
 
@@ -81,7 +81,7 @@
 * Ability to make changes to one part of the sytem, rather than being force to do this for muiple 
 * Managing the dependancies of your code
 
---
+---
 ## Types of Dependancies
 
 * Efferent Couplings - These classes depending on something
@@ -89,7 +89,7 @@
 
 ``` EfferentClass -> AfferentClass ```
 
---
+---
 ## Coupling & Cohesion
 
 * Internal Dependances - Methods and fields in the same class depend on each other
@@ -122,7 +122,7 @@
 	* Tell the objects that  hold the data to do  the work on that data
 	* If a method does not  have the data it needs, its probably the wrong method or in the wrong place
 
---
+---
 
 ## Class Design Principles (S.O.L.I.D)
 
@@ -151,21 +151,22 @@
 	* Concrete clases should have higher efferent couplings 
 
 **TO DO: Formulas for Dependancy inversion**	
---
+
+---
 
 ## Package Design Principles
 
 * Package = Unit of code release (Has been released and gone through the relevent release process)
 * If we are reusing of code, the package must have been through the release process
 
---
+---
 
 ## Release Reuse
 
 * The unit of reuse is the unit of release
 * 1st order reuse = Has been through the release process
 
---
+---
 
 ## Acyclic Dependancies
 
@@ -174,19 +175,19 @@
 * This causes you to build everything
 * You should understand whether or not a component should or why it depends on something and how they conntect to other components
 
---
+---
 
 ## Common Closure
 
 * Classes that change together, belong in the same package
 * Package things that are commonly used together
 
---
+---
 ## Package Cohesion Metrics
 
 * Package Cohesion = `Average Number of Internal Relationships Per Class / Number of classes`
 
---
+---
 
 ## More Class Design Principles
 
@@ -204,7 +205,7 @@
 	* `Abstractions (A) = AbstractClasses/AllClasses`
 	* High level modules and low level modules should depend on something abstract to join them
 
---
+---
 
 ## OO Design Level
 
