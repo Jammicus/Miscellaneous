@@ -12,7 +12,7 @@
 
 -----
 
-## Tools for writing regular expresions
+## Tools for writing regular expressions
 
 * RegexBuddy
 * RegexPal
@@ -123,13 +123,13 @@
 
 ### Unicode Blocks
 
-* Unicode blocks can be used where unicode categories can be used. the synax is the same, just needs to be passed a block rather than a category
+* Unicode blocks can be used where unicode categories can be used. the syntax is the same, just needs to be passed a block rather than a category
 
 
 
 ### Unicode Scripts
 
-* Same as unicode blocks, but some langauges do not accept it
+* Same as unicode blocks, but some languages do not accept it
 
 ## Match One of Several Alternatives
 
@@ -147,8 +147,8 @@
 ## Match Previously Matched Text Again
 
 * When wanting to match previously matched text, you have to recapture it.
-* This is done by a capuring group as shown above (The bracketed group
+* This is done by a capturing group as shown above (The bracketed group
 
 ## Capture and Name Parts of the Match (PG88)
 
-* 
+*

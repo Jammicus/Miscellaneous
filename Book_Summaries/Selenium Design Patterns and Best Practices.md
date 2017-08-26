@@ -16,32 +16,32 @@
 ### Disadvantages of the Record and Playback Pattern
 
 * Bad locators - Tool will often need the absolute path to an element
-* Inflexible tests - Tests will be indentical to the original recording
-* Hardcoded test data 
+* Inflexible tests - Tests will be identical to the original recording
+* Hardcoded test data
 * Poorly written tests (What you see is what you get)
 
 ## The Spaghetti Pattern
 
 * This is an anti-pattern
 * This is characterized by lack of perceived architecture and design
-* Concept is a bowl of spaghetti, where each strand of spaghetti can represent a single or multiple tests which are so tightly interwined that it becomes difficult to tell them apart.
-* Tests in this pattern are strongly dependant on the execution order of all the tests, and over share internal private components with each other.
+* Concept is a bowl of spaghetti, where each strand of spaghetti can represent a single or multiple tests which are so tightly intertwined that it becomes difficult to tell them apart.
+* Tests in this pattern are strongly dependent on the execution order of all the tests, and over share internal private components with each other.
 
 ### Advantages of the Spaghetti Pattern
 
 * Quick start - No need to sit down and plan ahead.
 * Smaller code base - As all tests depend on each other, no need to repeat test actions within individual tests
-* Smoke tests - These are fast, breif and leave as small a test data footprint as posible.
+* Smoke tests - These are fast, brief and leave as small a test data footprint as possible.
 
 ### Disadvantages of the Spaghetti Pattern
 
-* Anti-pattern - This will lead to long-term maintainability problems (Hench why it is an antipattern)
+* Anti-pattern - This will lead to long-term maintainability problems (Hence why it is an anti pattern)
 * Tight coupling - Prevents code reusability and lads to duplication
 * No parallel test runs - Will be unable to run different tests at the same time
-* Covers up failures - A failure in the beginning of the test suite will prevent the executation of the entire suite
+* Covers up failures - A failure in the beginning of the test suite will prevent the execution of the entire suite
 * No resilience
 
-## Intorducing Locator Stragegies
+## Introducing Locator Strategies
 
 * ID - Finds an element by its ID. By far the best way to locate any element as you do not have to deal with surrounding or parent elements
 * Class name - Locates element(s) with a given class name
@@ -62,15 +62,15 @@
 * Improvement on the Spaghetti pattern
 * Unlike the bowl of spaghetti, an outstretched length of chain can characterize this pattern
 * each link in the chain is a individual test and its own entity.
-* This however still relies on ridgid execution
+* This however still relies on rigid execution
 * Improvement over the Spaghetti pattern as it segregates individual tests into more or less self-contained units
 
 ## The Big Ball of Mud Pattern
 
-* DOes not have any format structures that will allow a distinction between any individual components
-* Test data and results are promiscuously shared amongst most distant and unrelated componoents until everything is global and mutable without warning
+* Does not have any format structures that will allow a distinction between any individual components
+* Test data and results are promiscuously shared amongst most distant and unrelated components until everything is global and mutable without warning
 * Unintentional test failures will occur when a component is changed for a new test without the realization that hundreds of other tests depend on it.
-* Compared to the spaghetti pattern, this state of affiars isin much more dire need of repair
+* Compared to the spaghetti pattern, this state of affairs is in much more dire need of repair
 * Avoid this at all costs
 
 ## Refactoring Tests
@@ -78,8 +78,8 @@
 ### The DRY testing Pattern
 
 * **Treating automated tests with the same care and respect as the application that we are trying to test is the key to long-term success**
-* DRY = Dont repeat yourself
-* Remove all unncessary duplication 
+* DRY = Don't repeat yourself
+* Remove all unnecessary duplication
 * This also includes removing duplicate test goals
 * Aim is to try to avoid accidentally testing any functionality not related to the current test
 
@@ -102,21 +102,21 @@
 
 * Setups is ran before tests to get the environment into a test-ready state
 * The teardown is used to clean up after the tests to put the environment back into a pristine state
-* Some frameworks allow setups and teardowns before and after each individual test, others only after a group of tests
+* Some frameworks allow setups and tear-downs before and after each individual test, others only after a group of tests
 
 ## Hermetic Test pattern
 
-* Polar opposie of the Spaghetti pattern
+* Polar opposite of the Spaghetti pattern
 * Each test should be independent and self-sufficient.
-* Any dependancy on other tests or third-party services that cannot be controlled should be avoided at all costs
-* Its impossible to get a perfectly hermetically sealted test, but when a dependency on anything outside the test is detected, it should be removed as soon as possible
+* Any dependency on other tests or third-party services that cannot be controlled should be avoided at all costs
+* Its impossible to get a perfectly hermetically seated test, but when a dependency on anything outside the test is detected, it should be removed as soon as possible
 
 ### Advantages of the Hermetic test pattern
 
 * Clean start - Each test has a cleaned up environment to work in. This prevents accidental test pollution from previous tests
 * Resilience - Each test is responsible for its own environment
-* MOdular - Each test is standalone and can berearranged into smaller test suites such as smoke suite or can run as a standalone test
-* Random run order practice - As they are not dependant on other tests, can be ran in any order
+* Modular - Each test is standalone and can be arranged into smaller test suites such as smoke suite or can run as a standalone test
+* Random run order practice - As they are not dependent on other tests, can be ran in any order
 * Allows parallel testing - This can significantly reduce the runtime of the test suite
 
 ### Disadvantages of the Hermetic test pattern
@@ -127,7 +127,7 @@
 
 ## Using Timestamps as test data
 
-* Great way to guarentee unique data 
+* Great way to guarantee unique data
 
 ## The Random Run order Principle
 
@@ -140,11 +140,11 @@
 * Flushes out data pollution - Can easily tell if a test leaves the environment in a bad state after completion
 * Built in - Some frameworks support test randomization out of the box and also have the random run order as a default setting
 
-### Disavantages of the random run order principle
+### Disadvantages of the random run order principle
 
 * A lot of refactoring - If the suite is a mess, will require a lot of work to get this principle working
-* Random run audits -  Can be hard to find the sequence of tests that cause insabilities due to random run order
-* Team fustrationg - Running tests in a random order can create a lot of fustration and resentment for the whole time. 
+* Random run audits -  Can be hard to find the sequence of tests that cause instabilities due to random run order
+* Team frustrating - Running tests in a random order can create a lot of frustration and resentment for the whole time.
 * No built in support - Many test frameworks do not support test randomization. Implementing this functionality might be very difficult
 
 ## Data Driven Testing
@@ -156,23 +156,23 @@
 
 ### Hiding test data from tests
 
-* To make our tests flexible enough to work on any test environment we want, we need to provide them with data applicable to the sdaid environment.
+* To make our tests flexible enough to work on any test environment we want, we need to provide them with data applicable to the said environment.
 * The test itself does not need to know what data we are using
 When data is hidden correctly, the test will not care what username and password is used, the information is fed into the test from the outside and is stored in variable
 * This can be done by using environment variables
 
 ### Choosing the test environment
 
-* Use environement vartiables 
+* Use environment variables
 * Using them can easily alter the applications behavior.
 * Eg `set environment = staging`
 * In your test code create methods that will get the environment variable set on the current system.
 
 ### Introducing test fixtures
 
-* A test fixutres are a term used to describe any test data that lives outside of that particular test, and is used to set the application to a known fixed state
-* Fitures allow us to have a constant to compare individual test runs against.
-* See the book for more information (This is particularly suited to Ecommerce websites)
+* A test fixtures are a term used to describe any test data that lives outside of that particular test, and is used to set the application to a known fixed state
+* Fixtures allow us to have a constant to compare individual test runs against.
+* See the book for more information (This is particularly suited to E commerce websites)
 
 CONTINUE HERE ##############
 
@@ -185,7 +185,7 @@ CONTINUE HERE ##############
 * The key goals for any CI system should be:
 	* Running fast and failing fast
 	* Running as often as possible
-	* Keeping a clean and consistent invronment
+	* Keeping a clean and consistent environment
 	* Discarding bad code changes
 	* Maintaining a stable test suite
 
@@ -201,29 +201,29 @@ CONTINUE HERE ##############
 
 ### Keeping a clean and consistent environment
 
-* Reloading the test database for every build is a greatway to keep a clean and consistent test environment
-* Using configuration management tool to keep all of the dependencies, suh as java versions, consistent for all the test nodes will save you headaches
+* Reloading the test database for every build is a great way to keep a clean and consistent test environment
+* Using configuration management tool to keep all of the dependencies, such as java versions, consistent for all the test nodes will save you headaches
 
 ### Discarding bad code changes
 
-* Set up a simple system that prevents anybody from committing hanges to the master/trunk unless all tests, including selenium, were passing.
-* If you have a stable test suite, this helps prevent unintented defects from going into production and making sure that the whole test suite, including selenium, was always passsing
+* Set up a simple system that prevents anybody from committing changes to the master/trunk unless all tests, including selenium, were passing.
+* If you have a stable test suite, this helps prevent unintended defects from going into production and making sure that the whole test suite, including selenium, was always passing
 
 ### Implementing Intelligent Delays
 
 * When you know that animations need to occur or certain events need to occur, use delays
 * A fluent wait/delay polls until the element is in or out of the DOM
-* A explicit wait, waits until the end of a set time 
+* A explicit wait, waits until the end of a set time
 
 ### The Action Wrapper Pattern
 
-* IDea is to collect all the most common pain points, and automatically imeplemnt measures to prevent issues for these pain points as soon as that action is performed
+* Idea is to collect all the most common pain points, and automatically implement measures to prevent issues for these pain points as soon as that action is performed
 * This helps to future proof the tests by automatically accounting for things that commonly go wrong and destabilize the tests
 
 #### Advantages of the Action Wrapper Pattern
 
-* Single location for auctions - Actions like clicking, typing ect are ina  single class. Encourages DRY
-* Increasd overall build stability - The test suite becomes a lot more stable since forgetting to add a wait no longer breaks random tests at random times
+* Single location for auctions - Actions like clicking, typing ect are in a  single class. Encourages DRY
+* Increased overall build stability - The test suite becomes a lot more stable since forgetting to add a wait no longer breaks random tests at random times
 *  Capture and append exceptions - IF an action cannot be performed, we can capture the stack trade and add more information for better debugging
 *  Helps to implement screenshot pattern : Makes it easier to add functionality that will capture screenshots of the whole web page on test failures
 
@@ -238,10 +238,10 @@ CONTINUE HERE ##############
 #### Advantages of the black hole proxy pattern
 
 * Improved speedy - Web pages will load faster as we do not have to wait for third-party content to load
-* Improved Stability 
+* Improved Stability
 * Hermetically sealed tests - test has higher control over the environment. By blocking third-party content, we reduce external dependencies that cause test failure
 
-#### Disavantages of the Black Hole Proxy Pattern
+#### Disadvantages of the Black Hole Proxy Pattern
 
 * Broken Layout - will be missing all third party content
 * Third-party content tests are broken
@@ -258,18 +258,18 @@ See book for implementation details
 
 #### Advantages of BDD
 
-* Bettter test understanding
-* Modular implementation - methods thats that perfom the actual implementation can be shared while testing
+* Better test understanding
+* Modular implementation - methods thats that perform the actual implementation can be shared while testing
 * Versatile implementation options - By sticking close to behavior, it is easy to have one defined behavior running in multiple environments
-* Multiple BDD frameworks 
+* Multiple BDD frameworks
 * Data separation
 
 #### Disadvantages of BDD
 
-* Easy to mix behavior and implementation - Can be  be tempting to start adding implmentation into the definition
+* Easy to mix behavior and implementation - Can be  be tempting to start adding implementation into the definition
 * Wide range of tools to choose from
-* Added overhead 
-* Learning curve for each new frameworking
+* Added overhead
+* Learning curve for each new frame work
 
 
 ### The Write once, test everywhere pattern
@@ -278,13 +278,13 @@ See book for implementation details
 
 #### Advantages of the write once, test everywhere pattern
  * Foresight - This pattern forces the architect of the test suite to think ahead and boil down every feature and behaviour to the simplest, most common list of ideas
- * Reusablity - Can be reused between the mobile and website test suite ect
+ * Reusability - Can be reused between the mobile and website test suite ect
  * Simplicity - We have a single test suite that runs on multiple platforms and shares some of the implementation details
 
 #### Disadvantages of the write once, test everywhere pattern
 
-* Runtime conext switching 
-* Complex code base - Combining multiple test suites into one has a lot of advantages, however, the project structure might become convoluted and difficult to understand very 
+* Runtime content switching
+* Complex code base - Combining multiple test suites into one has a lot of advantages, however, the project structure might become convoluted and difficult to understand very
 
 ## The Page Objects Pattern
 
@@ -299,15 +299,15 @@ homePage.footer =pagefooter;
 
 ### The Page Objects Pattern
 
-* Describes any webpage in terms of a hierachical Domaim Specific Language (DSL)
+* Describes any webpage in terms of a hierarchical Domain Specific Language (DSL)
 * Application specific DSL helps to hide the page implementation, so the test is no longer allowed to directly interact with the page, but instead uses a framework to classes and methods to accomplish the same goal.
 
 #### Advantages of the Page Object Pattern
 
 * Creates a DSL framework
-* Testing Behaviour - very similar to BDD
+* Testing Behaviours - very similar to BDD
 * DRY
-* Modular and reuseable : As each Page Object is made from multiple smaller objects, the smaller objects (Eg, header and footer objects), these can be shared between multiple pages that have the same implementations of these objects
+* Modular and reusable : As each Page Object is made from multiple smaller objects, the smaller objects (Eg, header and footer objects), these can be shared between multiple pages that have the same implementations of these objects
 * Clear intentions - Intended actions can be clearly represented in code
 
 #### Disadvantages of the page object pattern
@@ -319,9 +319,9 @@ homePage.footer =pagefooter;
 
 #### Create a page super class
 
-* All pages should inherit this. 
+* All pages should inherit this.
 * This class should provide access to different parts of every page
-* Eg when test needs to check the conent of the shopping card in the sidebar, it will ask the current page for the Sidebar object, which will ask for the shoppingCart object from that object.
+* Eg when test needs to check the content of the shopping card in the sidebar, it will ask the current page for the Sidebar object, which will ask for the shoppingCart object from that object.
 
 #### Creating page subclasses
 
@@ -336,25 +336,25 @@ homePage.footer =pagefooter;
 ### Strategies for writing test suites
 
 * Instead of having 100% test coverage, the best that can be done is to prioritize the growth of the test suites.
-* Its best to have a way to group certain tests together so they can be extecuted individually.
+* Its best to have a way to group certain tests together so they can be executed individually.
 
 ### Different Types of Tests
 
 * Unit tests - Smallest unit of tests . Written to test an individual object and even individual methods of said object. Selenium tests are not applicable here
 * Integration tests - Consists of several modules of code put together, allowing them to pass data between each other. In terms of selenium, this could be logging in and adding an item to the card
-* End-to-end - Highest level of test. Exevuted in production. Similar to integration tests, tries to verify that all the components including third-party services can communicate well with each other
+* End-to-end - Highest level of test. Executed in production. Similar to integration tests, tries to verify that all the components including third-party services can communicate well with each other
 
 ### The Smoke Test Suite
 
-* Idea is to plug in the new code, let it run, and see whether it runs or catches on fire. 
+* Idea is to plug in the new code, let it run, and see whether it runs or catches on fire.
 * By far the smallest in size, as it needs to give a close to instantaneous pass for fail verdict
-* Tests in the smoke test suite shold look like the following:
+* Tests in the smoke test suite should look like the following:
 	* Running the application: Does it give a 500 error? ect.
 	* Database connectivity
-	* Abnormal amount of eceptions - eg checking javascript logs for exceptions
-* Smoke test suite should almost be like a feather in a boxing fight. Should leave the application without a single dent or scratch occuring:
+	* Abnormal amount of exceptions - eg checking javascript logs for exceptions
+* Smoke test suite should almost be like a feather in a boxing fight. Should leave the application without a single dent or scratch occurring:
 	* Avoid writing to a database if you cannot clean it up after
-	* Dont test too much
+	* Don't test too much
 
 ### The Money path suite
 
@@ -374,7 +374,7 @@ homePage.footer =pagefooter;
 
 ### The Regression Suite
 
-* Regression tests are all of the tests in our suite that test features developed in the past. 
+* Regression tests are all of the tests in our suite that test features developed in the past.
 
 ### Continuous Integration
 
@@ -389,12 +389,12 @@ homePage.footer =pagefooter;
 
 #### Build node management
 
-* Ideally each node should beindentical with the same versions of software and OS on them
-* To apporach this problem use:
+* Ideally each node should be identical with the same versions of software and OS on them
+* To approach this problem use:
 	* Configuration management system
 	* Virtualization
 
-##### Configuration Mangement System.
+##### Configuration Management System.
 * Ensures nodes are configured in the same way
 * Key tools to ensure your nodes are identical:
 	* Chef
@@ -408,16 +408,16 @@ homePage.footer =pagefooter;
 	* Virtual box
 	* Windows virtual PC
 
-	
+
 ## FAQ
 
 ### What programming language to write tests in?
 
-* Close to the integration - if aplication is being tested is written on a JVM platform, uses a language that is jVM compativle
-* Developer involvement - use a langauge developers are comfortable with
+* Close to the integration - if application is being tested is written on a JVM platform, uses a language that is jVM compatible
+* Developer involvement - use a language developers are comfortable with
 
 ### Can I use selenium for performance testing?
 
 * Selenium is a terrible solution for performance testing.
 * YSlow is good for checking what assets are slow to load
-* You can write scripts in ruby or bash that make hTTP requests against different API endpoints or assets and records the time it took to complete a purchase requrst or for an image to download
+* You can write scripts in ruby or bash that make hTTP requests against different API endpoints or assets and records the time it took to complete a purchase request or for an image to download

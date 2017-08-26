@@ -1,14 +1,14 @@
 # Python Crash Course - Eric Matthes
 
 
-## Varibles & Simple Data types
+## Variables & Simple Data types
 
 ### Strings
 
 * Can be in either " "  or ' '
 * Can change the case of a string by using `.upper()` or `.lower()`
 * To Concatenate strings, use `string1 + string2`
-* To add whilespace, use `\n` or `\t` in the string itself
+* To add whitespace, use `\n` or `\t` in the string itself
 * To remove whitespace from the front of a string, use `.lstrip()`, From the end use `.rstrip()`
 * To change another type to a string, use `str(typeToChange)`
 
@@ -28,7 +28,7 @@
 * Insert Element into specific index: `listName.insert(index, elementToAdd)`
 	* This will shift the elements to the right of the index you have inserted a value to
 * Remove element from a list: `del listName[index]` or `listName.pop(index)`
-* Removing the last element: `listName.pop()` 
+* Removing the last element: `listName.pop()`
 * Removing item by value: `list.remove(valueToRemove)`
 * Sorting a list: `listName.sort()`
 * Reverse sorting a list: `listname.sort(reverse=True)`
@@ -39,9 +39,9 @@
 * Accessing the last element of a list: `listName[-1]`
 
 ## Working With Lists
-* Looping through a list: 
+* Looping through a list:
 ```
-magicians = ['alice', 'david', 'carolina'] 
+magicians = ['alice', 'david', 'carolina']
 for magician in magicians:	 print(magician)
 ```
 * Looping the a range of values:
@@ -59,7 +59,7 @@ for magician in magicians:	 print(magician)
 * Copying a list:
 
 ```
-my_foods = ['pizza', 'falafel', 'carrot cake'] 
+my_foods = ['pizza', 'falafel', 'carrot cake']
 friend_foods = my_foods[:]
 ```
 
@@ -77,7 +77,7 @@ for item in tuple:
 * Overwriting a tuple: `oldTuple = (newXValue,newYValue)`
 ## If Statements
 
-* Simple if: 
+* Simple if:
 
 ```
 if x > 10:
@@ -122,13 +122,13 @@ if (x==y) or (y==z):
 
 * Checking a value is in a list: ` 10 in listName`
 * Checking a value is not in a list: `10 not in listName`
-* if else: 
+* if else:
 
 ```
 if  x > y:
 	do something
-else: 
-	do something else	
+else:
+	do something else
 ```
 * else if conditional (elif):
 
@@ -136,8 +136,8 @@ else:
 if  x > y:
 	do something
 elif x > y:
-	do do something	
-else: 
+	do do something
+else:
 	do something else
 
 ```
@@ -148,7 +148,7 @@ else:
 if listName:
 	do something
 else:
-	print("List is empty")	
+	print("List is empty")
 ```
 
 ## Dictionaries
@@ -182,7 +182,7 @@ for keys in sorted(dictionaryName.keys()):
 	do something
 ```
 
-* Looping through all values in a dictionary: 
+* Looping through all values in a dictionary:
 
 ```
 for value in dictionaryName.values():
@@ -229,7 +229,7 @@ def add (numberOne, numberTwo):
 	return numberOne + numberTwo
 ```
 
-* Making a parameter optional (you need to pass it a empty value): 
+* Making a parameter optional (you need to pass it a empty value):
 
 ```
 def optionalParameters(mustHavePara, anotherMustHavePara, optionalPara=''):
@@ -244,7 +244,7 @@ def fuctionName(slicedList[:])
 
 * Passing an arbitary number of arguments:
 	* Note, thjis will make a tuple and pack all values it recieves into that tuple
-	
+
 ```
 def functionName (*tupleWithArguments):
 	do something
@@ -252,7 +252,7 @@ def functionName (*tupleWithArguments):
 
 * Mixing required and Arbitary Arguments:
 	* the arbitary argument parameter must be at the end
-	
+
 ```
 def functionName(requiredParaOne, requiredParaTwo, *arbitaryPara):
 	do something
@@ -271,7 +271,7 @@ class ClassName():
 
 ```
 class ClassName():
-	
+
 	def __init__(self, para1,parat2):
 		self.para1 = para1;
 		self.para2 = para2;
@@ -286,7 +286,7 @@ class ClassName(object):
 
 * Making an instance of a class:
 	* paras are the parameters needed by the `__init__` method
-	
+
 ```
 ourVariable = ClassName(para1,para2)
 ```
@@ -303,7 +303,7 @@ instanceTwo = ClassName()
 ```
 
 * Setting a default value for an attribute:
-	
+
 ```
 def __init__(self)
 	self.defaultValue = 10
@@ -311,9 +311,9 @@ def __init__(self)
 
 * Modifying an attributes value
 	* Directly: ` instance.attribute = value`
-	* Through a method 
+	* Through a method
 
-``` 
+```
 def ourMethod(self, variableValue):
 	self.attribute = variableValue
 
@@ -335,14 +335,14 @@ def childClass(ParentClass):
 
 ```
 class childClass(ParentClass):
-	
+
 	def __init__(self, parentAttribute):
 		super().__init__(parentAttribute)
 		# Attribute for the child class
 		self.childAttribute = 10;
-		
+
 	# Child Class method
-	
+
 	def childMethod(self):
 		do something
 ```
@@ -379,7 +379,7 @@ filename = 'textFile.txt'
 
 with open(filename) as file_object:
 	lines = file_object.readlines()
-	
+
 for line in lines:
 	print(line.rstrip())`
 
@@ -394,10 +394,10 @@ with open(filename) as file_object:
 	lines = file_object.readlines()
 
 # Add all the lines to a string
-pi_string = ''	
+pi_string = ''
 for line in lines:
 	pi_string += line.rstrip()
-	
+
 print (pi_string)
 print(len(pi_string))
 ```
@@ -423,7 +423,7 @@ filename = 'programming.txt'with open(filename, 'w') as file_object:    file_o
 
 ```
 #Opening the file in append mode
-with open(filename, 'a') as file_object:		file_object.write("I also love finding meaning in large datasets.\n")       		
+with open(filename, 'a') as file_object:		file_object.write("I also love finding meaning in large datasets.\n")
         file_object.write("I love creating apps that can run in a browser.\n")
 ```
 
@@ -436,10 +436,10 @@ with open(filename, 'a') as file_object:		file_object.write("I also love findin
  	code that may throw exception here
  except Exception
  	do something with the exception
- 
+
  ```
- 
-* Else blocks can be used in try except blocks. 
+
+* Else blocks can be used in try except blocks.
 	* code that depends on the try block executing will go into the else block if successful
 
 ```
@@ -451,7 +451,7 @@ except Exception:
 
 else:
 	code to execute if try was successful
-		
+
 ```
 
 
@@ -462,7 +462,7 @@ else:
 * To create a test class, you need to pass `unittest.TestCase` as a parameter to the class
 * Asserts should be used in your test to return whether a test passes or not.
 * Test methods should start with `test_`
-* To test a specific class, import that class to the test class 
+* To test a specific class, import that class to the test class
 
 Example
 

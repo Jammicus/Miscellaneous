@@ -7,7 +7,7 @@
 
 * Don't be motivated by recognition from above, be motivated to give protection from all levels of the organization
 * Leaders must prioritize the well-being of their people, and advance the well-being of one another and the organization
-* Leading with empathy will inturn make your followers work harder for you
+* Leading with empathy will in turn make your followers work harder for you
 
 -------
 ## Employees are People Too
@@ -32,7 +32,7 @@
 
 ## The Awesome Responsibility
 
-* While your employees are at work, their safety and happiness are your resposibility, they deserve your love and care
+* While your employees are at work, their safety and happiness are your responsibility, they deserve your love and care
 * Being a leader is like being a parent, and the company is like a new family to join
 * In sickness and in health, take care of them
 * As a leader, it is your sole responsibility to protect your people, and in turn, your people will protect each other and advance the organization together.
@@ -46,15 +46,15 @@
 * This is done by setting a culture free of danger from each other. Which is achieved by giving people a sense of belonging
 * Offer them a culture based on a clear set of human values and beliefs, along with the power to make decisions. Offer them trust and empathy
 * Letting someone into an organization is like adopting a child
-* Leaders should set the standard of entry to the circle of safety, and assess people based on whether their views and chracter will fit the group
+* Leaders should set the standard of entry to the circle of safety, and assess people based on whether their views and character will fit the group
 * The benefits of the team should extend to everyone in that team, no matter what position they hold
-* When the circle of safety is working they will feel valued by their colleagues and feel cared for by our superiors. 
+* When the circle of safety is working they will feel valued by their colleagues and feel cared for by our superiors.
 * The ultimate question "How safe do you feel where you work?"
 
 ----------
 
 ## It's All About the Group
-* Always protect your own, there will be internal disagreements,but when outside attacks come, you rally together
+* Always protect your own, there will be internal disagreements, but when outside attacks come, you rally together
 
 ---------
 
@@ -107,8 +107,8 @@
 ## Eating Last Is Repaid with Loyalty and Hard Work
 
 * "He came to see his company as a family, as a group of people to serve and keep safe and not just a labor force to be used to serve the company"
-* "It is better that we all suffer a litte, so that none of us has to suffer a lot"
-* The safety of a strong tribe provides its memebers makes the stribe stronger and better equipped to deal with the dangers and uncertainty of the outside world. 
+* "It is better that we all suffer a little, so that none of us has to suffer a lot"
+* The safety of a strong tribe provides its members makes the strive stronger and better equipped to deal with the dangers and uncertainty of the outside world.
 
 ----------
 
@@ -116,7 +116,7 @@
 
 * We dont just trust people to obey the rules, we also trust that they know when to break them.
 * The responsibility of leaders is to teach their people the rules, train them to gain competency and build their confidence. Leadership must then step back and trust that their people know what they are doing all will do what needs to be done.
-* The responsibility of a leader is to provide cover from above for their people who are working below. 
+* The responsibility of a leader is to provide cover from above for their people who are working below.
 * Our confidence to do what's right is determined by how trusted we feel by our leaders
 * You must give your followers complete flexibility
 
@@ -125,7 +125,7 @@
 ## When Leaders Eat First
 
 * Too many of the environments in  which we work today frustrate our natural inclinations to trust and cooperate
-* " No one wakes up  in the morning to go to work with the hope that someone will manage us. We wake up in the morning and go to work with the hope that someone will lead 
+* " No one wakes up  in the morning to go to work with the hope that someone will manage us. We wake up in the morning and go to work with the hope that someone will lead
 
 ---------
 ## Abstraction Kills
@@ -135,7 +135,7 @@
 
 ---------
 ## Modern Abstraction
-* You must go to all levels of the organisation and make yourself present. Don't take results from the spreadsheets
+* You must go to all levels of the organisations and make yourself present. Don't take results from the spreadsheets
 
 ---------
 ## Managing the Abstraction
@@ -151,19 +151,19 @@
 	* Its imperative for us to see the actual, tangible impact of our time and effort for our work to have meaning and for us to be motivated to do it even better.
 	* When you see the physical impact, it inspires us to work harder and do more
 	* Bringing people in to talk about how their work improved someones life is an excellent example
-	* It needs to envoking feelings for the people, its not about numbers.
+	* It needs to invoke feelings for the people, its not about numbers.
 * Rule 4. Given them Time, Not Just Money
 	* Time and effort have an absolute value, we all share the fact we have only 24 hours in a day
 	* If someone is willing to give us something of which they have a fixed and finite amount, a completely nonredeemable commodity, we perceive greater value.
 	* Energy also matters, you must be present with them, not distracted by other things
 	* What produces loyalty, that irrational willingness to commit to the organization, even when offered more money elsewhere, is the feeling that the leaders of the company would be willing, when it matters, to sacrifice their time and energy to help us
-	* We will judge a boss who spends time after hours to help us as more valuable than a boss who siply gives us a bonus when we hit a target
-	* Simply hearing about the time and energy soeone gave to other can inspire us to want to do more for others too
+	* We will judge a boss who spends time after hours to help us as more valuable than a boss who simply gives us a bonus when we hit a target
+	* Simply hearing about the time and energy someone gave to other can inspire us to want to do more for others too
 	* A leader offers their time and energy to those in their care
 * Rule 5. Be patient, the rules of seven days and seven years
-	* We instinctively know that the strong bond of human trust cannot be formed after one date or even after one week. 
+	* We instinctively know that the strong bond of human trust cannot be formed after one date or even after one week.
 	* Strong feelings after a first date/ job interview is dopamine fueled
-	* Building trust takes time and paitence.
+	* Building trust takes time and patience.
 
 ---------
 
@@ -176,7 +176,7 @@
 
 ## Shared Struggle
 
-* Its not the work we remember with fondness, but the camarderie, how the group came together to get things done
+* Its not the work we remember with fondness, but the camaraderie, how the group came together to get things done
 * Its about coming together during the hard times, than being there together through the good times.
 * During the hard times, you must help each other through it, rather than going alone
 * Struggles should be defined as success stories on how the team got through it

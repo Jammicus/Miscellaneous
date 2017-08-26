@@ -11,7 +11,7 @@
 
 ### HTML Elements
 
-* Used to describe the structure of a page. 
+* Used to describe the structure of a page.
 * Elements contain opening and closing tags, as well as its content
 * Opening tags can carry attributes, which describe the element
 * Attributes have a name and a value, where the value is usually put inside quotation marks.
@@ -21,12 +21,12 @@
 * Class is the attribute name
 * Fruit is the attribute value
 * The`<p ...>` is the opening tag
-* The `</p>` is the closing tag 
+* The `</p>` is the closing tag
 
 ### CSS Rules
 
-* Rules indication how the conents of elements should be shown in the browser
-* Each rule has a selector & declaratiion block
+* Rules indication how the contents of elements should be shown in the browser
+* Each rule has a selector & declaration block
 * Selector state which elements the rule applies to
 * Declaration block states how the element should be shown
 * Declaration blocks have a property, and a property value, which is denoted as  `propertyName: propertyValue`
@@ -34,14 +34,14 @@
 ` .fruit {color:pink} `
 
 * The `.fruit` is the selector
-* The ` {color: pink;} ` is the `property name: propery value`
+* The ` {color: pink;} ` is the `property name: property value`
 
 
 ---------------------
 
 ### Linking to a javascript file from an HTML Page
 
-* You use the `<script>` element 
+* You use the `<script>` element
 * The `<script>` elements `src` attribute says where to find the javascript file
 
 ``<script src = "js/add-conent.js"></script>``
@@ -51,8 +51,8 @@
 ------------
 ### How To  Use Objects & Methods
 
-* The format is: 
-``` 
+* The format is:
+```
 object.method(parameters)
 ```
 ----------------------------------
@@ -83,22 +83,22 @@ object.method(parameters)
 ### Data Types
 
 * Vars and consts can take on 3 types
-	* Numberic Data types - Handles positives, negatives and decimals
+	* Numeric Data types - Handles positives, negatives and decimals
 	* String data types - Handles a series of characters
 	* Boolean Data types - Handles `True` or `False` values
 
 ### Rules For Naming Variables
 
-1. The name must start with either $, _ or a chracters. **NEVER** numbers
-2. You cannot use reserved words 
+1. The name must start with either $, _ or a characters. **NEVER** numbers
+2. You cannot use reserved words
 3. Variables are case sensitive. So `score` and `Score` are different variables
 4. Use a name that describes the information that it is storing, eg `homeAddress`
-5. If you have more than two words in the variable, use a captial to seperate the words, as shown in number 4.
+5. If you have more than two words in the variable, use a capital to separate the words, as shown in number 4.
 
 ### Arrays
 
 * Stores a series of values.
-* Should be used when you dont know how many variables will be needed, or when you need a large amount of variables.
+* Should be used when you don't know how many variables will be needed, or when you need a large amount of variables.
 
 ### Creating Arrays
 
@@ -112,7 +112,7 @@ object.method(parameters)
 * To get subsequent characters, increment the value in `[x]`.
 * If you increment too far, where there is no more values in the array, you will get `index out of bounds.`
 
-### Changing values in arryas
+### Changing values in arrays
 
 1. Find the index of the value you want to change.
 2. Re assign the value.
@@ -134,17 +134,17 @@ object.method(parameters)
 
 ### Arithmetic Operators
 
-|Name              | Operator| Purpose                                                            | 
+|Name              | Operator| Purpose                                                            |
 |--------------|----------|--------------------------------------------|
 |Addition          | ``+``     | Addes one value to another                           |
-|Subtraction    | ``-``      | Subtracts one value from another                 | 
+|Subtraction    | ``-``      | Subtracts one value from another                 |
 |Divison           | ``/``       | Divides two values                                          |
 |Multiplication |``*``       | Multiplies two values                                       |
 |Increment       |``+``      | Adds one to current number                           |  
 |Decrement     |``--``     | Subtracts one from the current number         |
 |Modulus         |``%``      | Divdes two values and returns the remainder|
 
-* The order of execution is BIDMAS (Brackets, INdices, Divison,Multiplcation, Addition and Subtraction)
+* The order of execution is BIDMAS (Brackets, Indices, Division, Multiplication, Addition and Subtraction)
 
 
 ### String Operator
@@ -167,20 +167,20 @@ object.method(parameters)
 
 ### Functions
 
-* A group of instructions 
+* A group of instructions
 * Can use parameters, which are given to the function work with
 * When the function is finished, it will give you a value
 * Asking the function to run is known as calling the function
 
 ### Declaring a Function
 
-``` 
+```
 function addTwoNumbers(numberOne,numberTwo){
 return x+y
 }
 ```
 
-* The name of the function is `` addTwoNumbers`` 
+* The name of the function is `` addTwoNumbers``
 * The parameters are   `` numberOne,numberTwo``
 * The function when run will give back the value of `` x+y``
 * to call the function, you will say `` addTwoNumbers(10,5) ``
@@ -191,7 +191,7 @@ return x+y
 *  You do this by assigning the value to a variable
 
 ```
-var sumOfThreeAndFive = sum(3,5) 
+var sumOfThreeAndFive = sum(3,5)
 ```
 
 ### Getting Multiple Values Out Of a Function
@@ -201,34 +201,34 @@ var sumOfThreeAndFive = sum(3,5)
 
 ```
  	function getSize(width, height, depth) {
-	var area = witdh, height;
+	var area = width, height;
 	var volume = width* height * depth;
 	var sizes = [area, volume];
 	return sizes;
-	} 
-	
+	}
+
 	var areaOne = getSize(3,2,3)[0];
 	var volumeOne = getSize(3,2,3)[1];
 ```
 ### Anonymous Functions & Function Expressions
-	
-* Anonymous functions are functions with no names. 
+
+* Anonymous functions are functions with no names.
 * These are typically assigned when declaring a variable
 * The function is not used until the interpreter gets to the statement.
 * This function cannot be called until the interpreter finds it
 
 	```
-	var area = function(width,height) {
+	var area = function(width, height) {
 	return width *  height;
 	};
 
 	var size = area(3,4);
-	
+
 	```
 
 ### Immediately Invoked Function Expressions
 
-* These are pronouced `` IIFE``
+* These are pronounced `` IIFE``
 * These functions are not given a name, and are only executed once the interpreter comes across them
 * at the end of the function, you will have ``()`` this tells the interpret that this should be called immediately.
 * You need to wrap the function is ``( )`` to ensure that the interpret treats this function as an expression
@@ -245,18 +245,18 @@ return width * height ;
 
 * For code that only needs to be run once within a task, rather than repeatedly being called by other parts of the script. Eg:
 	* As an argument when a function is called
-	* To assign the value of a property to an ojbect
+	* To assign the value of a property to an object
 	* In event handlers and listenings to do something when the event occurs
 	* To prevent conflicts between two scripts that might use the same variable name
 
 ### Variable Scope
 
 * Local variables (Ones defined in function) -  can only be used in that function
-* Global variables (Onces defined outside of functions) can be called in any function
-* Global variables values are not changed with each function call, unless you modifiy the value in the function
-* Local variables change values for each function call. (They are initalised when the function is called.
+* Global variables (Ones defined outside of functions) can be called in any function
+* Global variables values are not changed with each function call, unless you modify the value in the function
+* Local variables change values for each function call. (They are initialised when the function is called.
 
-``` 
+```
 function getArea (width, height){
 var area = width * height;
 return area;
@@ -271,12 +271,12 @@ var othetWallSize = getArea(4,2);
 
 ### What are Objects?
 
-* A series of variabless that are contained together.
+* A series of variables that are contained together.
 * A item that a function can be called on to modify its variables. These functions are called methods
 
 ### Creating objects: Literal Notation
 
-``` 
+```
 var hotel = {
 name : 'James',
 rooms: '40'
@@ -287,12 +287,12 @@ checkAvailability: function() {
 };
 ```
 
-### Acessing objects
+### Accessing objects
 
 * To get values from the object, or call methods on an object, we use dot notation
 * This is done by `` object.variable`` or ``object.method()``
 
-``` 
+```
 var hotelName = hotel.name;
 var roomsFree = hotel.checkAvailability();
 ```
@@ -303,20 +303,20 @@ var roomsFree = hotel.checkAvailability();
 * You first declare the variable as a new object `` var hotel = new Object()``
 * You then can define variables and methods using the dot notation mentioned above
 
-``` 
+```
 var hotel = new Object();
 
 	hotel.name = 'Quay';
 	hotel.rooms = 40;
 	hotel.booked = 25;
-	
+
 	hotel.checkAvailability = function () {
 		return this.rooms -this.booked;
 	};
-	
+
 ```
 
-* The `this` notation references the specific object in questions variable values. 
+* The `this` notation references the specific object in questions variable values.
 
 ### Updating an Object
 
@@ -339,12 +339,12 @@ delete hotel.name;
 
 * We create a function with the objects variables and methods
 
-``` 
+```
 function hotel (name, rooms, booked) {
 	this.name = name;
 	this.rooms = rooms;
 	this.booked = booked;
-	
+
 	this.checkAvailability = function() {
 	return this. rooms - this.booked;
 	};
@@ -360,7 +360,7 @@ var cityHotel =  new hotel("City hotel",22,12);
 
 ### Recap: Ways of creating objects
 
-**Creating the object then addig properties and methods.**
+**Creating the object then adding properties and methods.**
 
 **Literal Notation**
 
@@ -374,7 +374,7 @@ hotel. booked =25;
 hotel.checkAvailablity = function(){
 	return this.rooms-this.booked;
 	};
-	
+
 ```
 
 **Object Constructor Notation**
@@ -404,7 +404,7 @@ var hotel = {
 		return this.rooms - this.booked;
 		}
 	};
-	
+
 ```
 
 **Object Constructor Notation**
@@ -420,7 +420,7 @@ function Hotel(name, rooms, booked) {
 		}
 	var quayHotel = new Hotel ('Quay', 40,25);
 	var parkHotel = new Hotel ('Park', 120, 77);
-	
+
 ```
 
 ### This Keyword
@@ -428,16 +428,16 @@ function Hotel(name, rooms, booked) {
 * Where a function is declared alters what this means
 * This will always refer to one object
 
-#### A functon in Global Scope Function
+#### A function in Global Scope Function
 
-* When a functon is not declared within a object or function
+* When a function is not declared within a object or function
 * Will return the value of that object.
 
 ```
 function windowSize() {
 	var width = this.innerWidth;
 	var height =  this.innerHeight;
-	return [height,width];
+	return [height, width];
 ```
 
 #### Global Variables
@@ -445,21 +445,21 @@ function windowSize() {
 * All global variables become properties of an object.
 * When a function is in the global context, you can access global variables.
 
-``` 
+```
 var width =600;
 		var shape = { width:300};
-		
+
 		var showWidth = function() {
 		// this will reference width declared at the top of the page
 			document.write(this.width);
 			};
-			
+
 			showWidth()
 ```
 
 ### Method of An Object
 
-* When a function is defined inside an object, it becomes a method, this referes to the object containing it.
+* When a function is defined inside an object, it becomes a method, this refers to the object containing it.
 
 ```
 var shape = {
@@ -475,23 +475,23 @@ getArea : function() {
 
 ### Function Expression As A Method
 
-* Referes the the passed value.
+* Refers the the passed value.
 
-``` 
+```
 		var width = 600;
 		var shape = {width: 300};
-		
+
 		var showWidth = function() {
 			document.write(this.width);
 		};
-		
+
 		//this uses the width value defined in shape. (Second line)
 		shape.getWidth = showWidth;
 		shape.getWitdth();
 
 ```
 
-###  Arrrays are Objects
+###  Arrays are Objects
 
 * Special type of objects.
 * These hold a set of data in a key/value format.
@@ -511,7 +511,7 @@ costs = [ 420,222,333,111];
 
 Given this array called costs:
 
-|Propery| Value                 |
+|Property| Value                 |
 |--------|----------------|
 |room1 |items[420,40,10]|
 
@@ -527,8 +527,8 @@ Given this array called costs:
 |--------------|-------------------------------|
 |0                     |{accom:420,food:40,phone,10}|
 
-``` 
-//To access the the phone vaule of the first object
+```
+//To access the the phone value of the first object
 
 costs[2].phone
 
@@ -543,8 +543,8 @@ costs[2].phone
 	This uses objects to create a representation of the current page. Creates a new object for each new element
 3. Global Javascript Objects
 	Represents things that the Javascript language needs to create a model of. Eg, dates and times.
-	
-	
+
+
 -------
 
 ### Browser Object Model
@@ -556,7 +556,7 @@ costs[2].phone
 * Navigator - Information about browser
 * Screen - Devices display information
 
-Window is the parent, where every other object is a child the window. 
+Window is the parent, where every other object is a child the window.
 
 ------
 MAKE A DIAGRAM
@@ -579,7 +579,7 @@ Used to create a model of the current webpage
 ### Global Javascript Objects
 
 * These are a bunch of individual objects that relate to different parts of the Javascript language
-* Usually start with a captial letter
+* Usually start with a capital letter
 
 Example objects for data types:
 * String
@@ -596,7 +596,7 @@ Example Objects to help with real world concepts:
 
 ### Data types Revisited
 
-#### Primative data types
+#### Primitive data types
 
 1. String (Is a object)
 2. Number (Is a object)
@@ -606,12 +606,12 @@ Example Objects to help with real world concepts:
 
 #### Complex Data Types
 
-1. Objects 
+1. Objects
 
 
 * Arrays and Functions are classified as objects.
-* If they are objects, we can call functions on an object or use build in methods on these. 
-* To see all of these, look online. 
+* If they are objects, we can call functions on an object or use build in methods on these.
+* To see all of these, look online.
 
 --------
 
@@ -633,7 +633,7 @@ Three key concepts:
 
 * Evaluations - Where you analyze values to determine whether they match the expected results
 * Decisions -  Using the result of evaluations, you can decide which path your script should go down
-* Loops - Repeatidly doing the same steps.
+* Loops - Repeatedly doing the same steps.
 
 --------------
 
@@ -654,7 +654,7 @@ do something
 
 * Javascript converts data types behind the scenes to complete operations.
 * This is known as type coercion
-* Javascript is known as weak typing, as we cna change the data type for a value.
+* Javascript is known as weak typing, as we can change the data type for a value.
 * This can end up giving us wrong evaluations
 
 -----
@@ -675,7 +675,7 @@ do something
 
 * There are two types of equality checkers:
 	* == - this checks whether two objects are truthly or falsly
-	* === - this is strict checking, this checks whether they share the same type 
+	* === - this is strict checking, this checks whether they share the same type
 
 ----------------
 
@@ -684,7 +684,7 @@ do something
 Three main types
 
 * for
-* While 
+* While
 * Do while
 
 
@@ -694,7 +694,7 @@ Three main types
 do something
 }
 `
-* You have to initalize a variable ( var i = 0)
+* You have to initialise a variable ( var i = 0)
 * You then need to say when the loop should run (When i < 10)
 * Then you say what should happen to I after the instruction is done (i++)
 * Each time the instruction is done, I is incremented, when i = 10, the loop stops.
@@ -712,7 +712,7 @@ i++
 
 #### Do While
 
-``` 
+```
 do {
 dosomething
 i++
@@ -741,7 +741,7 @@ Accessing and updating the DOM tree involves two steps:
 
 #### Ways Of Accessing the elements
 
-1. To select an individual element, use 
+1. To select an individual element, use
 	* getElementById(elements ID attribute)
 	* querySelector(css selector)
 
@@ -749,31 +749,31 @@ Accessing and updating the DOM tree involves two steps:
 	* getElementByClassName(class name)
 	* getElementsByTagName(tagname)
 	* querySelectorAll (Css selector)
-	
+
 3. Traversing between element nodes
 	* parentNode
 	* previousSibling/ nextSibling
 	* firstChild/ lastChild
-	
+
 #### Working with those elements
 
 * Access/update text of elements
 	1.Select the `<li>` element
 	2.use firstChild property to get the text node
-	3.use the txt nodes only property (nodeValue) to get the text from the elmeent
-	
-* Working with HTML Conent
-	1. innterHTML allows you to access child and text conent
-	2. to just work the text conent, use textConent
-	3. There are many methods that allow you to add/remove nodes, see DOM maniuplation
-	
-* Access or update attribute vaues
+	3.use the txt nodes only property (nodeValue) to get the text from the element
+
+* Working with HTML Content
+	1. innterHTML allows you to access child and text content
+	2. to just work the text content, use textContent
+	3. There are many methods that allow you to add/remove nodes, see DOM manipulation
+
+* Access or update attribute values
 	1.Can use the following:
 		* hasAttribute()
 		* getAttribute()
 		* setAttribute()
 		* remoteAttribute()
-		
+
 
 --------
 #### Caching Dom Queries
@@ -793,7 +793,7 @@ This is a collected of nodes.
 * Methods that return  a single element node:
 	* getElementById('id');
 	* querySelector('css selector')
-* Methos that reutrn one or more elements as a node list
+* Methods that return one or more elements as a node list
 	* getElementByClassName('class')
 	* getElementByTagName('tagName')
 	* querySelectorAll('css selector')
@@ -810,7 +810,7 @@ el.className = 'cool';
 ```
 -----
 
-#### Nodelists 
+#### Nodelists
 
 * NodeLists are treated as arrays
 * Key difference is they are not actually arrays, they are a type of object called collection.
@@ -820,7 +820,7 @@ el.className = 'cool';
 
 #### Live and Static Nodelists
 
-* A live NodeList occurs when your script updates the page, the NodeList is updated as well. 
+* A live NodeList occurs when your script updates the page, the NodeList is updated as well.
 * A static NodeList occurs when the script updates your page, the NodeList is not updated as well.
 * This occurs depending on what methods you use to get the elements.
 
@@ -873,11 +873,11 @@ You can do this with:
 
 #### Whitespace Nodes
 
-Some browsers add a text node whenever they come accross white spaces between elements. This can cause issues when traversing the DOM
+Some browsers add a text node whenever they come across white spaces between elements. This can cause issues when traversing the DOM
 
-You can strip all the whitespace out of a page. THis will make the page smaller and faster to load, but may make the code harder to read
+You can strip all the whitespace out of a page. This will make the page smaller and faster to load, but may make the code harder to read
 
-Another way to deal  with this is to avoid using these DOM properties altogether. 
+Another way to deal  with this is to avoid using these DOM properties altogether.
 
 JQuery for example is a solution for this.
 
@@ -891,25 +891,25 @@ If there is a element that has siblings from the same parent, you can use `eleme
 
 #### First and Last Child
 
-If there is a element that has siblings from the same parent, you can use ` element.firstChild` and `element.lastChild` to get these. 
+If there is a element that has siblings from the same parent, you can use ` element.firstChild` and `element.lastChild` to get these.
 
 For example, if we have 4 `li` elements, this would not be suitable to get the third `li` element.
 
 -------
 
-#### How To Get/Update Element Conent
+#### How To Get/Update Element Content
 
-* Navigage to the text node
+* Navigate to the text node
 	* This works best when the element contains only text.
 * Work with the containing element
-	* Allows you to access its text nodes and child elements. 
-* You will often be working with the property ` nodeValue` 
+	* Allows you to access its text nodes and child elements.
+* You will often be working with the property ` nodeValue`
 
 ---------
-#### Acessing & Updating a text node with nodevalue
+#### Accessing & Updating a text node with nodeValue
 
 
-` document.getElementById('one').firstChild.nextSibling.nodeValue; 
+` document.getElementById('one').firstChild.nextSibling.nodeValue;
 `
 
 * In order to use nodeValue, you must be on a text node, not the element that contains the text.
@@ -949,7 +949,7 @@ Two possible ways:
 1. using the InnerHTML property of a node. (This is not advised)
 2. DOM manipulation
 
-#### Adding/Removing with HTML Conent.
+#### Adding/Removing with HTML Content.
 
 This should not be used due to security risks.
 
@@ -969,7 +969,7 @@ Approach:
 Full Steps:
 
 1. use createElement and store in a variable
-2. Use createTextNode() and store in a vairable
+2. Use createTextNode() and store in a variable
 3. Use appendChild() to add it to the tree. AppendChild allows you to specify which element you want this to node added to, as a child of that node.
 
 ------
@@ -1004,7 +1004,7 @@ position.appendChild(newEl);
 var removeEl = document.getElementsByTagName('li')[3];
 
 //Its containing element
-var containerEl = removeEl.parentNOde;
+var containerEl = removeEl.parentNode;
 
 //Removing the element
 //containerEl= removeEl.parentNode;
@@ -1023,7 +1023,7 @@ var containerEl = removeEl.parentNOde;
 	* allows you to get/update the enter content of a element as a string.
 	* This is faster than DOM manipulation when adding a large amount of elements
 	* Simple way to remove all content from one element(pass it a blank string)
-	* Should not be used to add conent that has come from a user, this is a secruity risk
+	* Should not be used to add content that has come from a user, this is a security risk
 	* Event handlers can get broken when doing this.
 * DOM manipulation
 	* Good when a element has many siblings
@@ -1038,14 +1038,10 @@ var containerEl = removeEl.parentNOde;
 
 #### How XSS Happens
 
-* When a user places malicious code into a website	
+* When a user places malicious code into a website
 	* When a user creates profiles or adds comments
 	* When multiple authors may contribute to articles
 	* When Data comes from a third party
 	* When files and images can be uploaded
 
-#### What can these attacks do? 
-
-
-
-
+#### What can these attacks do?

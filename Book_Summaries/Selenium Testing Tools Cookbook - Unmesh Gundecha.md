@@ -38,41 +38,41 @@ builder.keyDown(Keys.CONTROL)
  * To drag and drop, Use `dragAndDrop(source,target)` in the actions builder class
 
 ### Executing Javascript Code
- 
+
  * To execute javascript code, use a Javascript executor
 
  Example
- 
+
  ```
- 
+
  JavascriptExector js = (JavascriptExecutor) driver;
- 
+
  String title = (String) js.executeScript ("return document.title");
- 
+
  ```
- 
+
 ### Taking Screenshots
- 
+
  * Selenium provides the TakeScreenshot interface
 
  ### Maximizing the Browser Window
- 
+
  * Use `driver.manage().window().maximize();`
 
 TODO AUTOMATING DROPDOWNS
- 
+
 ## Controlling the Test Flow
 
 
 ### Implicit Waits
 
 * You can use implicit waits to wait a specific amount of time.
-* This is useful if a element is not in the DOM when you get to that partof the test
+* This is useful if a element is not in the DOM when you get to that part of the test
 
 Example
 
 ```
-driver.manage().timeouts().implicitluWait(10, TimeUnit.SECONDS); 
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 ```
 
 ### Synchronizing a test with an explicit wait
@@ -101,7 +101,7 @@ wait.until(ExpectedConditions.titleContains("selenium"));
 
 Example
 ```
-WebElement message = (new WebDriverWait(driver, 5)). until( new ExpectedCOndition<WebElement>(){
+WebElement message = (new WebDriverWait(driver, 5)). until( new ExpectedCondition<WebElement>(){
 @Override
 public WebElement apply (WebDriver d) {
 return d.findElement(By.id("page4"));
@@ -113,7 +113,7 @@ return d.findElement(By.id("page4"));
 ```
 
 (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>()   {       public Boolean apply(WebDriver d) {           return d.findElement(By.id("userName")).   getAttribute("readonly").contains("true"); 	 }});
- 	 
+
 ```
 
 #### Waiting for an Elements Visibility
@@ -150,7 +150,7 @@ return d.findElement(By.id("page4"));
 ### Identifying and Handlign Pop windows By Title
 
 ```
-   @Test   public void testWindowPopupUsingTitle() {       //Save the WindowHandle of Parent Browser Window       String parentWindowId = driver.getWindowHandle();       //Clicking Visit Us Button will open Visit Us Page in a new Popup       //Browser Window       WebElement visitButton = driver.findElement(By.id("visitbutton"));       visitButton.click();       //Get Handles of all the open Popup Windows       //Iterate through the set and check if tile of each window matches       //with expected Window Title       Set<String> allWindows = driver.getWindowHandles();       if(!allWindows.isEmpty()) {       86for (String windowId : allWindows) { 
+   @Test   public void testWindowPopupUsingTitle() {       //Save the WindowHandle of Parent Browser Window       String parentWindowId = driver.getWindowHandle();       //Clicking Visit Us Button will open Visit Us Page in a new Popup       //Browser Window       WebElement visitButton = driver.findElement(By.id("visitbutton"));       visitButton.click();       //Get Handles of all the open Popup Windows       //Iterate through the set and check if tile of each window matches       //with expected Window Title       Set<String> allWindows = driver.getWindowHandles();       if(!allWindows.isEmpty()) {       86for (String windowId : allWindows) {
                try {                   if(driver.switchTo().window(windowId).getTitle().  						 equals("Visit Us")) {                       //Close the Visit Us Popup Window                       driver.close();						break; }               }               catch(NoSuchWindowException e) {                   e.printStackTrace();               }			} }       //Move back to the Parent Browser Window       driver.switchTo().window(parentWindowId);       //Verify the driver context is in Parent Browser Window       assertTrue(driver.getTitle().equals("Build my Car -   Configuration"));   }
 ```
 
@@ -188,15 +188,15 @@ public void testConfirmAccept()
 {
 	WebElement button = driver.findElement(By.id("confirm"));
 	button.click()
-	
+
 		try{
-		
+
 			Alert alert = driver.switchTo().alert();
 			alert.accept()
-			
+
 			WebElement message = driver.findElement(By.id("demo"));
 			assertEquals("Alert message", message.getText();
-			
+
 			} catch (NoAlertPresentException e) {
 			e.printStackTrade();
 			}
@@ -208,7 +208,7 @@ public void testConfirmAccept()
 ### Handling A Promt Box Alert
 
 * These are alerts where the user needs to add text to the box
-* Has Ok and cancel buttons. 
+* Has Ok and cancel buttons.
 * Ok returns the input value, cancel returns null
 
 Example
@@ -219,20 +219,20 @@ public void testPrompt() {
 	WebElement button = driver. findElement(By.id("prompt"));
 	//Click to open the alert
 	button.click();
-	
+
 	try {
 		Alert alert = driver.switchTo().alert();
 		//Send value into the input box on the alert
 		alert.sendKeys("Foo")
-		
+
 		WebElement message = driver.findElement(By.id("prompt_demo"));
 		assertEquals("Hello!", message.getText());
-		
+
 		} catch (NoAlertPResentException e) {
 		e.printStackTrade();
 		}
 	}
-	
+
 ```
 
 ---------
@@ -256,7 +256,7 @@ Following example is implemented a page object test for a BMI Calulator page
 1. Define and create all the page objects in a locial grouping
 2. Create a new Java Class which has all the elments of the page
 3. Define the classes constructor which calles `PageFactory.initEelemnts();` This method should map the elements on the page to the variables in the BmiCalcPage Class
-4. Then create a test 
+4. Then create a test
 
 ```
 public class BmiCalcPage {
@@ -266,11 +266,11 @@ public class BmiCalcPage {
 	public WebElement Calculate;
 	public WebElement bmi;
 	public WebElement bmi_category
-	
+
 	public BmiCalcPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		}
-	
+
 ```
 
 
@@ -286,21 +286,21 @@ public void testBmiCalculation() {
 	WebDriver driver = new ChromeDriver();
 	driver.get(...)
 	BmiCalcPage bmiCalcPage = new BmiCalcPage(driver);
-	
+
 	bmiCalcPage.heightCMS.sendKeys("181");
 	bmiCalcPAge.weightKg.sendKeys("80");
-	
+
 	bmiCalcPage.Calculate.click()
-	
+
 	assertEquals(somestuff)
-	
+
 	driver.close()
 
 ```
 
 #### FindBy Annotations
 
-* This can be used to find elements 
+* This can be used to find elements
 
 ```
 @FindBy(id = "heightCMS")
@@ -330,7 +330,7 @@ Example
 //load the page
  public void load() {       this.driver.get(url);   }
    //close the page   public void close() {       this.driver.close();   } public void calculateBmi(String height, String weight) {       heightCMS.sendKeys(height);       weightKg.sendKeys(weight);       Calculate.click();} public String getBmi() {       return bmi.getAttribute("value");}   public String getBmiCategory() {       return bmi_category.getAttribute("value");}
-       
+
        }
 
 ```
@@ -347,12 +347,12 @@ package seleniumcookbook.tests;import org.junit.Test;import static org.junit.A
 package seleniumcookbook.tests.pageobjects;       import org.openqa.selenium.WebDriver;       import org.openqa.selenium.chrome.ChromeDriver;       import org.openqa.selenium.WebElement;       import org.openqa.selenium.support.PageFactory;       import org.openqa.selenium.support.ui.LoadableComponent;       import static org.junit.Assert.*;       public class BmiCalcPage extends LoadableComponent<BmiCalcPage> {  private WebElement heightCMS;private WebElement weightKg;private WebElement Calculate;private WebElement bmi;private WebElement bmi_category;private WebDriver driver;
 
    private String url = "http://dl.dropbox.com/u/55228056/       bmicalculator.html";           private String title = "BMI Calculator";       public BmiCalcPage() {           driver = new ChromeDriver();           PageFactory.initElements(driver, this);} @Override       protected void load() {           this.driver.get(url);       }       @Override       protected void isLoaded()  {           assertTrue(driver.getTitle().equals(title));       }
-       
+
 ```
 
 ```
 import org.junit.Test;       import static org.junit.Assert.*;       import seleniumcookbook.tests.pageobjects.*;       public class BmiCalculatorTests { 154@Testpublic void testBmiCalculation(){    //Create an instance of Bmi Calculator Page class    //and provide the driver    BmiCalcPage bmiCalcPage = new BmiCalcPage();    //Open the Bmi Calculator Page bmiCalcPage.get();    //Calculate the Bmi by supplying Height and Weight values    bmiCalcPage.calculateBmi("181", "80");
-    
+
     //Verify Bmi & Bmi Category values               assertEquals("24.4", bmiCalcPage.getBmi());               assertEquals("Normal", bmiCalcPage.getBmiCategory());               //Close the Bmi Calculator Page               bmiCalcPage.close();           }}
 ```
 
@@ -379,9 +379,9 @@ import org.openqa.selenium.support.FindBy;       import org.openqa.selenium.sup
 ```
 package demo.magentocommerce.pages;       import java.util.ArrayList;       import java.util.List;       import org.openqa.selenium.By;       import org.openqa.selenium.WebElement;       import org.openqa.selenium.support.PageFactory;       import org.openqa.selenium.support.ui.LoadableComponent;       import static org.junit.Assert.assertTrue;       public class SearchResults extends LoadableComponent<SearchResul       ts> { 158private String query;public SearchResults(String query){    PageFactory.initElements(Browser.driver(),this);
     }@Overridepublic void isLoaded() {           assertTrue(Browser.driver().getTitle().equals("Search   results for: '" + this.query                   + "' - Magento1 Commerce Demo Store"));}       @Override       protected void load() {           // TODO Auto-generated method stub       }       public List<String> getProducts() {           List<String> products = new ArrayList<String>();           List<WebElement> productList = Browser.driver().   findElements(By.cssSelector("ul.products-grid > li"));           for(WebElement item : productList)               products.add(item.findElement(By.cssSelector("h2 >   a")).getText());           return products;       }       public void close() {           Browser.close();}       public Search Search() {              Search search = new Search();              return search;} }
-    
+
  ```
- 
+
  ```
  import org.junit.Test;import static org.junit.Assert.*;import demo.magentocommerce.pages.*;
 public class SearchTest {           @Test           public void testProductSearch()           {               //Create an instance of Home page               HomePage homePage = new HomePage();               //Navigate to the Home page               homePage.get();               //Search for 'sony', the searchInStore method will return               //SearchResults class               SearchResults searchResult = homePage.Search().       searchInStore("sony");               //Verify there are 2 products available with this search               assertEquals(2, searchResult.getProducts().size());               assertTrue(searchResult.getProducts().contains("Sony       Ericsson W810i"));               //Close the Search result page               searchResult.close();           }}
@@ -394,7 +394,7 @@ public class SearchTest {           @Test           public void testProductSea
 
 ###Creating an Extension Class for Web Tables
 
-* Currently there is no build in support for web tables or table elements 
+* Currently there is no build in support for web tables or table elements
 
 Example
 
@@ -413,7 +413,7 @@ import org.openqa.selenium.WebElement;       import org.openqa.selenium.By;   
 public WebElement getCellEditor(int rowIdx, int colIdx, int   editorIdx) throws NoSuchElementException {try {       List<WebElement> tableRows = _webTable.findElements(By.       tagName("tr"));       WebElement currentRow = tableRows.get(rowIdx-1);       List<WebElement> tableCols = currentRow.findElements(By.       tagName("td"));       WebElement cell = tableCols.get(colIdx-1);       WebElement cellEditor = cell.findElements(By.       tagName("input")).get(editorIdx);       return cellEditor;     } catch (NoSuchElementException e) {       throw new NoSuchElementException("Failed to get cell editor");} }
 ```
 
-* Create method to retrieve the cell editor element. 
+* Create method to retrieve the cell editor element.
 
 ```
  public WebElement getCellEditor(int rowIdx, int colIdx, int   editorIdx) { 2. Now add methods to retrieve rows and columns from a table, as shown in following code:List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));WebElement currentRow = tableRows.get(rowIdx-1);
@@ -454,9 +454,9 @@ import org.openqa.selenium.JavascriptExecutor;   import org.openqa.selenium.Web
 
 ```
 ublic static File captureElementBitmap(WebElement element) throws   Exception {
-   
+
    WrapsDriver= wrapsDriver = (WrapsDriver) element;
-   
+
    //Get the entire Screenshot from the driver of passed WebElement     File screen = ((TakesScreenshot)  wrapsDriver.getWrappedDriver()).     getScreenshotAs(OutputType.FILE);     //Create an instance of Buffered Image from captured screenshot     BufferedImage img = ImageIO.read(screen);     // Get the Width and Height of the WebElement using     int width = element.getSize().getWidth();     int height = element.getSize().getHeight();     //Create a rectangle using Width and Height     Rectangle rect = new Rectangle(width, height);     //Get the Location of WebElement in a Point.     //This will provide X & Y co-ordinates of the WebElement     Point p = element.getLocation();     //Create image by for element using its location and size.     //This will give image data specific to the WebElement     BufferedImage dest = img.getSubimage(p.getX(), p.getY(), rect.width,     rect.height);     //Write back the image data for element in File object     ImageIO.write(dest, "png", screen);     //Return the File object containing image data     return screen;   }
 ```
 
@@ -469,7 +469,7 @@ ublic static File captureElementBitmap(WebElement element) throws   Exception {
 
 ```
 import java.awt.Image;   import java.awt.Toolkit;   import java.awt.image.PixelGrabber;   public class CompareUtil {     public enum Result { Matched, SizeMismatch, PixelMismatch };     static Result CompareImage(String baseFile, String actualFile) {       Result compareResult = Result.PixelMismatch;       Image baseImage = Toolkit.getDefaultToolkit().getImage(baseFile);       Image actualImage = Toolkit.getDefaultToolkit().       getImage(actualFile);       try {           PixelGrabber baseImageGrab = new PixelGrabber(baseImage, 0, 0,           -1, -1, false);           PixelGrabber actualImageGrab = new PixelGrabber(actualImage,           0, 0, -1, -1, false);           int[] baseImageData = null;           int[] actualImageData = null;           if(baseImageGrab.grabPixels()) {             int width = baseImageGrab.getWidth();             int height = baseImageGrab.getHeight();             baseImageData = new int[width * height];             baseImageData = (int[])baseImageGrab.getPixels();}           if(actualImageGrab.grabPixels()) {             int width = actualImageGrab.getWidth();             int height = actualImageGrab.getHeight();             actualImageData = new int[width * height];             actualImageData = (int[])actualImageGrab.getPixels();}           System.out.println(baseImageGrab.getHeight() +  "<>" +           actualImageGrab.getHeight());
-           
+
            System.out.println(baseImageGrab.getWidth() +  "<>" +           actualImageGrab.getWidth());           if ((baseImageGrab.getHeight() != actualImageGrab.getHeight())           || (baseImageGrab.getWidth() != actualImageGrab.getWidth()))             compareResult = Result.SizeMismatch;           else if(java.util.Arrays.equals(baseImageData,           actualImageData))             compareResult = Result.Matched;       } catch (Exception e) {         e.printStackTrace();}       return compareResult;     }}
 
 ```
@@ -482,7 +482,7 @@ Example test:
 ```
    import org.openqa.selenium.firefox.FirefoxDriver;   import org.openqa.selenium.*;   import org.apache.commons.io.FileUtils;   import org.junit.*;   import static org.junit.Assert.*;   import java.io.File;   public class BmiCalculatorTest {     public WebDriver driver;     private StringBuffer verificationErrors = new StringBuffer();     @Before     public void setUp() throws Exception {       // Create a new instance of the Firefox driver       driver = new FirefoxDriver();     }     @Test     public void testBmiCalculatorLayout() throws Exception {       String scrFile = "c:\\screenshot.png";       String baseScrFile = "c:\\baseScreenshot.png";       //Open the BMI Calculator Page and get a Screen Shot of Page into       a File       driver.get("http://dl.dropbox.com/u/55228056/bmicalculator.html");
        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-       
+
        FileUtils.copyFile(screenshotFile, new File(scrFile));       try {         //Verify baseline image with actual image         assertEquals(CompareUtil.Result.Matched,         CompareUtil.CompareImage(baseScrFile,scrFile));       } catch (Error e) {         //Capture and append Exceptions/Errors         verificationErrors.append(e.toString());       }}     @After     public void tearDown() throws Exception {       //Close the browser       driver.quit();       String verificationErrorString = verificationErrors.toString();       if (!"".equals(verificationErrorString)) {         fail(verificationErrorString);       }} }
 ```
 
@@ -496,7 +496,7 @@ TODO
 
 ### Measuring The Response Time using a timer
 
-* This can be implemented using Date/Time Classes 
+* This can be implemented using Date/Time Classes
 
 Example
 ```
@@ -506,7 +506,7 @@ Example
 ### Using the BrowserMob proxy for measuring perormance
 
 * Captures performance data from a web application using HTML Archive (HAR) formzt
-* Can also manipulate brwoser behaviour and trafic
+* Can also manipulate browser behaviour and trafic
 
 Steps:
 
@@ -557,14 +557,14 @@ Example
 
 ```
 @Test   public void testHTML5VideoPlayer() throws Exception {       File scrFile = null;       //Get the HTML5 Video Element       WebElement videoPlayer = driver.findElement(By.id("vplayer"));       //We will need a JavaScript Executor for interacting       //with Video Element's       //methods and properties for automation       JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;       //Get the Source of Video that will be played in Video Player       String source = (String) jsExecutor.executeScript("return         arguments[0].currentSrc;", videoPlayer);       //Get the Duration of Video       long duration = (Long) jsExecutor.executeScript("return         arguments[0].duration", videoPlayer);       System.out.println(duration);       //Verify Correct Video is loaded and duration       assertEquals("http://html5demos.com/assets/dizzy.mp4", source);
-       
+
        assertEquals(25, duration);
-       
+
        //Play the Video
        jsExecutor.exectureScript("return arguments[0].play()", VideoPlayer);
-       
+
        Thread.sleep(5000);
-       
+
        //Pause the video       jsExecutor.executeScript("arguments[0].pause()", videoPlayer);       //Take a screen-shot for later verification       scrFile = ((TakesScreenshot)driver).getScreenshotAs         (OutputType.FILE);       FileUtils.copyFile(scrFile, new File("c:\\tmp\\pause_play.png"));}
 
 ```
@@ -583,10 +583,10 @@ Example
 
 ```
 @Test   public void testHTML5CanvasDrawing() throws Exception {     //Get the HTML5 Canvas Element     WebElement canvas = driver.findElement(By.id("imageTemp"));     //Select the Pencil Tool     Select drawtool = new Select(driver.findElement(By.id("dtool")));     drawtool.selectByValue("pencil");     //Create a Action Chain for Draw a shape on Canvas
-     
+
      Actions builder = new Actions(driver);builder.clickAndHold(canvas).moveByOffset(10, 50).               moveByOffset(50,10).
 				moveByOffset(-10,-50).               moveByOffset(-50,-10).release().perform();
-               
+
  //Get a screenshot of Canvas element after Drawing and     //compare it to the base version     //to verify if the Drawing is performed     FileUtils.copyFile(WebElementExtender.captureElementBitmap(canvas),       new File("c:\\tmp\\post.png"));     assertEquals(CompareUtil.Result.Matched,       CompareUtil.CompareImage("c:\\tmp\\base_post.png",       "c:\\tmp\\post.png"));   }
 ```
 
@@ -598,7 +598,7 @@ Example
 ### Web Storage - Testing Local Storage
 
 * HTML5 provides a `localstorage` interface through javascript
-* This interface stores data indefinatly 
+* This interface stores data indefinatly
 * In Chrome, you can see this data by click on Inspect Element in the resources tab
 
 
@@ -617,7 +617,7 @@ Example
 
 ```
 @Test   public void testHTML5SessionStorage() throws Exception {     String clickcount=null;     WebElement clickButton = driver.findElement(By.id("click"));
-     
+
      WebElement clicksField = driver.findElement(By.id("clicks"));     JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;     //Get current value of sessionStorage.clickcount, should be null     clickcount = (String) jsExecutor.executeScript("return       sessionStorage.clickcount;");     assertEquals(null, clickcount);     assertEquals("0", clicksField.getAttribute("value"));     //Click the Button, this will increase the     //sessionStorage.clickcount value by 1     clickButton.click();     //Get current value of sessionStorage.clickcount, should be 1     clickcount = (String) jsExecutor.executeScript("return       sessionStorage.clickcount;");     assertEquals("1", clickcount);     assertEquals("1", clicksField.getAttribute("value"));}
 ```
 
@@ -675,14 +675,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;       import org.openqa.selen
 @Before   public void setUp() throws Exception {      // Create an instance of GraphicsConfiguration to get the      // Graphics configuration      // of the Screen. This is needed for ScreenRecorder class.        GraphicsConfiguration gc = GraphicsEnvironment            .getLocalGraphicsEnvironment()            .getDefaultScreenDevice()            .getDefaultConfiguration();      // Create a instance of ScreenRecorder with the required      // configurations      screenRecorder = new ScreenRecorder(gc,         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey,           MIME_AVI),         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey,           ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,            CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,            DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),            QualityKey, 1.0f,            KeyFrameIntervalKey, (int) (15 * 60)),   new Format(MediaTypeKey, MediaType.VIDEO,     EncodingKey,"black",      FrameRateKey, Rational.valueOf(30)),        null);// Create a new instance of the Firefox driver
 
     driver = new FirefoxDriver();          //Call the start method of ScreenRecorder to begin recording          screenRecorder.start();       }```
- 
-``` 
- 
+
+```
+
  @Test       public void testGoogleSearch() throws Exception {          // And now use this to visit Google          driver.get("http://www.google.com");          // Find the text input element by its name          WebElement element = driver.findElement(By.name("q"));          // Enter something to search for          element.sendKeys("Cheese!");          // Now submit the form. WebDriver will find the form for us          // from the element          element.submit();try {             // Google's search is rendered dynamically with JavaScript.             // Wait for the page to load, timeout after 10 seconds             (new WebDriverWait(driver, 10)).until(new               ExpectedCondition<Boolean>() {                 public Boolean apply(WebDriver d) {                 return d.getTitle().toLowerCase().startsWith("cheese!");}});             // Should see: "cheese! - Google Search"             assertEquals("cheese! - Google Search", driver.getTitle());          } catch (Error e) {             //Capture and append Exceptions/Errors             verificationErrors.append(e.toString());} }
 ```
- 
+
 ```
          @After       public void tearDown() throws Exception {          //Close the browser          driver.quit();          // Call the stop method of ScreenRecorder to end the recording          screenRecorder.stop();          String verificationErrorString = verificationErrors.toString();          if (!"".equals(verificationErrorString)) {             fail(verificationErrorString);          }}
 ```
-
-

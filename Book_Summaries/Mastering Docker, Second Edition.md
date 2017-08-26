@@ -1,4 +1,4 @@
-# Mastering Docker, Second Edition 
+# Mastering Docker, Second Edition
 
 ## Docker Ecosystem
 
@@ -7,10 +7,10 @@
 	* Docker Community Edition (CE)
 	* Book will use CE
 * The docker engine contains the following:
-	* Docker Compose: Tool that allows you to define and share nulti container definitons
+	* Docker Compose: Tool that allows you to define and share multi container definitions
 	* Docker Machine: Tool to launch Docker hosts on multiple platforms.
 	* Docker hub: Repository for your docker images
-	* Docker store: Storefront for offical docker images and plugins
+	* Docker store: Storefront for official docker images and plugins
 	* Docker swarm: Multi-host-aware orchestration tool
 	* Docker cloud: Dockers contain as a service (CaaS)
 	* Docker for Amazon Web Services
@@ -18,7 +18,7 @@
 
 ## Building Container Images
 
-### Introducting the Docker File
+### Introducing the Docker File
 
 * Dockerfile is a plain text file that contains a set of user-defined commands, which when executed by the `docker image build` command assembles a container image
 
@@ -26,7 +26,7 @@ Example Docker file:
 
 ```
 FROM alpine:latest   LABEL maintainer="Russ McKendrick <russ@mckendrick.io>"   LABEL description="This example Dockerfile installs NGINX."   RUN apk add --update nginx && \           rm -rf /var/cache/apk/* && \           mkdir -p /tmp/nginx/   COPY files/nginx.conf /etc/nginx/nginx.conf   COPY files/default.conf /etc/nginx/conf.d/default.conf
-   
+
   ADD files/html.tar.gz /usr/share/nginx/   EXPOSE 80/tcp   ENTRYPOINT ["nginx"]   CMD ["-g", "daemon off;"]
 ```
 
@@ -121,7 +121,7 @@ Is Equvilent to:
 
 * Lets you specify the username to be used when a command is run
 * Can be used on the RUN, CMD or ENTRYPOINT instruction in the Dockerfile.
-* The user defined in USER must exist in your image file or there will be an error 
+* The user defined in USER must exist in your image file or there will be an error
 
 #### Workdir
 
@@ -178,7 +178,7 @@ Example of a docker file:
 
 ```
 FROM alpine:latestLABEL maintainer="Russ McKendrick <russ@mckendrick.io>"LABEL description="This example Dockerfile installs NGINX."RUN apk add --update nginx && \        rm -rf /var/cache/apk/* && \        mkdir -p /tmp/nginx/
-        
+
 COPY files/nginx.conf /etc/nginx/nginx.confCOPY files/default.conf /etc/nginx/conf.d/default.confADD files/html.tar.gz /usr/share/nginx/EXPOSE 80/tcpENTRYPOINT ["nginx"]CMD ["-g", "daemon off;"]
 ```
 
@@ -189,10 +189,10 @@ COPY files/nginx.conf /etc/nginx/nginx.confCOPY files/default.conf /etc/nginx/c
 	* Repository is typically the username you signed upf ro on Docker hub.
 	* Can use local to link to a local docker file
 
-Example 
+Example
 
 ```
-docker image build --file /path/to/your/dockerfile --tag   local:dockerfile-example 
+docker image build --file /path/to/your/dockerfile --tag   local:dockerfile-example
 ```
 
 * When the image is build, you can use `docker image ls` to find information about your image
@@ -216,7 +216,7 @@ Example
    $ apk update   $ apk upgrade   $ apk add --update nginx   $ rm -rf /var/cache/apk/*   $ mkdir -p /tmp/nginx/   $ exit
 ```
 
-* After installing the required packages, you need to stop and save the container. 
+* After installing the required packages, you need to stop and save the container.
 * To stop the container, use `exit`
 * To save the container, use the following:
 
@@ -285,7 +285,7 @@ ENV username=admin database=db1 tableprefix=pr2_
 
 * To veiw what varaibles are set on a given image, you can use `inspect`
 
-`docker image inspect <IMAGE_ID>` 
+`docker image inspect <IMAGE_ID>`
 
 
 CONTINUE WITH EXAMPLES HERE

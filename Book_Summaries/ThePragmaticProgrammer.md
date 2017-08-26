@@ -10,14 +10,14 @@
 * Factors that distinguish a pragmatic programmer:
 	* Attitude
 	* Style
-	* Philosophy of approaching problems and thier soluions
+	* Philosophy of approaching problems and their solutions
 	* Ability to think beyond the immediate problem by placing that problem in a larger context.
 	* Responsibility for everything they do
 
 ### The Cat Ate My Source Code
 
 * A pragmatic programmer takes charge of his career and is not afraid to admit ignorance or error
-* When something goes wrong, you should provide options to rectify it, not lame exuses
+* When something goes wrong, you should provide options to rectify it, not lame excuses
 * Do not blame someone or something else, this is completely your responsibility
 
 ### Software Entropy
@@ -28,7 +28,7 @@
 * You should fix everything broken, no matter how small as soon as it is discovered (Bad designs, bad code, ect)
 * this prevents more broken windows.
 * Once one window is broken and its not fixed, a project will get worse very quickly
-* Your code should always set a standard, no matter how bad other contributers code is
+* Your code should always set a standard, no matter how bad other contributors code is
 
 ### Stone Soup and Boiled Eggs
 
@@ -40,7 +40,7 @@
 ### Good Enough Software
 
 * You should discipline yourself to write software that's good enough for your users, for future maintainers, for your own peace of mind.
-* Good enough does not imply sloppy or poorly produced code. 
+* Good enough does not imply sloppy or poorly produced code.
 * Users should be given the opportunity to participate in the process of deciding when what you've produced is good enough
 
 ### Involve Your Users in the Trade-Off
@@ -52,28 +52,28 @@
 
 ### Know When To Stop
 
-* Dont spoil a perfectly good program by overembellishment and over-refinement. 
+* Don't spoil a perfectly good program by over embellishment and over-refinement.
 * Move on and let your code stand in its own right for a while.
 * Your program will never be perfect
 
 ## Your Knowledge Portfolio
 
-### Kowledge Portfolio
+### Knowledge Portfolio
 
 * Managing your portfolio is like managing a financial portfolio.
 * Technical and financial portfolios have the following aspects:
 	* Serious investors invest regularly - as a habit
 	* Diversification is the key to long-term success
 	* Smart investors balance their portfolios between conservative and high-risk, high-reward investments
-	* Inverstors try to buy low and sell high for maximum return
+	* Investors try to buy low and sell high for maximum return
 	* Portfolios should be reviewed and rebalanced periodically
 
 ### Building Your Portfolio
 
 * To have a successful career, you must manage your portfolio using the following guidelines:
-	* Invest Regularly 
+	* Invest Regularly
 	* Diversify - The more different things you know, the more valuable are.
-		* As a baseline, you need to know the ins and outs of the particular technology you are working with currently. 
+		* As a baseline, you need to know the ins and outs of the particular technology you are working with currently.
 		* The more technologies you are comfortable with, the better you will be able to adjust to change
 	* Manage risk - Its not ideal to put all your effort into high risk technology. Diversify and invest is various technologies.
 	* Buy low, sell high - Learning a young technology before it gets popular can be very rewarding
@@ -82,11 +82,11 @@
 ### Goals
 
 * The best way to acquire intellectual capital to fund your portfolio:
-	* Lern at least one new programming language every year
+	* Learn at least one new programming language every year
 	* Read a technical book each quarter
 		* Ideally read a book each month.
 	* Read nontechnical books too - Remember that computers are used by people, people whose needs you are trying to satyisfy
-	* Take classes 
+	* Take classes
 	* Participate in local user groups
 		* Find out what people are working on outside of your company
 	* Experiment with different environments
@@ -116,18 +116,18 @@
 ### The Evils of Duplication
 
 * Maintenance is not a discrete activity, but a routine part of the entire development process
-* Every piece of knowledge must have a single, umambiguous, authoritative representation within a system
-* Dont repeat yourself!
+* Every piece of knowledge must have a single, unambiguous, authoritative representation within a system
+* Don't repeat yourself!
 
 ### How Does Duplication Arise?
 
 * The following can cause duplication:
 	* Imposed duplication : Developers feel there is no choice
-	* Inadvertent duplication - Developers have not realised they are duplicating code
+	* Inadvertent duplication - Developers have not realized they are duplicating code
 	* Impatient duplication - Developers get lazy and duplicate code because it is easier
-	* Interdeveloper duplication - Mutliple people on a team produce the same code
+	* Inter-developer duplication - Multiple people on a team produce the same code
 
-### Othogonality
+### Orthogonality
 
 * Code should be orthogonal
 * Two pieces of code are orthogonal if when one piece changes, the other does not have to change
@@ -135,14 +135,14 @@
 	* Eliminates effects between unrelated things
 	* Promotes reuse
 	* Diseased sections of code are isolated
-	* Resuling system is more robust
+	* Resulting system is more robust
 	* Better testing as it is easier to design and run tests on its components
-	* The product willl be less tightly tied to a particular vendor, product or platform.
+	* The product will be less tightly tied to a particular vendor, product or platform.
 
 ### Ways to Apply Orthogonality
 
-* Organise ylour team into groups with well-defined responsibilites and minimal overlap
-* Seperate the infastructure from the application
+* Organise your team into groups with well-defined responsibilities and minimal overlap
+* Separate the infrastructure from the application
 * Check your design by asking yourself "If I change this, what else will need to be changed?"
 * Choose technology wisely.  Ask when adopting a technology whether this imposes new problems or challenges for your code that should not be there
 
@@ -156,9 +156,9 @@
 * Avoid similar functions
 
 
-## Reversiblity
+## Reversibility
 
-* There are no finacial decisions
+* There are no financial decisions
 * You should prepare your code for changes in requirements
 * Think about your architecture and how will that deal with change
 
@@ -190,30 +190,30 @@
 	* Robustness
 	* Style
 * When looking at the prototype architecture, look at the following:
-	* Are the responsibilites of the major components well defined and appropriate?
+	* Are the responsibilities of the major components well defined and appropriate?
 	* Are the collaborations between major components well defined?
 	* Is coupling minimized?
 	* Can you identify potential sources of duplication?
 	* Are interface definitions and constraints acceptable?
 	* Does every module have an access path to the data it needs during execution? Does it have that access when it needs it?
 
-	
+
 ## Domain Languages
 
 * Always try to write code using the vocabulary of the application domain
-* If you can, try to actually write code using the vocabulary, syntax and semation of the language/domain
+* If you can, try to actually write code using the vocabulary and syntax of the language/domain
 * Program close to the problem domain
 
 ### Implementing a Mini-Language
 
 * Mini-language may be in a line - oriented, easily parsed format.
-* If you need to implment a more complex language, you should implement it using BNF
+* If you need to implement a more complex language, you should implement it using BNF
 
-### Data Languages and Imperitive Languages
+### Data Languages and Imperative Languages
 
-* Data Languages produce some form of data structure used by an aplication. 
+* Data Languages produce some form of data structure used by an application.
 * These languages are used to represent configuration information
-* Imperitive languages build upon data languages  by adding contain statements and control constructs
+* Imperative languages build upon data languages  by adding contain statements and control constructs
 
 
 ## Estimating
@@ -224,11 +224,11 @@
 	* Duration 1-15 Days = Estimate in days
 	* Duration 3-8 Weeks = Estimate in weeks
 	* Duration in 8-30 Weeks = Estimate in months
-	* Duration in 30 + Weeks = Dont estimate
+	* Duration in 30 + Weeks = Don't estimate
 * To estimate, do the following steps:
 	* Gather the requirements
 	* Build a model
-	* BReak it into components
+	* Break it into components
 	* Assign each component to a time value
 	* Sum the answers
 * If a estimate is wrong, figure out why the estimate was wrong
@@ -237,8 +237,8 @@
 	* Analyze risk
 	* Design, implement and integrate
 	* Validate with the users
-* You shouold iterate the schedule with the code
-* If someone askes you for a estimate, always say *I'll get back to you*
+* You should iterate the schedule with the code
+* If someone ask's you for a estimate, always say *I'll get back to you*
 
 ## Basic Tools
 
@@ -246,7 +246,7 @@
 * The better your tools, and the better you know how to use them, the more productive you can be.
 * Keep all your knowledge in plain text, rather than binary
 * You should use useful tags to group data
-* Terminal commands are vitial for quick development, learn them!
+* Terminal commands are vital for quick development, learn them!
 * Its better to use one editor well, than multiple poorly
 * If you can, port your keybindings to different editors. Have a consistent series of commands that you use
 * Your editor should have the following features:
@@ -256,7 +256,7 @@
 
 ## Source Code Control
 
-* Source control use is not an option, its manditory
+* Source control use is not an option, its mandatory
 
 
 ## Debugging
@@ -277,7 +277,7 @@
 
 ## Text Manipulation
 
-* Text manipulation can be noisy, messy and somehwat brute force
+* Text manipulation can be noisy, messy and somewhat brute force
 * You should learn at least one text manipulation language
 * We use text manipulation languages every day, its vital to understand one (Such as SQL)
 
@@ -290,27 +290,27 @@
 	* Creating new source files
 	* Performing one-off conversions among programming languages
 	* Producing lookup tables and other resources that are expensive to compute at runtime
-* Active code generaters are used each time a result is required
+* Active code generators are used each time a result is required
 * Whenever you find yourself trying to get two disparate environments to work together, you should consider using active generators (Eg, taking a schema to produce something, when the schema changes, the produced thing should changed)
 
 ## Pragmatic Paranoia
 
 * **You can never write perfect code**
 * Pragmatic programmers program in defenses against their own mistakes
-* Design by contract : Clients and suppliers must agree on rights and responsibilitys
-* Dead programs tell no lies : We want to make sure that no damgage is done when working bugs out. Check things often and terminate the program if things go bad
+* Design by contract : Clients and suppliers must agree on rights and responsibilities
+* Dead programs tell no lies : We want to make sure that no damage is done when working bugs out. Check things often and terminate the program if things go bad
 * Assertive programming: Write code that actively verifies your assumptions
 * Exceptions : These cause more harm than good if not done properly
 
 
 ## Design By Contract
 
-* Contracts defines your rights and rsponsibilities, as well as the other parties.
+* Contracts defines your rights and responsibilities, as well as the other parties.
 * Focuses on documenting and agreeing to the rights and responsibilities of software modules to ensure program correctness
-* A program is correct when it does no more and no less than it claims to do. 
+* A program is correct when it does no more and no less than it claims to do.
 * Every function and method must do something before it starts something
 * Each function and method should have:
-	* Preconditions - What must be ture for the routine to be called. Routines should never be called if a preocndition is violated. Its the callers responsibility to pass good data
+	* Preconditions - What must be true for the routine to be called. Routines should never be called if a precondition is violated. Its the callers responsibility to pass good data
 	* Postconditions - What the routine will do. The state after the routine has finished. What will terminate the routine
 	* Class invariants - Class that ensures that the condition is always true from the callers perspective. The invariable may not hold while the routine is running, but it must hold once it has finished
 
@@ -341,11 +341,11 @@
 
 * Always finish what you started
 * An object or routine that allocates a resource should be responsible for deallocating it.
-* When a routine needs more than one resouce at a time, there are two suggestions for dealing with this:
+* When a routine needs more than one resource at a time, there are two suggestions for dealing with this:
 	* Deallocate resources in the opposite order that in which you allocate them
 	* When allocating the same set of resources in different places in your code, always allocate them in the same order. (This reduces the possibility of deadlock)
 
-	
+
 ## Bend Or Break
 
 * You should make every effort to write code that is as loose, and as flexible as possible.
@@ -360,7 +360,7 @@
 * If one module gets compromised and has to be replaced, the other modules should be able to carry on
 * You should be care about how many other modules you interact with, and how you came to interact with them.
 * When we ask for an object for a particular serve, we want the service to be performed on our behalf
-* The law of demeter for functions attempts to minimize coupling between modules.
+* The law of Demeter for functions attempts to minimize coupling between modules.
 * It prevents you from reach into an object to reach ANOTHER objects methods
 * Any method of an object should call only methods belonging to:
 	* Itself
@@ -384,29 +384,29 @@
 
 ## Temporal Coupling
 
-* Temporal coupling is about time. 
+* Temporal coupling is about time.
 * You should always write code which allows for concurrency and to think about decoupling any time or order dependencies (Eg, a must call b, then b must call c  would be bad!)
 * By analyzing the workflow of your users, in what steps they do something, you can improve concurrency
-* Can anything they do be performed in parrallel?
+* Can anything they do be performed in parallel?
 * Design using services - independent, concurrent objects behind well-defined, stable, consistent interfaces
 
 ### Design for Concurrency
 
-* Global and static varibles must be protected from concurrent access
-* Objects must always be in a valid state when they are called, and they can be called at the most awkard of times
+* Global and static variables must be protected from concurrent access
+* Objects must always be in a valid state when they are called, and they can be called at the most awkward of times
 
 ## It's Just a View
 
 * Events are a special message that says "something interesting just happened"
-* Events should be used to singal changes in one object that some other object may be interested in
-* This minimizes coupling between objects, the send of the event does not need to hae any explicit knowledge of the receiver.
-* This is were we can use publish and subsribe
+* Events should be used to signal changes in one object that some other object may be interested in
+* This minimizes coupling between objects, the send of the event does not need to have any explicit knowledge of the receiver.
+* This is were we can use publish and subscribe
 	* Objects can subscribe to another object
 	* If an object is subscribed to an object, and then when that object is changed it will publish that something has changed
 * Model-view - controller should be used
 	* The model contains the data itself, with operations to manipulate it.
-	* The view is seprate, it is used to display the data in various ways
-	* The controller probides a way to provide the model with new data, and pass data from the model to the view
+	* The view is separate, it is used to display the data in various ways
+	* The controller provides a way to provide the model with new data, and pass data from the model to the view
 
 ## While You are Coding
 
@@ -414,7 +414,7 @@
 * We constantly see room for improvement in our programs and our designs
 * Something that should be in the back of your mind when producing code is that someday you will have to test it
 
-##Programming by Conincidence
+##Programming by Coincidence
 
 * You should avoid programming by coincidence - relying on luck and accidental successes - in favor of programming deliberately
 * You should know why your code is working in the way that it does
@@ -429,20 +429,20 @@
 	* Additional and unnecessary calls make your code slower
 	* Additional calls also increase the risk of introducing new bugs of their own
 
-## How to Program Deliberatly
+## How to Program Deliberately
 
-* Always be aware of what you are doing. 
-* Dont code blindfolded. Attempte to build an application you dont fully understand, or to use technology you arent familiar with, is an invitation to be misled by conidcidences
-* Procesed from a plan, whether in your head or wrirten down
+* Always be aware of what you are doing.
+* Don't code blindfolded. Attempt to build an application you don't fully understand, or to use technology you aren't familiar with, is an invitation to be misled by coincidences
+* Proceed from a plan, whether in your head or written down
 * Rely only on reliable things
 * Document your assumptions
-* Dont just test your code, but test your assumptions as well.
+* Don't just test your code, but test your assumptions as well.
 * Prioritize your effort. Spend time on the important aspects.
-* Don't be a slave to history. Dont let existing code dictate future code. All code can be replaced if it is no longer appropriate
+* Don't be a slave to history. Don't let existing code dictate future code. All code can be replaced if it is no longer appropriate
 
 ## Algorithm Speed
 
-* Measured by O() Notiation
+* Measured by O() Notation
 	* o(1) =  Constant time
 	* o(log(n) = Logarithmic
 	* o(n) = linear
@@ -451,22 +451,22 @@
 	* o(n^3) = Cubic
 	* o(C^N) Exponential
 
-## Common Sense Extimation
+## Common Sense Estimation
 
 * Can estimate the order of many algorithms using common sense
 * Simple loops = o(n)
 * Nested Loops  = o(N x M)
 * Binary Chop = o(log(n))
 * Divide and Conquer = o (n log (n))
-* Combinatoric(perutations of things) = Very slow
+* Combinatoric(permutations of things) = Very slow
 
 * You should test your estimates!
 
 ## When You Should Refactor
 
-* Dupication - You've found violations of the DRY principle
+* Duplication - You've found violations of the DRY principle
 * Nonorthogonal design - You've discovered some code or design that oculd be made more orthogonal
-* Outdated Knowledge - Things change, requirments drift
+* Outdated Knowledge - Things change, requirements drift
 * Performance - Bad performance
 
 * You should refactor early and often
@@ -474,13 +474,13 @@
 ## How To Refactor
 
 * Dont try to refactor and add functionality at the same time
-* Mak sure you have good tests before you begin refactoring.
+* Make sure you have good tests before you begin refactoring.
 * Run the tests often as possible
 * Take short, deliberate steps.
 
 ## Code Thats Easy to Test
 
-* Unit tests should be used to test modules independantly 
+* Unit tests should be used to test modules independently
 * When unit testing you should think of testing against contract - We want to write test cases that a given unit honors its contract (What we expect it to do under each condition)
 
 ## Using Test Harnesses
@@ -507,7 +507,7 @@
 ## Solving Impossible Problems
 
 * You must challenge any preconceived notations and evaluate whether or not they are real.
-* The problem is finding the real constraints. 
+* The problem is finding the real constraints.
 * When you have a intractable problem, enumerate all the possible avenues you have before you.
 * Then go through the list and explain why a certain path cannot be taken. Are you sure? Can you PROVE it?
 
@@ -523,7 +523,7 @@
 
 ## Not Until You're Ready
 
-* Great performers share a trait: They know when to start adn when to wait.
+* Great performers share a trait: They know when to start and when to wait.
 * Start when you are ready, if you have a nagging voice when you sit down to type, listen to it.
 * If you're unsure how to start, start by prototyping
 
@@ -546,7 +546,7 @@
 * Procedure that takes an empty directory and builds the project from scratch
 * The steps for this are:
 	* Check out the source code from the repository
-	* Build the project from scartch
+	* Build the project from scratch
 	* Create a distributable image
 	* Run specified tests
 
@@ -579,13 +579,13 @@
 * Some easy things that look good to the average user:
 	* Balloon or ToolTip help
 	* Keyboard shortcuts
-	* Quick reference guide as a suppliment to the user manual
+	* Quick reference guide as a supplement to the user manual
 	* Colorization
 	* Log file analyzers
 	* Automated installation
 	* Tools for checking the integrity of the system
 	* The ability to run multiple versions of the system for training
-	* A splash screen customized for their organisation
+	* A splash screen customized for their organisations
 
 ## Pride and Prejudice
 
@@ -593,6 +593,3 @@
 * Code must be owned, this can be personal ownership or communal ownership of code
 * Your signature should come to be recognized as an indicator of quality
 * People should see your name on a piece of code and expect it to be solid, well written, tested and documented.
-
-
-

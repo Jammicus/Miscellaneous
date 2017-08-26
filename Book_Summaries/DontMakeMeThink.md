@@ -26,7 +26,7 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 * Smart/cute/technical/company specific names
 * Where should be we start on the page
-* Ambigious buttons / forms
+* Ambiguous buttons / forms
 * Thinking whether this is part of the site, or an advert
 
 ### You Cant Make Everything Self-Evident
@@ -42,11 +42,11 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 ### Scanning, Satisficing, and Muddling Through
 
-* Users most the time glace at each page, scan some of the text and click on the first link that interests them or vaguely resembles the thing that they are looking for. 
+* Users most the time glance at each page, scan some of the text and click on the first link that interests them or vaguely resembles the thing that they are looking for.
 * The majority of the time there are large parts of the page that the user will not even look at.
 * Users will not make optimal choices when scanning a page. They will often chose the first reasonable option, rather than scanning all options for the perfect fit. (This is known as satisficing)
 * Generally people do not figure out how things work, they will muddle through. They wont read instructions, they will take a guess and what is right in their mind
-* When a user finds something that works, they will often repeat those steps in the future to get the same results. 
+* When a user finds something that works, they will often repeat those steps in the future to get the same results.
 ---
 
 
@@ -57,43 +57,43 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 * Things you can do to make the user see and understand as much as they need to know, and what you want them to know as possible:
 	* Take advantage of conventions
-	* Create effective visual hierachies
+	* Create effective visual hierarchies
 	* Break pages up into clearly defined areas
 	* Make it obvious what's clickable
 	* Eliminate distractions
 	* Format content to support scanning
 
 
-#### Conentions Are Your Friends
+#### Conventions Are Your Friends
 
 * An easy way to make the user grasp things in a hurry is to use conventions they will see in every day life.
-	* Stop signs for example are universally known 
+	* Stop signs for example are universally known
 	* Where things are located on a page, for example logos and home buttons are generally in the top left corner of web pages
-	* How things work, for example, most shopping websites use a shopping cart 
+	* How things work, for example, most shopping websites use a shopping cart
 	* How things look, for example, the shopping cart image.
 
 > Clartity Trumps Consistency
 
 
-#### Creating Effective Visual Hierachies.
+#### Creating Effective Visual Hierarchies.
 
-* This is achieved by portraying the relation ships between things on the page visually. 
+* This is achieved by portraying the relation ships between things on the page visually.
 
-* Pages that have clear visual hierachys have three traits:
-	1. The more import something is, the prominent it is. Eg, bold, larger icon, distincitve color
-	2. Things that are releated locically are related visually. Think of it as parent-child. Eg, text is smaller than the parent. 
+* Pages that have clear visual hierarchies have three traits:
+	1. The more import something is, the prominent it is. Eg, bold, larger icon, distinctive color
+	2. Things that are related logically are related visually. Think of it as parent-child. Eg, text is smaller than the parent.
 	3. Things are "nested" visually to show what's part of what. Think of the side menu, they are nested in the menu to show that they are menu items.
-	
-	
+
+
 #### Breaking Up Pages Into Clearly Defined Areas
-	
+
 * This allows the users to decide quickly which areas of the page to focus on and which areas they can safely ignore.
 
 
 #### Make It Obvious What's Clickable
 
 * This is done via visual cues, such as the shape, the location and the formatting.
-* For example, stick to one text color for all links, and that they shape and location identify them as clickable. 
+* For example, stick to one text color for all links, and that they shape and location identify them as clickable.
 
 
 #### Keep The Noise Down To A Dull Roar
@@ -101,7 +101,7 @@ Simple rule of usability is to minimize the amount of things a user has to think
 * Visual noise is where the page is condensed with a lot of information that overloads the user.
 * There are three types of noise:
 	1. Shoting - When everything on the page is clamoring for your attention.  This is a result of failing to decide what is most important
-	2. Disorganization -  Where there is no clear structure. 
+	2. Disorganization -  Where there is no clear structure.
 	3. Clutter - Where they simply is too much stuff on  a page
 
 
@@ -111,9 +111,9 @@ Simple rule of usability is to minimize the amount of things a user has to think
 * You can do this by
 	1. Use plenty of headings (Make sure to format correctly), Make sure there is more space above a heading than below a heading
 	2. Keep paragraphs short
-	3. Use bulleted lists (Have a small amount of aditional space between each bullet )
+	3. Use bulleted lists (Have a small amount of additional space between each bullet )
 	4. Highlight key terms when they first appear in the text in bold
-	
+
 --------
 
 
@@ -129,12 +129,12 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 ### Some Assistance May Be Required
 
-* If you can;t avoid giving the user a difficult choice, you need to go out of your way to give me as much guidance as they need, but no more
-* The best types of guideance follow the following:
+* If you cant avoid giving the user a difficult choice, you need to go out of your way to give me as much guidance as they need, but no more
+* The best types of guidance follow the following:
 	1. Brief: Smallest amount of information to help the user
 	2. Timely: In the right place so that the user can see it when they need it
 	3. Unavoidable: Formatted in a way that the user will see it easily.
-	
+
 -----
 
 
@@ -145,24 +145,24 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 > Get rid of half the words on each page, then rid of half of whats left.
 
-* A sentance should contain no unncecessary words
+* A sentence should contain no unnecessary words
 * A paragraph should contain no unnecessary sentences
-* The advantages of getting rid of all those wotrds that no one is going to read has several enefits:
+* The advantages of getting rid of all those words that no one is going to read has several benefits:
 	1. It reduces the noise level of the page
 	2. It makes the useful content more prominent
 	3. It makes the pages shorter, allowing users to see more of each page at a glance without scrolling.
-	
-	
+
+
 ### Happy Talk Must Die
 
-* Get rid of introductory text. 
+* Get rid of introductory text.
 * If you are unsure as to whether something is happy talk, ask yourself : If I listen very closely while i'm reading it, can you actually hear a tiny voice in the back of your head saying "blah blah blah blah..."
 
 
 ### Instructions Must Die
 
-* Try to eliminate instructions entirely by making everything self-explaatory, or as close to it as possible.
-* If instructions are absolutely neccesssary, cut them back to the bare minimum
+* Try to eliminate instructions entirely by making everything self-explanatory, or as close to it as possible.
+* If instructions are absolutely necessary, cut them back to the bare minimum
 
 ----
 
@@ -172,7 +172,7 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 ### Designing Navigation
 
-> People won't use your Web site if they can't find their way around it. 
+> People won't use your Web site if they can't find their way around it.
 
 
 ### Web Navigation 101
@@ -191,9 +191,9 @@ Simple rule of usability is to minimize the amount of things a user has to think
 * Other equally important functions of navigation:
 	* It tells us whats here - by making the hierarchy visible, and navigation tell us what the site contains and reveals content
 	* It tells us how to use the site - If the navigation is doing its job, it tells you implicitly where to begin and what your options are.
-	* It gives us confidence in the people who build it - Clear well thought-out navigation is a great way to give a good impresssion behind the creators.
-	
-	
+	* It gives us confidence in the people who build it - Clear well thought-out navigation is a great way to give a good impression behind the creators.
+
+
 ### Web Navigation Conventions
 
 * Site ID is located in the top left corner (Eg, logo)
@@ -205,25 +205,25 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 ### Just Click Your Heels Three Times and Say "There's no place like home"
 
-* Having a home button in sight at all times is vitial, this gives the user a "get out of jail free" card.
+* Having a home button in sight at all times is vital, this gives the user a "get out of jail free" card.
 
 
 ### A Way To Search
 
 * A search box should have 1 of the following
 	1. The word search next to it/in the search box
-	2. A magnifing glass
+	2. A magnifying glass
 
 * For searching, you should avoid
-	* Fancing wording. Not things like qucik find, keyword search
+	* Fancy wording. Not things like quick find, keyword search
 	* Instructions such as type a keyword
-	* Options. You should only be able to search 
-	
-	
+	* Options. You should only be able to search
+
+
 ### Breadcrumbs
 
 * These show you how to got to the page. For example (best buy > Tvs > Tv stands)
-* BReadcrumbs should be placed at the top of the page
+* Breadcrumbs should be placed at the top of the page
 * You should use ">" between levels
 * You should make the last time, or the part you are on, bold.
 
@@ -243,10 +243,10 @@ Simple rule of usability is to minimize the amount of things a user has to think
 	* What are my options at this level (Local navigation)
 	* Where am I in the scheme of things ("You are here indicators)
 	* How can I search?
-	
+
 * How to perform this test
 	1. Choose a page anywhere in the site at random, and print it
-	2. Hold it at arm's length, or squint so you can't really study it closely 
+	2. Hold it at arm's length, or squint so you can't really study it closely
 	3. As quickly as possible, try to find and circle each of these items.
 		* Site ID
 		* Page Name
@@ -264,7 +264,7 @@ Simple rule of usability is to minimize the amount of things a user has to think
 	* Site hierarchy
 	* Search
 	* Teases
-	* Conent promos
+	* Content promos
 	* Feature promos
 	* Timely content
 	* Deals
@@ -275,7 +275,7 @@ Simple rule of usability is to minimize the amount of things a user has to think
 	* What i'm not looking for
 	* Showing me where to start
 	* Establish credibility and trust
-	
+
 
 ### The First Casualty of War
 
@@ -288,39 +288,39 @@ Simple rule of usability is to minimize the amount of things a user has to think
 
 ### How To Get The Message Across
 
-* The tagline - this is by the site ID. 
-* The Welcome blurb - description of the site that is displayed in a prominent block on the homepage, usually at the top left or center of the conent space.
-* THe "Learn more" 
+* The tagline - this is by the site ID.
+* The Welcome blurb - description of the site that is displayed in a prominent block on the homepage, usually at the top left or center of the content space.
+* The "Learn more"
 * Make sure to use as much space as necessary
-* Dont use any more space than necessary
+* Don't use any more space than necessary
 * Don't use a mission statement as a Welcome blurb
-* It's one of the most important things to test - get others opinions 
+* It's one of the most important things to test - get others opinions
 
 ### Nothing Beats A Good Tagline
 
-* Good taglines are clear and informative and explain exactly what your site or your organization does
-* Good taglines are just long enough but not too long -  6-8 words
-* Good taglines convey differentiation and a clear benefit - one that no one else in the world could use except you
-* Bad taglines sound generic
-* Good taglines are personable, lively, and sometimes clever.
+* Good tag lines are clear and informative and explain exactly what your site or your organization does
+* Good tag lines are just long enough but not too long -  6-8 words
+* Good tag lines convey differentiation and a clear benefit - one that no one else in the world could use except you
+* Bad tag lines sound generic
+* Good tag lines are personable, lively, and sometimes clever.
 
 ### The Fifth Questions
 
 * When you glance around a new sight, the home page should be able to answer with confidence:
 	* Here's where to start if I want to search
 	* Here's where to start if I want to browse
-	* Here's wher to start if I want o sample their best stuff
-	
+	* Here's where to start if I want o sample their best stuff
+
 ------
 
 ## Chapter 8. "The Farmer and The Cowman Should Be Friends"
 
 > Most arguments about usability are a waste of time
-	
+
 
 ### "Everybody Likes ___"
 
-* You must keep your feelings at the door when desigining. Ignore your own preferences
+* You must keep your feelings at the door when designing. Ignore your own preferences
 
 
 ### The Myth Of The Average User
@@ -338,20 +338,20 @@ Simple rule of usability is to minimize the amount of things a user has to think
 ### Several True Things About Usability Testing
 
 * If you want a great site, you've got to test
-* Testing one user is 100% perent better than testing none
+* Testing one user is 100% percent better than testing none
 * Testing one user early in the project is better than testing 50 near the end
 
 
 ### Do-it-Yourself Usability Testing
 
 * One morning a month, test, debrief and decide what to fix
-* Continually test throughout the development proces
+* Continually test throughout the development process
 * Have one round of testing per month
 * Have 3 users in each testing round
-* Recruit these users losely
+* Recruit these users loosely
 * Test on the site, with observers in a conference room using screen sharing software to watch
 * A 1-2 page email should summarize decisions made during the team's debriefing
-* The entire development team and any interested stakeholds should meet to compare notes and ecide what to fix
+* The entire development team and any interested stokeholds should meet to compare notes and decide what to fix
 * Identify the most serious problems and commit to fixing them before the net round of testing
 
 -------
@@ -369,16 +369,16 @@ CONTINUE
 ### The Reservoir of Goodwill
 
 * Each time we enter a web site, we start out with a reservoir of goodwill.
-* Each problem we find with a website, the reservoir of goodwill reduces. 
+* Each problem we find with a website, the reservoir of goodwill reduces.
 * Eventually, you will leave and never use the website again
 * A few key things about the reservoir:
 	* It's idiosyncratic : Some people have large reservoir, some smaller. You can't count on everyone having a very large reserve
 	* It's situational : It depends on the users mood
 	* You can refill it : This is done by doing things on the website that makes the user feel like you're looking out for their best interests
 	* Sometimes, a single mistake can empty it.
-	
-	
-### Things That Dimish Goodwill
+
+
+### Things That Diminish Goodwill
 
 * Hiding information that I want
 * Pushing me for not doing things your way
@@ -405,14 +405,14 @@ CONTINUE
 
 ### What Developers And Designers Hear
 
-* __% of the population has a disability - Many developers will not consider acessiblity for others
-* Making things more accessible beenefits everyone - They are likely to imagine cases where accessibility adaptations are likely to make things worse for "everyone else"
+* __% of the population has a disability - Many developers will not consider accessibility for others
+* Making things more accessible benefits everyone - They are likely to imagine cases where accessibility adaptations are likely to make things worse for "everyone else"
 * Its the right thing to do - There is no right thing!
 
 
 ### What Designers And Developers Fear
 
-* More work 
+* More work
 * Compromised design
 
 
@@ -421,15 +421,15 @@ CONTINUE
 1. Fix the usability problems that confuse everyone
 2 Read an article on usability
 3. Read a book to improve your knowledge
-4. Go for the low-hanging fruit 
+4. Go for the low-hanging fruit
 	1. Add appropriate alt text to every image
 	2. Use headings correctly
 	3. Make your forms work with screen readers.
-	4. Put a "skip to main conent" link at the beginning of each page
-	5. Make all conent accessible by keyboard
+	4. Put a "skip to main content" link at the beginning of each page
+	5. Make all content accessible by keyboard
 	6. Create significant contrast between your text and background
 	7. Use an accessible template
-	
+
 -------
 
 ## Chapter 13. Guide For The Perplexed
@@ -448,10 +448,4 @@ CONTINUE
 * Don't use small, low-contrast type.
 * Don't put labels inside form fields
 * Preserve the distinction between visited and unvisited text links
-* Dont float headings between paragraphs
-
-
-
-
-
-
+* Don't float headings between paragraphs

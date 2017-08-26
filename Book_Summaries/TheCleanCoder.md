@@ -7,13 +7,13 @@
 
 ### Be Careful What you Ask for
 
-* Professionals is a marker of responsibility and accountability. 
+* Professionals is a marker of responsibility and accountability.
 * You can't take pride and honor in something that you can't be held accountable for
 
 ### Taking Responsibility
 
-* Take responsibility for your customers service and your employeers repuation. 
-* Sometimes doing the responsible thing will let others down, but it will be benfitical for others in the long run
+* Take responsibility for your customers service and your employers reputation.
+* Sometimes doing the responsible thing will let others down, but it will be beneficial for others in the long run
 
 ### First, Do No Harm
 
@@ -25,15 +25,15 @@
 ### QA Should Find Nothing
 
 * When you release your software to the QA team, they should find no problems
-* Its extreamly unprofessional to send coe that you know to be faulty to QA
+* Its extremely unprofessional to send code that you know to be faulty to QA
 * Faulty code is any code you aren't certain about
-* QA will find bugs, get ready to apologize and then figure out why those bugs managed to escapeyour notice and do something to prevent it from happening again
+* QA will find bugs, get ready to apologize and then figure out why those bugs managed to escape your notice and do something to prevent it from happening again
 
 ### You Must Know How It Works
 
 * Test, test and test again
 * All of your code should be covered with automated unit tests
-* Every single long of coe you write should be tested. Period
+* Every single long of code you write should be tested. Period
 * Code is only hard to test if it has been designed to be hard to test
 
 ### Automated QA
@@ -43,40 +43,40 @@
 ### Do No Harm To Structure
 
 * The fundamental assumption underlying all software projects is that software is easy to change.
-* If you violate this by creating inflexible code, you rbeak the model that the industry is based on
+* If you violate this by creating inflexible code, you break the model that the industry is based on
 * You should be able to make changes without high costs
-* **Always check in a module cleaner than when you checked it out. Always make some random act of kindness to the coe whever you see it**
-* If you have a utomated suite of tests that cover virtually 100% of the code, and if that suite of tests can be executed quickly, you will not fear making changes
+* **Always check in a module cleaner than when you checked it out. Always make some random act of kindness to the code whoever you see it**
+* If you have a automated suite of tests that cover virtually 100% of the code, and if that suite of tests can be executed quickly, you will not fear making changes
 
 ### Work Ethic
 
-* Your career is your responsibility. 
-* Never fall into the trap of thinking that it is your employers responsbility
-* Its not your employers responsiblity to give you the time you need ot learn
+* Your career is your responsibility.
+* Never fall into the trap of thinking that it is your employers responsibility
+* Its not your employers responsibility to give you the time you need to learn
 * You should plan to work 60 hours a week - 40 for your employer, and 20 for you (Thats around 3 extra hours a day just for you)
 
 ### Know Your Field
 
 * How much do you know about your field?
-* The following is the minimal list any software devleoper should know:
+* The following is the minimal list any software developer should know:
 	* Design patterns - Describe all 24 and have knowing knowledge of many of them
 	* Design principles - know all the SOLID principles and good understanding of the component principles
-	* Methods - Understanding of XP, Scrum, Kanban, Waterfall, Strucutred Analysis and structured design
-	* Disciplines - Practice the following: TDD, Object - oriented deisgn, structured programming, continuous integration, and pair programming
-	* Artifacts - how to use UML, DFDs, Structure Charts, Petrinets, state transition diagrams andtables, flow charts and decision tables
+	* Methods - Understanding of XP, Scrum, Kanban, Waterfall, Structured Analysis and structured design
+	* Disciplines - Practice the following: TDD, Object - oriented design, structured programming, continuous integration, and pair programming
+	* Artifacts - how to use UML, DFDs, Structure Charts, state transition diagrams and tables, flow charts and decision tables
 
-### Contnuous Learning
+### Continuous Learning
 
-* Would you visit a doctor who does not keep current with medical hournals?
+* Would you visit a doctor who does not keep current with medical journals?
 * Read books, articles, blogs, tweets
-* G to conferences, usergroups
+* Go to conferences, user groups
 * Learn new languages
 
 ### Practice
 
 * Professionals practice
 * True professionals work hard to keep their skills sharp and ready
-* Practice using Katas. 
+* Practice using Katas.
 * Try to aim to do one or two katas each day (More on practicing later)
 * Think of them as a ten minute warm up and 10 minute warm down each day
 
@@ -88,7 +88,7 @@
 ### Mentoring
 
 * The best way to learn is to teach
-* There is no better way to bring new people into an organization than to sit down with them and show them the ropes. 
+* There is no better way to bring new people into an organization than to sit down with them and show them the ropes.
 * Professionals take personal responsibility for mentoring juniors
 
 ### Know your domain
@@ -103,19 +103,19 @@
 
 * Your Employer's problems are your problems.
 * Understand these problems and work toward the best solutions
-* Its easy to feel like you are against your employer, try to avoid this 
+* Its easy to feel like you are against your employer, try to avoid this
 
 ### Humility
 
 * Professionals  takes pride in his work
-* Profesionals are confident in his abilities, and take bold, calculated risks based on their confidence
+* Professionals are confident in his abilities, and take bold, calculated risks based on their confidence
 * When a professional finds himself the butt of a joke,, he's the first to laugh
-* He will never ridicule others, but will accept ridcule when it is deserved and laugh it off when it is not.
+* He will never ridicule others, but will accept ridicule when it is deserved and laugh it off when it is not.
 * He will punish another for making a mistake, as mistakes are necessary
 
 ## Saying No
 
-* Professionals speak truth to power. 
+* Professionals speak truth to power.
 * Professionals have the courage to say no to their managers
 * Professionals are expected to say no!
 * Good managers crave someone who has the guys to say no
@@ -124,7 +124,7 @@
 
 * Professionals will pursue and defend their objects as aggressively as they can
 * You and your manager must come to the best possible outcome for both of you
-* Negotiating this can be unpleasent
+* Negotiating this can be unpleasant
 * You do this by saying no, then working out a solution that was mutually agreeable to both
 
 ### High Stakes
@@ -139,7 +139,7 @@
 
 ### Trying
 
-* The promise to try is admitting that you are holding back. 
+* The promise to try is admitting that you are holding back.
 * By promising to try you are promising to change your plans
 
 
@@ -154,7 +154,7 @@
 
 ### Recognizing Lack of Commitment
 
-* Phrases that demonstrate noncommitment:
+* Phrases that demonstrate non commitment:
 	* Need/Should
 	* Hope/wish
 	* Lets
@@ -164,7 +164,7 @@
 * I will....by...
 * Commitment is stating what you can do by a time you set. Without needing others
 * You need to take full responsibility or this
-* You can only commit to things you have full control voer
+* You can only commit to things you have full control over
 
 
 ## Coding
@@ -172,11 +172,11 @@
 ### Preparedness
 
 * Coding requires you to juggle many competing factors at once
-	* Your code must work, meaning you must understand the problem and how to solve it. 
+	* Your code must work, meaning you must understand the problem and how to solve it.
 	* Your code must also solve the problem set by the customer.
 	* Your code must fit well into the existing system
 	* Your code must be readable by other programmers
-* If you are tired and distracted, do not code. You'll only end dup redoing what you did. 
+* If you are tired and distracted, do not code. You'll only end dup redoing what you did.
 * Try to eliminate the distractions and settle your mind
 
 ### 3 AM Code
@@ -193,11 +193,11 @@
 ### The Flow Zone
 
 * Avoid the zone
-* The zone is an unncommunicative state
+* The zone is an uncommunicative state
 
 ### Music
 
-* Becareful that the music you are listening to does either distract you passively, or force you to enter the zone
+* Be careful that the music you are listening to does either distract you passively, or force you to enter the zone
 
 ### Interruptions
 
@@ -207,7 +207,7 @@
 
 * When you are having block, find a pair partner
 * This will knock you out the block and give you a fresh perspective
-* If you can't get a pair partner, do somethign creative
+* If you can't get a pair partner, do something creative
 * Read, draw anything that gives your mind a break from the problem
 
 ### Debugging
@@ -235,8 +235,8 @@
 
 ### Hope
 
-* Always avoid hoping! 
-* Hope is a project killer and destroys schedules and repuations
+* Always avoid hoping!
+* Hope is a project killer and destroys schedules and reputations
 
 
 ### Rushing
@@ -246,7 +246,7 @@
 
 ### Overtime
 
-* Overtime can work and sometimes is neessary
+* Overtime can work and sometimes is necessary
 * You should however not agree to overtime unless:
 	* You can personally afford it
 	* Its only a short period, eg 2 weeks or less
@@ -296,7 +296,7 @@
 
 ### Acceptance tests
 
-* What is the defintion of done?
+* What is the definition of done?
 * In an ideal world, QA and stakeholders would collaborate to write these tests, and developers would review them
 * Business analyists write the happy path versions, where QA's write the unhappy path
 * Acceptance testing should be as late as possible, generally a few days before the feature is implemented
@@ -318,11 +318,11 @@
 
 * Test individual units of the program
 * Written by programmers for programmers
-* SHould have around 90% coverage of a feature
+* Should have around 90% coverage of a feature
 
 ### Component tests
 
-* Writen against the programs component
+* Written against the programs component
 * Tests wrap a component, then pass input data into the component and gathers output data from it
 * Tests that the out matches the input correctly
 * These are written by QA and business as assistance to development
@@ -334,14 +334,14 @@
 * The make sure that components are joined correctly and are properly connected and can communicate clearly with each other
 * Written by system architects or lead designers
 * Generally written in the same language and environment as component tests
-* Typically not part of continuous integrations uite
+* Typically not part of continuous integrations suite
 
 ### System Tests
 
 * Automated tests that execute against the entire system.
-* They are the ultimate integration tsts
+* They are the ultimate integration tests
 * Tests that the system has been wired together correctly and its part interoperate according to plan
-* Written by system archiects and leads
+* Written by system architects and leads
 
 ## Time Management
 
@@ -358,23 +358,23 @@
 	2. What am I going to do today?
 	3. What's in my way?
 
-* Interation planning meetings are design to mvoe items from the backlog into the next iteration
+* Integration planning meetings are design to move items from the backlog into the next iteration
 * Backlog items should be quickly discussed then either selected or rejected
-* Retrospectives should 20-25 mintues long
+* Retrospectives should 20-25 minutes long
 * When debating/arguing, anything that cannot be solved in 5 minutes cannot be solved
 
 ### Focus - Manna
 
-* Sleep is extreamly important, make sure you get enough
-* Monitor how much caffine you are having, make sure its not too mcuh
-* Recharing should be done by de-focussing. Do this by walking away from your code for a while
-* Physical exercise is also extreamly important. 
+* Sleep is extremely important, make sure you get enough
+* Monitor how much caffeine you are having, make sure its not too much
+* Recharging should be done by de-focussing. Do this by walking away from your code for a while
+* Physical exercise is also extremely important.
 
 ### Time Boxing and Tomatoes
 
 * Use the pomodoro technique/ tomatoes
-* Set a timer for 25 mintues and aim to get a goal done in that time
-* Nothing should interfere you during those 25 mintues
+* Set a timer for 25 minutes and aim to get a goal done in that time
+* Nothing should interfere you during those 25 minutes
 * When the timer goes off, stop immediately and have a short break
 * After 4 iterations, take a longer break
 * On a good day, you can get 12-14 tomatoes done.  
@@ -386,7 +386,7 @@
 
 ## Estimation TODO
 
-## Preasure
+## Pressure
 
 ### Avoiding pressure
 
@@ -398,7 +398,7 @@
 
 ### Handling pressure
 
-* Mangage your stress.
+* Manage your stress.
 * Slow down and think the problem through
 * Communicate with others and let them know you are in trouble, and your plan for getting out of trouble.
 * Ask others for input and guidance
@@ -423,7 +423,7 @@
 * Gelled teams can work miracles. They anticipate each other, cover for each other, support each other, and demand the best from each other
 * Gelled teams normally consist of about a dozen people
 * The team should be composed of programmers, testers, and analysts with a project managers
-* 2:1 ratio of developers to testers and analysts is a good 
+* 2:1 ratio of developers to testers and analysts is a good
 * A gelled team plan together, solve problems together, face issues together and get things done
 * Its best to keep a team together and feed new projects to that team
 * Teams have different velocity - a rate of how much work they can get done in a fixed period
@@ -431,7 +431,7 @@
 
 ## Craftsmanship
 
-* Craftmanship is the mindset held by craftsmen. Its contains values, disciplines, techniques, attitudes and answers
-* These mindsets are passed down 
+* Craftsmanship is the mindset held by craftsmen. Its contains values, disciplines, techniques, attitudes and answers
+* These mindsets are passed down
 * You must make your mindset observable. You act as the role model
-* You become a craftsman first, and let your craftsmanship show. 
+* You become a craftsman first, and let your craftsmanship show.

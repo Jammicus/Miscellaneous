@@ -35,7 +35,7 @@
 
 ### Integration Tests
 
-* These are any tests that are not fast and consistent, and use one or more real dependencies of the units under control. 
+* These are any tests that are not fast and consistent, and use one or more real dependencies of the units under control.
 	* Examples of these could be tests that use the current system time. This will always be unique!
 * Integration tests increase the resk of testing too many things at once
 * Integration testing is testing a unit of work without having full control over all of it and using one or more of its real dependancies, such as time, network, database, threats, random number generators and so on.
@@ -47,7 +47,7 @@ TDD Steps:
 
 1. Write a failing test to prove code or functionality is missing from the end product. (You write this as if the production code were already working)
 2. Make the test pass by writing production code that meets the expectations of your test.
-3. Refactor your code. 
+3. Refactor your code.
 
 * Refactoring = Changing a piece of code without changing its functionality.
 
@@ -59,13 +59,13 @@ TDD Steps:
 
 ## A First Unit Test
 
-* You should have one test class per tested class. 
+* You should have one test class per tested class.
 * For a unit of work, your test method should have the following format: `[UnitOfWorkName]_[ScenarioUnderTest]_[ExpectedBehavior]`
 	* UnutOfWorkName = The name of the method of group of methods or classes you are testing
 	* Scenario = The conditions under which the test is tested, such as  "bad login'
 	* Expected behavior = What you expect the tested method to do under the specified conditions. These can be:
 		* Returning a value as a result
-		* Changing the state of the system as a result 
+		* Changing the state of the system as a result
 		* Call a third party system as a result
 
 Eg, `IsValidLogInFailed()` could be refactored to be called: `IsValidFileName_BadExtension_ReturnsFalse()`
@@ -73,10 +73,10 @@ Eg, `IsValidLogInFailed()` could be refactored to be called: `IsValidFileName_Ba
 ### Writing Your First Test
 
 * Unit tests compromise of three main actions:
-	* Arrange objects, creating and setting them up as neccessary
+	* Arrange objects, creating and setting them up as necessary
 	* Act on an object
 	* Assert that something is as expected
-* Unit testing frameworks have assert methodas you should use!
+* Unit testing frameworks have assert methods you should use!
 
 Example
 
