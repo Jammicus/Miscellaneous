@@ -437,3 +437,13 @@ Pretty self explanitory
 * Having seperate specification documents that reuse the same automation allows teams to do assisted exploratory testing and quickly try out lots of different additional scenarios, even keeping them in a regression test suite if needed.
 
 ## Let The Chaos Monkey out Periodically
+
+* Technical code coverage is relatively easy to measure, but it doesn't actualy say much about the effectiveness of a test system.
+* Risk coverage theoretically gives much better measurement of effectiveness, but it is also a lot more difficult to measure.
+* A good set of tests should warn about unexpected impacts and prevent function regression problems.
+* The best way to check if it will serve that purpose is to actually cause problems and see if the tests catch them.
+* You can do this by running tests without the internet on for example
+* Occasionally throw in undesirable conditions for your tests.
+* Do the pass even though they should not?
+* This approach allows you to peridically cause artificial crises in a safe environment, so they can improve their processes without having to put out fires at the same time.
+* Think of these "chaos monkey" sessions just as a type of exploratory testing activity that requires the involvement of a slightly larger, more cross-functional, group.
